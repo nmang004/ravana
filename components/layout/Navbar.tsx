@@ -8,19 +8,26 @@ import { cn } from "@/lib/utils";
 import { navLinks } from "@/lib/data";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import MobileNav from "./MobileNav";
+import { useLenis } from "@/context/LenisContext";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const { lenis } = useLenis();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    if (!lenis) return;
+
+    const handleScroll = ({ scroll }: { scroll: number }) => {
+      setIsScrolled(scroll > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    lenis.on("scroll", handleScroll);
+
+    return () => {
+      lenis.off("scroll", handleScroll);
+    };
+  }, [lenis]);
 
   return (
     <motion.nav

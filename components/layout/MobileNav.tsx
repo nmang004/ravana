@@ -39,7 +39,7 @@ const MobileNav = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-background z-50 flex flex-col"
+            className="fixed inset-0 bg-background z-[999] flex flex-col"
           >
             <div className="flex items-center justify-between p-4 border-b border-border">
               <Link href="/" onClick={toggleMenu}>
