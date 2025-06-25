@@ -46,10 +46,10 @@ export const LenisProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [])
 
-  // Scroll to top on route change
+  // Instantly jump to top on route change (no animation)
   useEffect(() => {
     if (lenis) {
-      lenis.scrollTo(0, { immediate: false })
+      lenis.scrollTo(0, { immediate: true })
     }
   }, [pathname, lenis])
 
