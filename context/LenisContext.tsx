@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, ReactNode, useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Lenis from 'lenis'
 
 interface LenisContextType {
@@ -19,6 +20,7 @@ export const useLenis = () => {
 
 export const LenisProvider = ({ children }: { children: ReactNode }) => {
   const [lenis, setLenis] = useState<Lenis | null>(null)
+  const pathname = usePathname()
 
   useEffect(() => {
     const newLenis = new Lenis({
@@ -43,6 +45,13 @@ export const LenisProvider = ({ children }: { children: ReactNode }) => {
       newLenis.destroy()
     }
   }, [])
+
+  // Scroll to top on route change
+  useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: false })
+    }
+  }, [pathname, lenis])
 
   return <LenisContext.Provider value={{ lenis }}>{children}</LenisContext.Provider>
 }
