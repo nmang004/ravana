@@ -211,19 +211,21 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-24 px-6">
         <div className="container mx-auto text-center">
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-12 md:p-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
+          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 md:p-12 lg:p-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
               Not Sure Which Service You Need?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let's discuss your project requirements and find the perfect solution for your business goals.
             </p>
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">
-                Schedule a Free Consultation
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
+            <div className="flex justify-center px-4">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full max-w-sm md:w-auto">
+                <Link href="/contact" className="block md:inline-block">
+                  <span className="block md:inline">Schedule a Free Consultation</span>
+                  <ArrowRight className="ml-2 w-4 h-4 inline" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
