@@ -37,10 +37,11 @@ export default function Navbar() {
     <motion.nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled && !isMenuOpen
-          ? 'bg-background/80 backdrop-blur-md border-b border-border'
-          : 'bg-transparent',
-        isMenuOpen && 'bg-background'
+        isMenuOpen 
+          ? 'bg-background'
+          : isScrolled
+            ? 'bg-background/80 backdrop-blur-md border-b border-border'
+            : 'bg-transparent'
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
