@@ -135,15 +135,16 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-lg text-muted-foreground">
                     <p>
-                      Ravana was born from a simple observation: too many businesses were 
-                      settling for mediocre digital experiences. We believed that every company, 
-                      regardless of size, deserved world-class design and engineering.
+                      Ravana was born in Norfolk, Virginia, from a simple observation: too many 
+                      businesses were settling for mediocre digital experiences. Our founder, 
+                      leveraging a surplus of enterprise-level client experience, saw an opportunity 
+                      to bring world-class design and engineering to local businesses.
                     </p>
                     <p>
-                      Founded in 2020 by a team of former Silicon Valley engineers and designers, 
-                      we set out to bridge the gap between enterprise-level quality and accessible 
-                      pricing. Our name, inspired by the mythological figure known for his 
-                      unmatched skills and ambition, reflects our commitment to excellence.
+                      Founded in 2020, we set out to bridge the gap between enterprise-level quality 
+                      and accessible service. Our name, inspired by the mythological figure known for 
+                      his unmatched skills and ambition, reflects our commitment to excellence. We 
+                      believe every company deserves world-class design.
                     </p>
                     <p>
                       Today, we're proud to have helped over 50 companies transform their digital 
