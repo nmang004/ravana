@@ -4,8 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedCursor from "@/components/interactive/AnimatedCursor";
-import SmoothScroll from "@/components/interactive/SmoothScroll";
 import StructuredData from "@/components/seo/StructuredData";
+import { LenisProvider } from "@/context/LenisContext";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -88,13 +88,14 @@ export default function RootLayout({
         <StructuredData type="website" />
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
-        <SmoothScroll />
-        <AnimatedCursor />
-        <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <LenisProvider>
+          <AnimatedCursor />
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );
