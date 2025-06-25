@@ -322,6 +322,7 @@ export default function SEOServicesPage() {
                     </Card>
                   );
                 })}
+              </div>
             </StaggerReveal>
           </div>
         </section>
@@ -421,6 +422,7 @@ export default function SEOServicesPage() {
                     </Badge>
                   </Card>
                 ))}
+              </div>
             </StaggerReveal>
           </div>
         </section>
@@ -519,6 +521,7 @@ export default function SEOServicesPage() {
                     </Button>
                   </Card>
                 ))}
+              </div>
             </StaggerReveal>
           </div>
         </section>

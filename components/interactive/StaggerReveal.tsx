@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 import { staggerContainer, staggerChild } from "@/lib/animations/variants";
 
 interface StaggerRevealProps {
-  children: ReactNode[];
+  children: ReactNode;
   className?: string;
   childClassName?: string;
   staggerDelay?: number;
@@ -41,15 +41,7 @@ export default function StaggerReveal({
       animate={controls}
       className={className}
     >
-      {children.map((child, index) => (
-        <motion.div
-          key={index}
-          variants={staggerChild}
-          className={childClassName}
-        >
-          {child}
-        </motion.div>
-      ))}
+      {children}
     </motion.div>
   );
 }
