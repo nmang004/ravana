@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { InsightArticle } from '@/lib/insights';
 import { floatingCard } from '@/lib/animations/variants';
+import CategoryIcon from './CategoryIcon';
 
 interface ArticleCard3DProps {
   article: InsightArticle;
@@ -82,19 +83,15 @@ export default function ArticleCard3D({ article, index = 0 }: ArticleCard3DProps
           />
 
           {/* Image Section */}
-          <div className="relative h-48 overflow-hidden">
+          <div className="relative h-48 overflow-hidden bg-gradient-to-br from-muted/20 to-muted/40 flex items-center justify-center">
             <motion.div
               animate={{
-                scale: isHovered ? 1.1 : 1,
+                scale: isHovered ? 1.2 : 1,
+                rotate: isHovered ? 5 : 0,
               }}
               transition={{ duration: 0.4 }}
             >
-              <Image
-                src={article.coverImage}
-                alt={article.title}
-                fill
-                className="object-cover"
-              />
+              <CategoryIcon category={article.category} size={60} />
             </motion.div>
             
             {/* Gradient Overlay */}

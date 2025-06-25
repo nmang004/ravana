@@ -56,22 +56,28 @@ export default function InsightsHub({
         }}
       />
       
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-hidden">
         {/* Hero Section */}
-        <HubLandingHero featuredArticle={heroArticle} />
+        <div className="relative z-10">
+          <HubLandingHero featuredArticle={heroArticle} />
+        </div>
 
         {/* Category Filters */}
-        <CategoryFilters 
-          categories={categories}
-          activeCategory={activeCategory}
-          onCategoryChange={handleCategoryChange}
-        />
+        <div className="relative z-20 bg-background">
+          <CategoryFilters 
+            categories={categories}
+            activeCategory={activeCategory}
+            onCategoryChange={handleCategoryChange}
+          />
+        </div>
 
         {/* Articles Grid */}
-        <ArticleGrid 
-          articles={filteredArticles}
-          isLoading={isLoading}
-        />
+        <div className="relative z-20 bg-background">
+          <ArticleGrid 
+            articles={filteredArticles}
+            isLoading={isLoading}
+          />
+        </div>
 
         {/* Stats Section */}
         <motion.section

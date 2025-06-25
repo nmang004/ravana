@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { InsightArticle } from '@/lib/insights';
 import { fadeInUp, revealText } from '@/lib/animations/variants';
+import CategoryIcon from './CategoryIcon';
 
 interface HubLandingHeroProps {
   featuredArticle: InsightArticle;
@@ -27,7 +28,7 @@ export default function HubLandingHero({ featuredArticle }: HubLandingHeroProps)
             repeatType: "reverse" 
           }}
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.accent/0.1)_0%,transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-radial from-accent/10 to-transparent" />
         </motion.div>
       </div>
 
