@@ -37,32 +37,18 @@ const stats = [
 
 const team = [
   {
-    name: "Alex Rivera",
-    position: "Founder & Lead Developer",
-    bio: "Full-stack developer with 8+ years experience building scalable SaaS platforms. Previously at Google and Stripe.",
-    image: "/images/team/alex.jpg",
-    skills: ["Next.js", "Node.js", "AWS", "System Architecture"]
+    name: "Nick Mangubat",
+    position: "Co-Founder and Developer",
+    bio: "A software engineer with a passion for creating beautiful and functional web experiences. Nick specializes in front-end development and has a keen eye for detail.",
+    image: "/images/team/nick.jpg",
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS"]
   },
   {
-    name: "Sarah Chen",
-    position: "Creative Director",
-    bio: "UI/UX designer passionate about creating beautiful, user-centered digital experiences. Former Apple design team member.",
-    image: "/images/team/sarah.jpg",
-    skills: ["UI/UX Design", "Figma", "Prototyping", "Brand Strategy"]
-  },
-  {
-    name: "Marcus Johnson",
-    position: "Marketing Strategist",
-    bio: "Data-driven marketing expert who has helped 50+ companies scale their digital presence and achieve 10x growth.",
-    image: "/images/team/marcus.jpg",
-    skills: ["Digital Marketing", "SEO", "Analytics", "Growth Hacking"]
-  },
-  {
-    name: "Elena Vasquez",
-    position: "Backend Engineer",
-    bio: "DevOps and backend specialist focused on building secure, scalable infrastructure. PhD in Computer Science.",
-    image: "/images/team/elena.jpg",
-    skills: ["Python", "Docker", "Kubernetes", "Security"]
+    name: "Ishan Perera",
+    position: "Co-Founder and Stakeholder",
+    bio: "A strategic thinker with a background in business development. Ishan is passionate about helping businesses grow and succeed in the digital age.",
+    image: "/images/team/ishan.jpg",
+    skills: ["Business Strategy", "Marketing", "Project Management", "Client Relations"]
   }
 ];
 
