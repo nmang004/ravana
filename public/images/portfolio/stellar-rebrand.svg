@@ -1,1 +1,85 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" style="fill:rgb(255,0,255);stroke-width:3;stroke:rgb(0,0,0)" /></svg>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0A0A0A"/>
+  
+  <!-- Brand Identity Showcase -->
+  <rect x="30" y="30" width="340" height="240" rx="12" fill="#262626" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Logo Design Area -->
+  <rect x="50" y="50" width="120" height="80" rx="8" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Stellar Logo Concept -->
+  <circle cx="110" cy="90" r="20" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <path d="M110 75 L115 85 L125 85 L117 92 L120 102 L110 97 L100 102 L103 92 L95 85 L105 85 Z" fill="#FFD700"/>
+  <circle cx="110" cy="90" r="8" fill="none" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Typography Samples -->
+  <rect x="190" y="50" width="160" height="35" rx="6" fill="#404040"/>
+  <rect x="200" y="60" width="60" height="6" fill="#FFD700"/>
+  <rect x="200" y="70" width="80" height="4" fill="#666"/>
+  <rect x="270" y="60" width="70" height="6" fill="#FFD700"/>
+  <rect x="270" y="70" width="60" height="4" fill="#666"/>
+  
+  <!-- Color Palette -->
+  <rect x="50" y="140" width="300" height="40" rx="6" fill="#404040"/>
+  <circle cx="80" cy="160" r="12" fill="#FFD700"/>
+  <circle cx="110" cy="160" r="12" fill="#0A0A0A" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="140" cy="160" r="12" fill="#262626" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="170" cy="160" r="12" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="200" cy="160" r="12" fill="#FFFFFF" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Gradient samples -->
+  <rect x="230" y="150" width="40" height="20" rx="4" fill="url(#goldGradient)"/>
+  <rect x="280" y="150" width="40" height="20" rx="4" fill="url(#darkGradient)"/>
+  
+  <!-- Define gradients -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#262626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Website Mockup -->
+  <rect x="50" y="190" width="140" height="70" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Mini website layout -->
+  <rect x="60" y="200" width="120" height="12" rx="2" fill="#FFD700"/>
+  <rect x="65" y="220" width="30" height="20" rx="2" fill="#666"/>
+  <rect x="100" y="220" width="30" height="20" rx="2" fill="#666"/>
+  <rect x="135" y="220" width="30" height="20" rx="2" fill="#666"/>
+  <rect x="65" y="245" width="110" height="4" fill="#FFD700"/>
+  <rect x="65" y="252" width="80" height="3" fill="#666"/>
+  
+  <!-- Business Cards Mockup -->
+  <rect x="210" y="190" width="60" height="35" rx="4" fill="#FFD700" transform="rotate(5 240 207)"/>
+  <rect x="220" y="200" width="60" height="35" rx="4" fill="#404040" stroke="#FFD700" stroke-width="1" transform="rotate(-3 250 217)"/>
+  
+  <!-- Brand Guidelines -->
+  <rect x="290" y="190" width="60" height="70" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  <rect x="300" y="200" width="40" height="3" fill="#FFD700"/>
+  <rect x="300" y="208" width="30" height="2" fill="#666"/>
+  <rect x="300" y="215" width="35" height="2" fill="#666"/>
+  <rect x="300" y="222" width="25" height="2" fill="#666"/>
+  <rect x="300" y="235" width="15" height="15" rx="2" fill="#FFD700"/>
+  <rect x="320" y="235" width="15" height="15" rx="2" fill="#666"/>
+  
+  <!-- Design Elements Floating -->
+  <circle cx="360" cy="80" r="8" fill="#FFD700" fill-opacity="0.3"/>
+  <rect x="30" y="100" width="12" height="12" rx="6" fill="#FFD700" fill-opacity="0.3" transform="rotate(45 36 106)"/>
+  <path d="M370 120 L375 115 L380 120 L375 125 Z" fill="#FFD700" fill-opacity="0.4"/>
+  
+  <!-- Before/After Comparison Arrow -->
+  <path d="M190 100 L210 100" stroke="#FFD700" stroke-width="3" fill="none"/>
+  <path d="M205 95 L210 100 L205 105" stroke="#FFD700" stroke-width="3" fill="none"/>
+  
+  <!-- Brand Impact Metrics -->
+  <rect x="10" y="200" width="30" height="60" rx="4" fill="#262626" stroke="#FFD700" stroke-width="1"/>
+  <rect x="15" y="240" width="20" height="15" fill="#FFD700"/>
+  <text x="25" y="220" text-anchor="middle" fill="#FFD700" font-size="10" font-family="Arial">250%</text>
+  <text x="25" y="275" text-anchor="middle" fill="#666" font-size="8" font-family="Arial">Engagement</text>
+</svg>

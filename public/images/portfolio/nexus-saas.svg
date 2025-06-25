@@ -1,1 +1,37 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" style="fill:rgb(255,0,0);stroke-width:3;stroke:rgb(0,0,0)" /></svg>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0A0A0A"/>
+  
+  <!-- Main Container -->
+  <rect x="40" y="40" width="320" height="220" rx="12" fill="#262626" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Header Bar -->
+  <rect x="50" y="50" width="300" height="40" rx="6" fill="#404040"/>
+  <circle cx="70" cy="70" r="4" fill="#FFD700"/>
+  <circle cx="85" cy="70" r="4" fill="#FFD700"/>
+  <circle cx="100" cy="70" r="4" fill="#FFD700"/>
+  
+  <!-- Dashboard Cards -->
+  <rect x="60" y="110" width="90" height="60" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  <rect x="160" y="110" width="90" height="60" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  <rect x="260" y="110" width="90" height="60" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Charts/Analytics -->
+  <path d="M70 140 L85 130 L100 145 L115 125 L130 135" stroke="#FFD700" stroke-width="2" fill="none"/>
+  <rect x="170" y="125" width="8" height="30" fill="#FFD700"/>
+  <rect x="185" y="135" width="8" height="20" fill="#FFD700"/>
+  <rect x="200" y="120" width="8" height="35" fill="#FFD700"/>
+  <rect x="215" y="130" width="8" height="25" fill="#FFD700"/>
+  
+  <!-- Task List -->
+  <rect x="60" y="190" width="280" height="50" rx="6" fill="#404040"/>
+  <circle cx="80" cy="210" r="3" fill="#FFD700"/>
+  <circle cx="80" cy="225" r="3" fill="#FFD700"/>
+  <rect x="95" y="207" width="120" height="6" rx="3" fill="#666"/>
+  <rect x="95" y="222" width="80" height="6" rx="3" fill="#666"/>
+  
+  <!-- Central Hub Icon -->
+  <circle cx="340" cy="200" r="15" fill="#FFD700"/>
+  <circle cx="340" cy="200" r="8" fill="#0A0A0A"/>
+  <circle cx="340" cy="200" r="3" fill="#FFD700"/>
+</svg>

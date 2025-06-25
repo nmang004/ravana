@@ -1,1 +1,47 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" style="fill:rgb(0,255,0);stroke-width:3;stroke:rgb(0,0,0)" /></svg>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0A0A0A"/>
+  
+  <!-- Browser Window -->
+  <rect x="30" y="30" width="340" height="240" rx="12" fill="#262626" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Browser Header -->
+  <rect x="40" y="40" width="320" height="30" rx="6" fill="#404040"/>
+  <circle cx="55" cy="55" r="4" fill="#FF5555"/>
+  <circle cx="70" cy="55" r="4" fill="#FFAA00"/>
+  <circle cx="85" cy="55" r="4" fill="#00AA00"/>
+  <rect x="110" y="48" width="200" height="14" rx="7" fill="#666" fill-opacity="0.5"/>
+  
+  <!-- Product Grid -->
+  <rect x="50" y="90" width="80" height="80" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  <rect x="140" y="90" width="80" height="80" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  <rect x="230" y="90" width="80" height="80" rx="6" fill="#404040" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Product Images (Fashion Items) -->
+  <!-- Dress silhouette -->
+  <path d="M80 105 Q75 110 75 120 L75 145 Q75 150 80 150 L100 150 Q105 150 105 145 L105 120 Q105 110 100 105 Q90 100 80 105 Z" fill="#FFD700"/>
+  
+  <!-- Shirt silhouette -->
+  <path d="M170 105 L190 105 Q195 105 195 110 L195 130 L175 130 Q165 130 165 120 L165 110 Q165 105 170 105 Z" fill="#FFD700"/>
+  <rect x="172" y="130" width="16" height="25" fill="#FFD700"/>
+  
+  <!-- Bag silhouette -->
+  <path d="M260 110 Q255 105 250 110 L250 145 Q250 155 260 155 L280 155 Q290 155 290 145 L290 110 Q285 105 280 110 Z" fill="#FFD700"/>
+  <path d="M265 110 Q265 105 275 105 Q275 110 275 110" stroke="#FFD700" stroke-width="2" fill="none"/>
+  
+  <!-- Shopping Cart -->
+  <circle cx="320" cy="210" r="18" fill="#FFD700"/>
+  <path d="M310 205 L315 205 L318 215 L325 215 L327 205 L330 205" stroke="#0A0A0A" stroke-width="2" fill="none"/>
+  <circle cx="318" cy="220" r="2" fill="#0A0A0A"/>
+  <circle cx="325" cy="220" r="2" fill="#0A0A0A"/>
+  
+  <!-- Price Tags -->
+  <rect x="55" y="175" width="25" height="12" rx="2" fill="#FFD700"/>
+  <rect x="145" y="175" width="25" height="12" rx="2" fill="#FFD700"/>
+  <rect x="235" y="175" width="25" height="12" rx="2" fill="#FFD700"/>
+  
+  <!-- Stars (Reviews) -->
+  <path d="M90 190 L92 195 L97 195 L93 198 L95 203 L90 200 L85 203 L87 198 L83 195 L88 195 Z" fill="#FFD700"/>
+  <path d="M180 190 L182 195 L187 195 L183 198 L185 203 L180 200 L175 203 L177 198 L173 195 L178 195 Z" fill="#FFD700"/>
+  <path d="M270 190 L272 195 L277 195 L273 198 L275 203 L270 200 L265 203 L267 198 L263 195 L268 195 Z" fill="#FFD700"/>
+</svg>

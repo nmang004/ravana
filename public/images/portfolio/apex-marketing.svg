@@ -1,1 +1,53 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="300" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" /></svg>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0A0A0A"/>
+  
+  <!-- Central Megaphone -->
+  <path d="M120 130 L180 110 Q190 110 190 120 L190 180 Q190 190 180 190 L120 170 Q110 165 110 150 Q110 135 120 130 Z" fill="#FFD700"/>
+  <path d="M190 120 L210 115 Q220 115 220 125 L220 175 Q220 185 210 185 L190 180" fill="#FFD700"/>
+  
+  <!-- Sound Waves -->
+  <path d="M230 140 Q240 140 245 150 Q240 160 230 160" stroke="#FFD700" stroke-width="3" fill="none"/>
+  <path d="M250 130 Q265 130 275 150 Q265 170 250 170" stroke="#FFD700" stroke-width="3" fill="none"/>
+  <path d="M280 120 Q300 120 315 150 Q300 180 280 180" stroke="#FFD700" stroke-width="3" fill="none"/>
+  
+  <!-- Analytics Dashboard -->
+  <rect x="40" y="40" width="140" height="80" rx="8" fill="#262626" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Growth Chart -->
+  <path d="M55 100 L70 85 L85 95 L100 70 L115 80 L130 60 L145 75" stroke="#FFD700" stroke-width="3" fill="none"/>
+  <circle cx="55" cy="100" r="3" fill="#FFD700"/>
+  <circle cx="70" cy="85" r="3" fill="#FFD700"/>
+  <circle cx="85" cy="95" r="3" fill="#FFD700"/>
+  <circle cx="100" cy="70" r="3" fill="#FFD700"/>
+  <circle cx="115" cy="80" r="3" fill="#FFD700"/>
+  <circle cx="130" cy="60" r="3" fill="#FFD700"/>
+  <circle cx="145" cy="75" r="3" fill="#FFD700"/>
+  
+  <!-- Social Media Icons -->
+  <circle cx="260" cy="60" r="20" fill="#262626" stroke="#FFD700" stroke-width="2"/>
+  <rect x="252" y="52" width="16" height="16" rx="2" fill="#FFD700"/>
+  
+  <circle cx="320" cy="60" r="20" fill="#262626" stroke="#FFD700" stroke-width="2"/>
+  <path d="M315 55 L325 55 L325 65 L315 65 Z M318 52 L322 52 M315 68 L325 68" stroke="#FFD700" stroke-width="2" fill="none"/>
+  
+  <!-- Email/Newsletter -->
+  <rect x="40" y="200" width="120" height="60" rx="8" fill="#262626" stroke="#FFD700" stroke-width="1"/>
+  <path d="M50 220 L100 240 L150 220" stroke="#FFD700" stroke-width="2" fill="none"/>
+  <rect x="60" y="210" width="80" height="40" rx="4" fill="none" stroke="#FFD700" stroke-width="1"/>
+  
+  <!-- Target/Bullseye -->
+  <circle cx="300" cy="230" r="25" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <circle cx="300" cy="230" r="15" fill="none" stroke="#FFD700" stroke-width="2"/>
+  <circle cx="300" cy="230" r="5" fill="#FFD700"/>
+  
+  <!-- ROI Arrow -->
+  <path d="M200 220 L240 200" stroke="#FFD700" stroke-width="4" fill="none"/>
+  <path d="M235 195 L240 200 L235 205" stroke="#FFD700" stroke-width="4" fill="none"/>
+  
+  <!-- Campaign Performance Bars -->
+  <rect x="170" y="240" width="8" height="20" fill="#FFD700"/>
+  <rect x="185" y="235" width="8" height="25" fill="#FFD700"/>
+  <rect x="200" y="230" width="8" height="30" fill="#FFD700"/>
+  <rect x="215" y="225" width="8" height="35" fill="#FFD700"/>
+</svg>
