@@ -125,19 +125,19 @@ export default function ServicesPage() {
               const isEven = index % 2 === 0;
               
               return (
-                <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
                   {/* Content */}
-                  <div className={!isEven ? 'lg:col-start-2' : ''}>
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
-                        <Icon className="w-6 h-6 text-accent" />
+                  <div className={`p-4 md:p-6 lg:p-0 ${!isEven ? 'lg:col-start-2' : ''}`}>
+                    <div className="flex items-center mb-6">
+                      <div className="w-14 h-14 md:w-16 md:h-16 lg:w-12 lg:h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                        <Icon className="w-7 h-7 md:w-8 md:h-8 lg:w-6 lg:h-6 text-accent" />
                       </div>
-                      <h2 className="text-3xl md:text-4xl font-heading font-bold">
+                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold">
                         {service.title}
                       </h2>
                     </div>
                     
-                    <p className="text-lg text-muted-foreground mb-6">
+                    <p className="text-base md:text-lg text-muted-foreground mb-8">
                       {service.description}
                     </p>
 
@@ -180,14 +180,14 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                    <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                      <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                         <Link href={`/contact?service=${service.id}`}>
                           Get Started
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                       </Button>
-                      <Button asChild variant="outline">
+                      <Button asChild variant="outline" size="lg">
                         <Link href={`/services/${service.id}`}>
                           Learn More
                         </Link>
@@ -196,9 +196,9 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Visual */}
-                  <Card className={`p-8 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20 ${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                    <div className="aspect-square flex items-center justify-center">
-                      <Icon className="w-32 h-32 text-accent opacity-20" />
+                  <Card className={`p-8 md:p-12 lg:p-8 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20 ${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                    <div className="aspect-square min-h-[300px] md:min-h-[400px] lg:min-h-0 flex items-center justify-center">
+                      <Icon className="w-24 h-24 md:w-32 md:h-32 lg:w-32 lg:h-32 text-accent opacity-20" />
                     </div>
                   </Card>
                 </div>
