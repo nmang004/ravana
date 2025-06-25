@@ -218,11 +218,11 @@ export default function ServicesPage() {
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let's discuss your project requirements and find the perfect solution for your business goals.
             </p>
-            <div className="flex justify-center px-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full max-w-sm md:w-auto">
-                <Link href="/contact" className="block md:inline-block">
-                  <span className="block md:inline">Schedule a Free Consultation</span>
-                  <ArrowRight className="ml-2 w-4 h-4 inline" />
+            <div className="flex justify-center">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Link href="/contact">
+                  Schedule a Free Consultation
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
             </div>
