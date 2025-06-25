@@ -12,30 +12,24 @@ interface HubLandingHeroProps {
 
 export default function HubLandingHero({ featuredArticle }: HubLandingHeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20">
-      {/* Background Image with Ken Burns Effect */}
-      <motion.div 
-        className="absolute inset-0 z-0"
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.1 }}
-        transition={{ 
-          duration: 20, 
-          ease: "linear",
-          repeat: Infinity,
-          repeatType: "reverse" 
-        }}
-      >
-        <div className="relative w-full h-full">
-          <Image
-            src={featuredArticle.coverImage}
-            alt={featuredArticle.title}
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-        </div>
-      </motion.div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 pt-20">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+        <motion.div 
+          className="absolute inset-0 opacity-10"
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.05 }}
+          transition={{ 
+            duration: 20, 
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse" 
+          }}
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.accent/0.1)_0%,transparent_50%)]" />
+        </motion.div>
+      </div>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 z-1">
@@ -114,13 +108,8 @@ export default function HubLandingHero({ featuredArticle }: HubLandingHeroProps)
                 {/* Card Background */}
                 <div className="relative overflow-hidden rounded-2xl bg-card border border-border/50 backdrop-blur-sm">
                   {/* Image */}
-                  <div className="relative h-64 md:h-80 overflow-hidden">
-                    <Image
-                      src={featuredArticle.coverImage}
-                      alt={featuredArticle.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                  <div className="relative h-64 md:h-80 overflow-hidden bg-gradient-to-br from-muted/20 to-muted/40 flex items-center justify-center">
+                    <CategoryIcon category={featuredArticle.category} size={80} />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                     
                     {/* Category Badge */}
