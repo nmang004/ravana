@@ -1,41 +1,46 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { navLinks } from "@/lib/data";
-import useMediaQuery from "@/hooks/useMediaQuery";
-import MobileNav from "./MobileNav";
-import { useLenis } from "@/context/LenisContext";
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import { navLinks } from '@/lib/data'
+import useMediaQuery from '@/hooks/useMediaQuery'
+import MobileNav from './MobileNav'
+import { useLenis } from '@/context/LenisContext'
+import { Menu } from 'lucide-react'
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 768px)");
-  const { lenis } = useLenis();
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const isMobile = useMediaQuery('(max-width: 768px)')
+  const { lenis } = useLenis()
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   useEffect(() => {
-    if (!lenis) return;
+    if (!lenis) return
 
     const handleScroll = ({ scroll }: { scroll: number }) => {
-      setIsScrolled(scroll > 50);
-    };
+      setIsScrolled(scroll > 50)
+    }
 
-    lenis.on("scroll", handleScroll);
+    lenis.on('scroll', handleScroll)
 
     return () => {
-      lenis.off("scroll", handleScroll);
-    };
-  }, [lenis]);
+      lenis.off('scroll', handleScroll)
+    }
+  }, [lenis])
 
   return (
     <motion.nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        isScrolled && !isMenuOpen
+          ? 'bg-background/80 backdrop-blur-md border-b border-border'
+          : 'bg-transparent',
+        isMenuOpen && 'bg-background'
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -43,7 +48,6 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="relative group">
             <motion.h1 
               className="text-2xl font-heading font-bold text-foreground"
@@ -61,7 +65,12 @@ export default function Navbar() {
           </Link>
 
           {isMobile ? (
-            <MobileNav />
+            <div className="md:hidden">
+              <button onClick={toggleMenu} className="p-2 z-[100]">
+                <Menu size={24} />
+              </button>
+              <MobileNav isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+            </div>
           ) : (
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((item, index) => (
@@ -111,5 +120,5 @@ export default function Navbar() {
         </div>
       </div>
     </motion.nav>
-  );
+  )
 }
