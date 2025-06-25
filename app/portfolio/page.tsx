@@ -10,105 +10,105 @@ import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 
 const portfolioProjects = [
   {
-    id: "nexus-saas",
-    title: "Nexus SaaS Platform",
+    id: "seo-auditer",
+    title: "SEOAuditer Platform",
     category: "SaaS Development",
-    description: "A comprehensive project management SaaS platform with real-time collaboration, task automation, and advanced analytics.",
-    image: "/images/portfolio/nexus-saas.svg",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "WebSockets"],
-    liveUrl: "https://nexus-saas-demo.com",
+    description: "A premium, full-stack SEO analysis dashboard for advanced site audits, competitor tracking, and real-time insights.",
+    image: "/images/portfolio/seo-auditer.svg",
+    technologies: ["Next.js", "Express", "PostgreSQL", "Redis", "Socket.IO"],
+    liveUrl: "https://seoauditer.vercel.app",
     featured: true,
     completedDate: "2024-02-15",
-    client: "TechFlow Inc.",
+    client: "SEOAuditer Inc.",
     results: {
-      metric1: "300% increase in team productivity",
-      metric2: "50K+ active users",
-      metric3: "$2M+ in revenue generated"
+      metric1: "500+ SEO agencies onboarded",
+      metric2: "1M+ websites analyzed",
+      metric3: "98% accuracy in audits"
     }
   },
   {
-    id: "luxe-ecommerce",
-    title: "Luxe Fashion E-commerce",
+    id: "la-brioche",
+    title: "La Brioche Bakery",
     category: "Web Development",
-    description: "Premium fashion e-commerce platform with advanced filtering, AR try-on features, and seamless checkout experience.",
-    image: "/images/portfolio/luxe-ecommerce.svg",
-    technologies: ["React", "Shopify Plus", "Node.js", "AR.js"],
-    liveUrl: "https://luxe-fashion-demo.com",
+    description: "A modern, high-performance web application for an artisan French bakery, combining cutting-edge web technology with timeless French elegance.",
+    image: "/images/portfolio/la-brioche.svg",
+    technologies: ["Next.js", "React", "TypeScript", "Supabase", "Sanity.io"],
+    liveUrl: "https://labrioche.vercel.app",
     featured: true,
     completedDate: "2024-01-20",
-    client: "Luxe Brands",
+    client: "La Brioche Norfolk",
     results: {
-      metric1: "150% increase in conversion rate",
-      metric2: "85% reduction in cart abandonment",
-      metric3: "$5M+ in online sales"
+      metric1: "200% increase in online orders",
+      metric2: "4.9/5 customer satisfaction rating",
+      metric3: "60% repeat customer rate"
     }
   },
   {
-    id: "apex-marketing",
-    title: "Apex Digital Campaign",
-    category: "Digital Marketing",
-    description: "Complete digital marketing transformation for a B2B SaaS company, including brand redesign and multi-channel campaigns.",
-    image: "/images/portfolio/apex-marketing.svg",
-    technologies: ["Google Ads", "LinkedIn Ads", "HubSpot", "Analytics"],
-    liveUrl: "https://apex-results-demo.com",
+    id: "review-boost",
+    title: "ReviewBoost SaaS Platform",
+    category: "SaaS Development",
+    description: "A gamified employee review collection system designed to motivate teams and boost customer feedback.",
+    image: "/images/portfolio/review-boost.svg",
+    technologies: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
+    liveUrl: "https://reviewboost.vercel.app",
     featured: false,
-    completedDate: "2023-12-10",
-    client: "Apex Solutions",
+    completedDate: "2024-03-10",
+    client: "ReviewBoost Inc.",
     results: {
-      metric1: "400% increase in qualified leads",
-      metric2: "65% reduction in cost per lead",
-      metric3: "200% increase in brand awareness"
+      metric1: "95% increase in review collection rate",
+      metric2: "3x employee engagement boost",
+      metric3: "50+ businesses onboarded"
     }
   },
   {
-    id: "vertex-seo",
-    title: "Vertex SEO Optimization",
-    category: "SEO Services",
-    description: "Complete SEO overhaul for a fintech startup, achieving first-page rankings for high-value keywords.",
-    image: "/images/portfolio/vertex-seo.svg",
-    technologies: ["Technical SEO", "Content Strategy", "Link Building"],
-    liveUrl: "https://vertex-fintech.com",
+    id: "wm-stone",
+    title: "W.M. Stone Logistics",
+    category: "Web Development",
+    description: "Modern website for a century-old customs brokerage and international freight forwarding company, combining heritage with cutting-edge logistics technology.",
+    image: "/images/portfolio/wm-stone.svg",
+    technologies: ["Webflow", "HTML", "CSS", "JavaScript", "CMS Integration"],
+    liveUrl: "https://www.wmstone.com",
     featured: false,
     completedDate: "2023-11-05",
-    client: "Vertex Fintech",
+    client: "W.M. Stone & Company",
     results: {
-      metric1: "800% increase in organic traffic",
-      metric2: "Top 3 rankings for 50+ keywords",
-      metric3: "300% increase in organic leads"
+      metric1: "150% increase in lead generation",
+      metric2: "70% reduction in customer service calls",
+      metric3: "45% increase in online quote requests"
     }
   },
   {
-    id: "quantum-app",
-    title: "Quantum Mobile App",
+    id: "rival-outranker",
+    title: "Rival Outranker",
     category: "SaaS Development",
-    description: "Cross-platform mobile application for healthcare professionals with real-time patient monitoring and AI diagnostics.",
-    image: "/images/portfolio/quantum-app.svg",
-    technologies: ["React Native", "TypeScript", "Firebase", "AI/ML"],
-    liveUrl: "https://quantum-health-demo.com",
+    description: "A professional-grade SEO analysis platform with a modular architecture and comprehensive audit capabilities.",
+    image: "/images/portfolio/rival-outranker.svg",
+    technologies: ["TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    liveUrl: "https://rival-outranker.netlify.app",
     featured: true,
     completedDate: "2023-10-15",
-    client: "Quantum Health",
+    client: "Rival Digital Solutions",
     results: {
-      metric1: "100K+ healthcare professionals using",
-      metric2: "40% faster diagnosis times",
-      metric3: "95% user satisfaction rate"
+      metric1: "50+ ranking factors analyzed",
+      metric2: "140+ audit checkpoints",
+      metric3: "85% performance improvement"
     }
   },
   {
-    id: "stellar-rebrand",
-    title: "Stellar Brand Transformation",
+    id: "jenna-eve",
+    title: "Jenna Eve Portfolio",
     category: "Web Development",
-    description: "Complete brand and website redesign for a Fortune 500 company, focusing on modern design and user experience.",
-    image: "/images/portfolio/stellar-rebrand.svg",
-    technologies: ["Next.js", "Framer Motion", "Headless CMS", "Analytics"],
-    liveUrl: "https://stellar-corp.com",
+    description: "An animated portfolio that redefines the boundaries of web experience design, showcasing the pinnacle of web animation technology.",
+    image: "/images/portfolio/jenna-eve.svg",
+    technologies: ["Next.js", "Framer Motion", "Three.js", "Tone.js"],
+    liveUrl: "https://jennaeve.vercel.app",
     featured: false,
     completedDate: "2023-09-20",
-    client: "Stellar Corporation",
+    client: "Jenna Eve",
     results: {
-      metric1: "250% increase in website engagement",
-      metric2: "60% reduction in bounce rate",
-      metric3: "180% increase in contact form submissions"
+      metric1: "60fps performance guarantee",
+      metric2: "95% user engagement rate",
+      metric3: "Award-winning design"
     }
   }
 ];
