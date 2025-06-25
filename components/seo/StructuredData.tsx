@@ -123,6 +123,38 @@ export default function StructuredData({ type = 'organization', data }: Structur
           ...data
         };
 
+      case 'article':
+        return {
+          ...baseData,
+          '@type': 'Article',
+          headline: data?.title,
+          description: data?.excerpt,
+          image: data?.coverImage,
+          author: {
+            '@type': 'Person',
+            name: data?.author
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Ravana Digital Agency',
+            url: 'https://ravana.agency',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://ravana.agency/logo.png'
+            }
+          },
+          datePublished: data?.datePublished,
+          dateModified: data?.dateModified || data?.datePublished,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': data?.url
+          },
+          keywords: data?.keywords,
+          articleSection: data?.category,
+          wordCount: data?.wordCount,
+          ...data
+        };
+
       default:
         return {
           ...baseData,

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getAllInsights } from '@/lib/insights';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ravana.agency';
@@ -8,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/services',
+    '/insights',
     '/portfolio',
     '/contact',
   ];
@@ -29,6 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/marketing',
     '/services/seo',
   ];
+
+  // Get all insights articles
+  const allInsights = getAllInsights();
 
   const currentDate = new Date();
 
@@ -55,6 +60,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+    })),
+    
+    // Insights articles
+    ...allInsights.map((insight) => ({
+      url: `${baseUrl}/insights/${insight.slug}`,
+      lastModified: new Date(insight.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
   ];
 }
