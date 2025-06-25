@@ -136,7 +136,7 @@ export default function HeroSection() {
             delay: 2.5,
             ease: [0.645, 0.045, 0.355, 1],
           }}
-          className="flex flex-col sm:flex-row gap-4 mb-16"
+          className="flex flex-col sm:flex-row gap-4 mb-20 md:mb-24"
         >
           <Button
             asChild
@@ -172,35 +172,35 @@ export default function HeroSection() {
             </Link>
           </Button>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          variants={scrollIndicatorVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            duration: 0.6,
-            delay: 3,
-            ease: [0.645, 0.045, 0.355, 1],
-          }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="flex flex-col items-center space-y-2 text-muted-foreground"
-          >
-            <span className="text-sm font-medium">Scroll to explore</span>
-            <ArrowDown className="w-4 h-4" />
-          </motion.div>
-        </motion.div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        variants={scrollIndicatorVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{
+          duration: 0.6,
+          delay: 3,
+          ease: [0.645, 0.045, 0.355, 1],
+        }}
+        className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+      >
+        <motion.div
+          animate={{
+            y: [0, 10, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="flex flex-col items-center space-y-2 text-muted-foreground"
+        >
+          <span className="text-xs md:text-sm font-medium">Scroll to explore</span>
+          <ArrowDown className="w-3 h-3 md:w-4 md:h-4" />
+        </motion.div>
+      </motion.div>
 
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
