@@ -15,8 +15,7 @@ const footerLinks = {
     { href: "/careers", label: "Careers" },
   ],
   Resources: [
-    { href: "/blog", label: "Blog" },
-    { href: "/case-studies", label: "Case Studies" },
+    { href: "/insights", label: "Insights" },
     { href: "/privacy", label: "Privacy Policy" },
     { href: "/terms", label: "Terms of Service" },
   ],
