@@ -32,25 +32,41 @@ export interface InsightFrontmatter {
 const insightsDirectory = path.join(process.cwd(), 'content/insights');
 
 export function getAllInsights(): InsightArticle[] {
-  const fileNames = fs.readdirSync(insightsDirectory);
-  const allInsights: InsightArticle[] = fileNames
-    .filter((fileName) => fileName.endsWith('.mdx'))
-    .map((fileName) => {
-      const slug = fileName.replace(/\.mdx$/, '');
-      const fullPath = path.join(insightsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data, content } = matter(fileContents);
+  try {
+    if (!fs.existsSync(insightsDirectory)) {
+      console.warn('Insights directory does not exist');
+      return [];
+    }
 
-      return {
-        ...(data as InsightFrontmatter),
-        content,
-      };
+    const fileNames = fs.readdirSync(insightsDirectory);
+    const allInsights: InsightArticle[] = fileNames
+      .filter((fileName) => fileName.endsWith('.mdx'))
+      .map((fileName) => {
+        try {
+          const slug = fileName.replace(/\.mdx$/, '');
+          const fullPath = path.join(insightsDirectory, fileName);
+          const fileContents = fs.readFileSync(fullPath, 'utf8');
+          const { data, content } = matter(fileContents);
+
+          return {
+            ...(data as InsightFrontmatter),
+            content,
+          };
+        } catch (error) {
+          console.error(`Error processing file ${fileName}:`, error);
+          return null;
+        }
+      })
+      .filter((insight): insight is InsightArticle => insight !== null);
+
+    // Sort by date (newest first)
+    return allInsights.sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
-
-  // Sort by date (newest first)
-  return allInsights.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
+  } catch (error) {
+    console.error('Error reading insights directory:', error);
+    return [];
+  }
 }
 
 export function getInsightBySlug(slug: string): InsightArticle | null {

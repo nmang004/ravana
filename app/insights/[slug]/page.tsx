@@ -10,12 +10,20 @@ interface InsightPageProps {
   };
 }
 
+// Force dynamic rendering to avoid SSG issues with MDXRemote
+export const dynamic = 'force-dynamic';
+
 // Generate static params for all articles
 export async function generateStaticParams() {
-  const insights = getAllInsights();
-  return insights.map((insight) => ({
-    slug: insight.slug,
-  }));
+  try {
+    const insights = getAllInsights();
+    return insights.map((insight) => ({
+      slug: insight.slug,
+    }));
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
 }
 
 // Generate metadata for each article
@@ -65,28 +73,33 @@ export async function generateMetadata({ params }: InsightPageProps): Promise<Me
 }
 
 export default async function InsightPage({ params }: InsightPageProps) {
-  const insight = getInsightBySlug(params.slug);
-  
-  if (!insight) {
+  try {
+    const insight = getInsightBySlug(params.slug);
+    
+    if (!insight) {
+      notFound();
+    }
+
+    // Serialize the MDX content
+    const mdxSource = await serialize(insight.content, {
+      mdxOptions: {
+        remarkPlugins: [],
+        rehypePlugins: [],
+      },
+    });
+
+    // Get related articles
+    const relatedInsights = getRelatedInsights(insight.slug, 3);
+
+    return (
+      <InsightArticle 
+        insight={insight}
+        mdxSource={mdxSource}
+        relatedInsights={relatedInsights}
+      />
+    );
+  } catch (error) {
+    console.error('Error loading insight:', error);
     notFound();
   }
-
-  // Serialize the MDX content
-  const mdxSource = await serialize(insight.content, {
-    mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [],
-    },
-  });
-
-  // Get related articles
-  const relatedInsights = getRelatedInsights(insight.slug, 3);
-
-  return (
-    <InsightArticle 
-      insight={insight}
-      mdxSource={mdxSource}
-      relatedInsights={relatedInsights}
-    />
-  );
 }

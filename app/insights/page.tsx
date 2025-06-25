@@ -32,19 +32,42 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsPage() {
-  const allInsights = getAllInsights();
-  const featuredInsights = getFeaturedInsights();
-  const categories = getAllCategories();
+  try {
+    const allInsights = getAllInsights();
+    const featuredInsights = getFeaturedInsights();
+    const categories = getAllCategories();
 
-  // Get the top featured article for the hero
-  const heroArticle = featuredInsights[0] || allInsights[0];
+    // Get the top featured article for the hero
+    const heroArticle = featuredInsights[0] || allInsights[0];
 
-  return (
-    <InsightsHub 
-      allInsights={allInsights}
-      featuredInsights={featuredInsights}
-      categories={categories}
-      heroArticle={heroArticle}
-    />
-  );
+    if (!heroArticle) {
+      return (
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold mb-4">No articles found</h1>
+            <p className="text-muted-foreground">Please check back later.</p>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <InsightsHub 
+        allInsights={allInsights}
+        featuredInsights={featuredInsights}
+        categories={categories}
+        heroArticle={heroArticle}
+      />
+    );
+  } catch (error) {
+    console.error('Error loading insights page:', error);
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Error loading insights</h1>
+          <p className="text-muted-foreground">Please try again later.</p>
+        </div>
+      </div>
+    );
+  }
 }
