@@ -14,9 +14,9 @@ const portfolioProjects = [
     title: "SEOAuditer Platform",
     category: "SaaS Development",
     description: "A premium, full-stack SEO analysis dashboard for advanced site audits, competitor tracking, and real-time insights.",
-    image: "/images/portfolio/seo-auditer.svg",
+    image: "/images/portfolio/seo-auditer.jpg",
     technologies: ["Next.js", "Express", "PostgreSQL", "Redis", "Socket.IO"],
-    liveUrl: "https://seoauditer.vercel.app",
+    liveUrl: "https://seoauditer.netlify.app",
     featured: true,
     completedDate: "2024-02-15",
     client: "SEOAuditer Inc.",
@@ -31,7 +31,7 @@ const portfolioProjects = [
     title: "La Brioche Bakery",
     category: "Web Development",
     description: "A modern, high-performance web application for an artisan French bakery, combining cutting-edge web technology with timeless French elegance.",
-    image: "/images/portfolio/la-brioche.svg",
+    image: "/images/portfolio/la-brioche.jpg",
     technologies: ["Next.js", "React", "TypeScript", "Supabase", "Sanity.io"],
     liveUrl: "https://labrioche.vercel.app",
     featured: true,
@@ -48,9 +48,9 @@ const portfolioProjects = [
     title: "ReviewBoost SaaS Platform",
     category: "SaaS Development",
     description: "A gamified employee review collection system designed to motivate teams and boost customer feedback.",
-    image: "/images/portfolio/review-boost.svg",
+    image: "/images/portfolio/review-boost.jpg",
     technologies: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
-    liveUrl: "https://reviewboost.vercel.app",
+    liveUrl: "https://reviewboost-virid.vercel.app",
     featured: false,
     completedDate: "2024-03-10",
     client: "ReviewBoost Inc.",
@@ -65,7 +65,7 @@ const portfolioProjects = [
     title: "W.M. Stone Logistics",
     category: "Web Development",
     description: "Modern website for a century-old customs brokerage and international freight forwarding company, combining heritage with cutting-edge logistics technology.",
-    image: "/images/portfolio/wm-stone.svg",
+    image: "/images/portfolio/wm-stone.jpg",
     technologies: ["Webflow", "HTML", "CSS", "JavaScript", "CMS Integration"],
     liveUrl: "https://www.wmstone.com",
     featured: false,
@@ -82,7 +82,7 @@ const portfolioProjects = [
     title: "Rival Outranker",
     category: "SaaS Development",
     description: "A professional-grade SEO analysis platform with a modular architecture and comprehensive audit capabilities.",
-    image: "/images/portfolio/rival-outranker.svg",
+    image: "/images/portfolio/rival-outranker.jpg",
     technologies: ["TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
     liveUrl: "https://rival-outranker.netlify.app",
     featured: true,
@@ -99,7 +99,7 @@ const portfolioProjects = [
     title: "Jenna Eve Portfolio",
     category: "Web Development",
     description: "An animated portfolio that redefines the boundaries of web experience design, showcasing the pinnacle of web animation technology.",
-    image: "/images/portfolio/jenna-eve.svg",
+    image: "/images/portfolio/jenna-eve.jpg",
     technologies: ["Next.js", "Framer Motion", "Three.js", "Tone.js"],
     liveUrl: "https://jennaeve.vercel.app",
     featured: false,
@@ -161,7 +161,13 @@ export default function PortfolioPage() {
                 <RevealOnScroll key={project.id} delay={index * 0.2}>
                   <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-border hover:border-accent/50">
                     <div className="aspect-video bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
-                      <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
+                      <Image 
+                        src={project.image} 
+                        alt={project.title} 
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      />
                     </div>
                     
                     <div className="p-6">
@@ -237,7 +243,13 @@ export default function PortfolioPage() {
                 <RevealOnScroll key={project.id} delay={index * 0.1}>
                   <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover:border-accent/50">
                     <div className="aspect-video bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
-                        <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
+                      <Image 
+                        src={project.image} 
+                        alt={project.title} 
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                     </div>
                     
                     <div className="p-4">
