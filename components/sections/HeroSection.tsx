@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ParticleField from "@/components/interactive/ParticleField";
 import { ArrowDown } from "lucide-react";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const textVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -40,6 +41,7 @@ const scrollIndicatorVariants = {
 };
 
 export default function HeroSection() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const words = ["Power.", "Precision.", "Performance."];
   
   const renderAnimatedWord = (word: string, wordIndex: number) => {
@@ -90,9 +92,11 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Particle Field Background */}
-      <div className="absolute inset-0">
-        <ParticleField />
-      </div>
+      {!isMobile && (
+        <div className="absolute inset-0">
+          <ParticleField />
+        </div>
+      )}
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background pointer-events-none" style={{ zIndex: 2 }} />
@@ -101,7 +105,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center">
         {/* Main Headline */}
         <div className="mb-6">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-heading font-bold leading-tight">
             {words.map((word, index) => renderAnimatedWord(word, index))}
           </h1>
         </div>
@@ -116,7 +120,7 @@ export default function HeroSection() {
             delay: 2.2,
             ease: [0.645, 0.045, 0.355, 1],
           }}
-          className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mb-8 leading-relaxed"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mb-8 leading-relaxed"
         >
           Premium digital agency specializing in{" "}
           <span className="text-accent font-semibold">SaaS development</span>,{" "}

@@ -34,7 +34,7 @@ export default function Footer() {
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
@@ -84,8 +84,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm mb-4 md:mb-0">
+        <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-muted-foreground text-sm text-center sm:text-left mb-4 sm:mb-0">
             © {new Date().getFullYear()} Ravana Agency. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-muted-foreground">

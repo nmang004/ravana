@@ -14,7 +14,7 @@ const portfolioProjects = [
     title: "Nexus SaaS Platform",
     category: "SaaS Development",
     description: "A comprehensive project management SaaS platform with real-time collaboration, task automation, and advanced analytics.",
-    image: "/images/portfolio/nexus-saas.jpg",
+    image: "/images/portfolio/nexus-saas.svg",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "WebSockets"],
     liveUrl: "https://nexus-saas-demo.com",
     featured: true,
@@ -31,7 +31,7 @@ const portfolioProjects = [
     title: "Luxe Fashion E-commerce",
     category: "Web Development",
     description: "Premium fashion e-commerce platform with advanced filtering, AR try-on features, and seamless checkout experience.",
-    image: "/images/portfolio/luxe-ecommerce.jpg",
+    image: "/images/portfolio/luxe-ecommerce.svg",
     technologies: ["React", "Shopify Plus", "Node.js", "AR.js"],
     liveUrl: "https://luxe-fashion-demo.com",
     featured: true,
@@ -48,7 +48,7 @@ const portfolioProjects = [
     title: "Apex Digital Campaign",
     category: "Digital Marketing",
     description: "Complete digital marketing transformation for a B2B SaaS company, including brand redesign and multi-channel campaigns.",
-    image: "/images/portfolio/apex-marketing.jpg",
+    image: "/images/portfolio/apex-marketing.svg",
     technologies: ["Google Ads", "LinkedIn Ads", "HubSpot", "Analytics"],
     liveUrl: "https://apex-results-demo.com",
     featured: false,
@@ -65,7 +65,7 @@ const portfolioProjects = [
     title: "Vertex SEO Optimization",
     category: "SEO Services",
     description: "Complete SEO overhaul for a fintech startup, achieving first-page rankings for high-value keywords.",
-    image: "/images/portfolio/vertex-seo.jpg",
+    image: "/images/portfolio/vertex-seo.svg",
     technologies: ["Technical SEO", "Content Strategy", "Link Building"],
     liveUrl: "https://vertex-fintech.com",
     featured: false,
@@ -82,7 +82,7 @@ const portfolioProjects = [
     title: "Quantum Mobile App",
     category: "SaaS Development",
     description: "Cross-platform mobile application for healthcare professionals with real-time patient monitoring and AI diagnostics.",
-    image: "/images/portfolio/quantum-app.jpg",
+    image: "/images/portfolio/quantum-app.svg",
     technologies: ["React Native", "TypeScript", "Firebase", "AI/ML"],
     liveUrl: "https://quantum-health-demo.com",
     featured: true,
@@ -99,7 +99,7 @@ const portfolioProjects = [
     title: "Stellar Brand Transformation",
     category: "Web Development",
     description: "Complete brand and website redesign for a Fortune 500 company, focusing on modern design and user experience.",
-    image: "/images/portfolio/stellar-rebrand.jpg",
+    image: "/images/portfolio/stellar-rebrand.svg",
     technologies: ["Next.js", "Framer Motion", "Headless CMS", "Analytics"],
     liveUrl: "https://stellar-corp.com",
     featured: false,
@@ -156,17 +156,12 @@ export default function PortfolioPage() {
               </h2>
             </RevealOnScroll>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {featuredProjects.slice(0, 2).map((project, index) => (
                 <RevealOnScroll key={project.id} delay={index * 0.2}>
                   <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-border hover:border-accent/50">
                     <div className="aspect-video bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-background/20 to-background/80 group-hover:from-background/10 group-hover:to-background/60 transition-all duration-500" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-6xl font-bold text-accent/20 group-hover:text-accent/30 transition-colors duration-500">
-                          {project.title.split(' ')[0]}
-                        </div>
-                      </div>
+                      <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
                     </div>
                     
                     <div className="p-6">
@@ -237,24 +232,12 @@ export default function PortfolioPage() {
               </h2>
             </RevealOnScroll>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {portfolioProjects.map((project, index) => (
                 <RevealOnScroll key={project.id} delay={index * 0.1}>
                   <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover:border-accent/50">
                     <div className="aspect-video bg-gradient-to-br from-accent/10 to-accent/5 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-background/20 to-background/80 group-hover:from-background/10 group-hover:to-background/60 transition-all duration-300" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-4xl font-bold text-accent/20 group-hover:text-accent/30 transition-colors duration-300">
-                          {project.title.split(' ')[0]}
-                        </div>
-                      </div>
-                      {project.featured && (
-                        <div className="absolute top-3 right-3">
-                          <Badge className="bg-accent text-accent-foreground">
-                            Featured
-                          </Badge>
-                        </div>
-                      )}
+                        <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
                     </div>
                     
                     <div className="p-4">

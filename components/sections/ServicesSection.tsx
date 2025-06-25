@@ -35,10 +35,10 @@ export default function ServicesSection() {
   const serviceCards = services.map((service, index) => {
     const Icon = service.icon;
     return (
-      <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300 border-border hover:border-accent/50 group">
+      <Card key={index} className="p-8 transition-all duration-300 border-border group md:hover:shadow-lg md:hover:border-accent/50">
         <div className="flex items-start space-x-4">
-          <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors duration-300">
-            <Icon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" />
+          <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 md:group-hover:bg-accent/20 transition-colors duration-300">
+            <Icon className="w-6 h-6 text-accent md:group-hover:scale-110 transition-transform duration-300" />
           </div>
           <div className="flex-1">
             <h3 className="text-2xl font-heading font-semibold mb-3">
