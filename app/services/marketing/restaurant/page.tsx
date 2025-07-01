@@ -189,10 +189,12 @@ export default function RestaurantMarketingPage() {
           <div className="container mx-auto relative z-10">
             <RevealOnScroll>
               <div className="text-center mb-12">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-accent/10 rounded-2xl mb-8 group hover:bg-accent/20 transition-colors">
-                  <Utensils className="w-10 h-10 text-accent group-hover:scale-110 transition-transform" />
+                <div className="flex flex-col items-center mb-8">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-accent/10 rounded-2xl mb-4 group hover:bg-accent/20 transition-colors">
+                    <Utensils className="w-10 h-10 text-accent group-hover:scale-110 transition-transform" />
+                  </div>
+                  <Badge className="bg-accent/10 text-accent border-accent/20">Specialized Restaurant Marketing</Badge>
                 </div>
-                <Badge className="mb-6 bg-accent/10 text-accent border-accent/20">Specialized Restaurant Marketing</Badge>
                 <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">
                   Transform Your <span className="text-accent">Restaurant</span>
                 </h1>
