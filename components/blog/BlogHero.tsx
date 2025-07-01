@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BlogPost } from '@/lib/blog-data';
 import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
+import { PricingAnalysisHero, ComparisonHero } from './BlogHeroIcons';
 
 interface BlogHeroProps {
   featuredPost: BlogPost;
@@ -55,14 +56,22 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
             <Link href={`/blog/${featuredPost.slug}`}>
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-0">
                 {/* Image Section */}
-                <div className="relative h-64 lg:h-full overflow-hidden">
-                  <Image
-                    src={featuredPost.coverImage}
-                    alt={featuredPost.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/20" />
+                <div className="relative h-64 lg:h-full overflow-hidden bg-card">
+                  {featuredPost.slug === 'spothopper-pricing-hidden-costs-restaurant-marketing' ? (
+                    <PricingAnalysisHero />
+                  ) : featuredPost.slug === 'ravana-vs-spothopper-restaurant-marketing-comparison' ? (
+                    <ComparisonHero />
+                  ) : (
+                    <>
+                      <Image
+                        src={featuredPost.coverImage}
+                        alt={featuredPost.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/20" />
+                    </>
+                  )}
                 </div>
 
                 {/* Content Section */}

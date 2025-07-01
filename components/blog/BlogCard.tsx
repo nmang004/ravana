@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BlogPost } from '@/lib/blog-data';
 import { ArrowUpRight, Calendar, Clock, Sparkles } from 'lucide-react';
+import { PricingAnalysisHero, ComparisonHero } from './BlogHeroIcons';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -33,15 +34,23 @@ export default function BlogCard({ post, index }: BlogCardProps) {
       <Link href={`/blog/${post.slug}`} className="block h-full">
         <div className="h-full bg-card rounded-xl border border-border/50 overflow-hidden hover:border-accent/30 transition-all duration-300">
           {/* Image Section */}
-          <div className="relative h-48 overflow-hidden">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+          <div className="relative h-48 overflow-hidden bg-card">
+            {post.slug === 'spothopper-pricing-hidden-costs-restaurant-marketing' ? (
+              <PricingAnalysisHero />
+            ) : post.slug === 'ravana-vs-spothopper-restaurant-marketing-comparison' ? (
+              <ComparisonHero />
+            ) : (
+              <>
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+              </>
+            )}
             
             {/* Featured Badge */}
             {post.featured && (

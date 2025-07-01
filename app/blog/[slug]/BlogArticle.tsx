@@ -9,6 +9,7 @@ import StructuredData from '@/components/seo/StructuredData';
 import BlogContentRenderer from '@/components/blog/BlogContentRenderer';
 import ReadingProgress from '@/components/insights/ReadingProgress';
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from 'lucide-react';
+import { PricingAnalysisHero, ComparisonHero } from '@/components/blog/BlogHeroIcons';
 
 interface BlogArticleProps {
   post: BlogPost;
@@ -54,15 +55,29 @@ export default function BlogArticle({ post }: BlogArticleProps) {
         {/* Header */}
         <header className="relative">
           {/* Hero Image */}
-          <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+          <div className="relative h-[50vh] md:h-[60vh] overflow-hidden bg-card">
+            {post.slug === 'spothopper-pricing-hidden-costs-restaurant-marketing' ? (
+              <>
+                <PricingAnalysisHero />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+              </>
+            ) : post.slug === 'ravana-vs-spothopper-restaurant-marketing-comparison' ? (
+              <>
+                <ComparisonHero />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+              </>
+            ) : (
+              <>
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+              </>
+            )}
           </div>
 
           {/* Article Header */}
@@ -199,13 +214,19 @@ export default function BlogArticle({ post }: BlogArticleProps) {
                     >
                       <Link href={`/blog/${relatedPost.slug}`}>
                         <div className="bg-card rounded-xl border border-border/50 overflow-hidden hover:border-accent/30 transition-all duration-300">
-                          <div className="relative h-48 overflow-hidden">
-                            <Image
-                              src={relatedPost.coverImage}
-                              alt={relatedPost.title}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
+                          <div className="relative h-48 overflow-hidden bg-card">
+                            {relatedPost.slug === 'spothopper-pricing-hidden-costs-restaurant-marketing' ? (
+                              <PricingAnalysisHero />
+                            ) : relatedPost.slug === 'ravana-vs-spothopper-restaurant-marketing-comparison' ? (
+                              <ComparisonHero />
+                            ) : (
+                              <Image
+                                src={relatedPost.coverImage}
+                                alt={relatedPost.title}
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                              />
+                            )}
                           </div>
                           <div className="p-6">
                             <span className="text-xs text-accent font-medium">
