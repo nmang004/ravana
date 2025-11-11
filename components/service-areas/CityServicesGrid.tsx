@@ -17,7 +17,7 @@ interface CityServicesGridProps {
 
 // Helper function to get icon component by name
 function getIconComponent(iconName: string): LucideIcon {
-  const IconComponent = (Icons as Record<string, LucideIcon>)[iconName];
+  const IconComponent = (Icons as any)[iconName] as LucideIcon;
   return IconComponent || Icons.HelpCircle;
 }
 

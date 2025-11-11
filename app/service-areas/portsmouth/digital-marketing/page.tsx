@@ -28,41 +28,45 @@ if (!city || !service) {
   notFound();
 }
 
+// Type assertions to help TypeScript understand these are defined after notFound check
+const cityData = city!;
+const serviceData = service!;
+
 export const metadata: Metadata = {
-  title: generateCityServiceMetaTitle(city.name, service.name),
-  description: generateCityServiceMetaDescription(city.name, service.name),
+  title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+  description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
   keywords: [
-    `${service.name} ${city.name}`,
-    `${city.name} ${service.name}`,
-    `social media marketing ${city.name}`,
-    `PPC advertising ${city.name} VA`,
-    `${city.name} marketing agency`,
-    `email marketing ${city.name}`,
-    `digital ads ${city.name}`,
-    `marketing automation ${city.name}`,
+    `${serviceData.name} ${cityData.name}`,
+    `${cityData.name} ${serviceData.name}`,
+    `social media marketing ${cityData.name}`,
+    `PPC advertising ${cityData.name} VA`,
+    `${cityData.name} marketing agency`,
+    `email marketing ${cityData.name}`,
+    `digital ads ${cityData.name}`,
+    `marketing automation ${cityData.name}`,
   ],
   alternates: {
     canonical: `/service-areas/${citySlug}/${serviceSlug}`,
   },
   openGraph: {
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    description: generateCityServiceMetaDescription(city.name, service.name),
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
     type: 'website',
     url: `https://www.ravanasolutions.com/service-areas/${citySlug}/${serviceSlug}`,
     images: [
       {
-        url: city.ogImage,
+        url: cityData.ogImage,
         width: 1200,
         height: 630,
-        alt: `${service.name} in ${city.name} - Ravana Digital Agency`,
+        alt: `${serviceData.name} in ${cityData.name} - Ravana Digital Agency`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    description: generateCityServiceMetaDescription(city.name, service.name),
-    images: [city.ogImage],
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
+    images: [cityData.ogImage],
   },
 };
 
@@ -75,11 +79,11 @@ export default function PortsmouthDigitalMarketingPage() {
       <StructuredData
         type="service"
         data={{
-          name: `${service.name} in ${city.name}`,
-          description: `Professional ${service.name.toLowerCase()} services for ${city.name} businesses. Data-driven campaigns that generate measurable growth and ROI.`,
+          name: `${serviceData.name} in ${cityData.name}`,
+          description: `Professional ${serviceData.name.toLowerCase()} services for ${cityData.name} businesses. Data-driven campaigns that generate measurable growth and ROI.`,
           areaServed: {
             '@type': 'City',
-            name: city.name,
+            name: cityData.name,
             addressRegion: 'VA',
             addressCountry: 'US',
           },
@@ -91,8 +95,8 @@ export default function PortsmouthDigitalMarketingPage() {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Service Areas', href: '/service-areas' },
-          { label: city.name, href: `/service-areas/${citySlug}` },
-          { label: service.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
+          { label: cityData.name, href: `/service-areas/${citySlug}` },
+          { label: serviceData.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
         ]}
       />
 
@@ -108,14 +112,14 @@ export default function PortsmouthDigitalMarketingPage() {
                 className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm border-accent/40 bg-accent/10 text-accent"
               >
                 <Target className="h-4 w-4" />
-                {service.name} in {city.name}
+                {serviceData.name} in {cityData.name}
               </Badge>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.1}>
               <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Data-Driven {service.name} for{' '}
-                <span className="text-accent">{city.name} Businesses</span>
+                Data-Driven {serviceData.name} for{' '}
+                <span className="text-accent">{cityData.name} Businesses</span>
               </h1>
             </RevealOnScroll>
 
@@ -158,7 +162,7 @@ export default function PortsmouthDigitalMarketingPage() {
           <RevealOnScroll>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Why {city.name} Businesses Trust Our Marketing Expertise
+                Why {cityData.name} Businesses Trust Our Marketing Expertise
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 We understand Portsmouth&apos;s diverse business landscape—from defense contractors to waterfront hospitality. Our marketing strategies are tailored to connect with Portsmouth customers and drive measurable business growth.
@@ -212,7 +216,7 @@ export default function PortsmouthDigitalMarketingPage() {
             <RevealOnScroll>
               <div>
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                  Comprehensive Marketing for {city.name} Businesses
+                  Comprehensive Marketing for {cityData.name} Businesses
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   Our full-service digital marketing approach combines multiple channels to create campaigns that attract, engage, and convert Portsmouth customers into loyal advocates for your brand.
@@ -247,10 +251,10 @@ export default function PortsmouthDigitalMarketingPage() {
             <RevealOnScroll delay={0.2}>
               <Card className="p-8 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/30">
                 <h3 className="text-2xl font-heading font-bold mb-6">
-                  Perfect for {city.name} Industries:
+                  Perfect for {cityData.name} Industries:
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {city.stats.keyIndustries.map((industry) => (
+                  {cityData.stats.keyIndustries.map((industry) => (
                     <div
                       key={industry}
                       className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -272,10 +276,10 @@ export default function PortsmouthDigitalMarketingPage() {
           <RevealOnScroll>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Our {service.name} Process
+                Our {serviceData.name} Process
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                A systematic, data-driven approach that delivers consistent results for {city.name}{' '}
+                A systematic, data-driven approach that delivers consistent results for {cityData.name}{' '}
                 businesses.
               </p>
             </div>
@@ -331,7 +335,7 @@ export default function PortsmouthDigitalMarketingPage() {
                 We Also Serve Other Hampton Roads Cities
               </h2>
               <p className="text-muted-foreground">
-                Explore our {service.name.toLowerCase()} services in nearby cities.
+                Explore our {serviceData.name.toLowerCase()} services in nearby cities.
               </p>
             </div>
           </RevealOnScroll>
@@ -341,7 +345,7 @@ export default function PortsmouthDigitalMarketingPage() {
               <RevealOnScroll key={otherCity.slug}>
                 <Button asChild variant="outline" className="border-accent/30 hover:bg-accent/10">
                   <Link href={`/service-areas/${otherCity.slug}/${serviceSlug}`}>
-                    {service.name} in {otherCity.name}
+                    {serviceData.name} in {otherCity.name}
                   </Link>
                 </Button>
               </RevealOnScroll>
@@ -352,8 +356,8 @@ export default function PortsmouthDigitalMarketingPage() {
 
       {/* CTA Section */}
       <LocalCTASection
-        cityName={city.name}
-        heading={`Ready to Grow Your ${city.name} Business?`}
+        cityName={cityData.name}
+        heading={`Ready to Grow Your ${cityData.name} Business?`}
         description={`Let's create a digital marketing strategy that generates qualified leads, increases sales, and delivers measurable ROI. Get your free marketing audit today.`}
       />
     </PageTransition>

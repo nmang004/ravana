@@ -28,41 +28,45 @@ if (!city || !service) {
   notFound();
 }
 
+// Type assertions to help TypeScript understand these are defined after notFound check
+const cityData = city!;
+const serviceData = service!;
+
 export const metadata: Metadata = {
-  title: generateCityServiceMetaTitle(city.name, service.name),
-  description: generateCityServiceMetaDescription(city.name, service.name),
+  title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+  description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
   keywords: [
-    `${service.name} ${city.name}`,
-    `${city.name} ${service.name}`,
-    `${service.name} ${city.name} VA`,
-    `web design ${city.name}`,
-    `website development ${city.name}`,
-    `${city.name} web developer`,
-    `custom websites ${city.name}`,
-    `responsive web design ${city.name}`,
+    `${serviceData.name} ${cityData.name}`,
+    `${cityData.name} ${serviceData.name}`,
+    `${serviceData.name} ${cityData.name} VA`,
+    `web design ${cityData.name}`,
+    `website development ${cityData.name}`,
+    `${cityData.name} web developer`,
+    `custom websites ${cityData.name}`,
+    `responsive web design ${cityData.name}`,
   ],
   alternates: {
     canonical: `/service-areas/${citySlug}/${serviceSlug}`,
   },
   openGraph: {
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    description: generateCityServiceMetaDescription(city.name, service.name),
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
     type: 'website',
     url: `https://www.ravanasolutions.com/service-areas/${citySlug}/${serviceSlug}`,
     images: [
       {
-        url: city.ogImage,
+        url: cityData.ogImage,
         width: 1200,
         height: 630,
-        alt: `${service.name} in ${city.name} - Ravana Digital Agency`,
+        alt: `${serviceData.name} in ${cityData.name} - Ravana Digital Agency`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    description: generateCityServiceMetaDescription(city.name, service.name),
-    images: [city.ogImage],
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
+    images: [cityData.ogImage],
   },
 };
 
@@ -75,11 +79,11 @@ export default function NorfolkWebDevelopmentPage() {
       <StructuredData
         type="service"
         data={{
-          name: `${service.name} in ${city.name}`,
-          description: `Professional ${service.name.toLowerCase()} services for ${city.name} businesses. Custom websites that drive results and help you dominate the local market.`,
+          name: `${serviceData.name} in ${cityData.name}`,
+          description: `Professional ${serviceData.name.toLowerCase()} services for ${cityData.name} businesses. Custom websites that drive results and help you dominate the local market.`,
           areaServed: {
             '@type': 'City',
-            name: city.name,
+            name: cityData.name,
             addressRegion: 'VA',
             addressCountry: 'US',
           },
@@ -91,8 +95,8 @@ export default function NorfolkWebDevelopmentPage() {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Service Areas', href: '/service-areas' },
-          { label: city.name, href: `/service-areas/${citySlug}` },
-          { label: service.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
+          { label: cityData.name, href: `/service-areas/${citySlug}` },
+          { label: serviceData.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
         ]}
       />
 
@@ -108,14 +112,14 @@ export default function NorfolkWebDevelopmentPage() {
                 className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm border-accent/40 bg-accent/10 text-accent"
               >
                 <Code2 className="h-4 w-4" />
-                {service.name} in {city.name}
+                {serviceData.name} in {cityData.name}
               </Badge>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.1}>
               <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Premium {service.name} for{' '}
-                <span className="text-accent">{city.name} Businesses</span>
+                Premium {serviceData.name} for{' '}
+                <span className="text-accent">{cityData.name} Businesses</span>
               </h1>
             </RevealOnScroll>
 
@@ -160,7 +164,7 @@ export default function NorfolkWebDevelopmentPage() {
           <RevealOnScroll>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Why {city.name} Businesses Choose Ravana for {service.name}
+                Why {cityData.name} Businesses Choose Ravana for {serviceData.name}
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 We understand Norfolk&apos;s unique business landscape—from the defense and
@@ -216,10 +220,10 @@ export default function NorfolkWebDevelopmentPage() {
             <RevealOnScroll>
               <div>
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                  What&apos;s Included in Your {city.name} Website
+                  What&apos;s Included in Your {cityData.name} Website
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Every website we build for {city.name} businesses includes these essential
+                  Every website we build for {cityData.name} businesses includes these essential
                   features to ensure you dominate your market from day one.
                 </p>
 
@@ -252,10 +256,10 @@ export default function NorfolkWebDevelopmentPage() {
             <RevealOnScroll delay={0.2}>
               <Card className="p-8 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/30">
                 <h3 className="text-2xl font-heading font-bold mb-6">
-                  Perfect for {city.name} Industries:
+                  Perfect for {cityData.name} Industries:
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {city.stats.keyIndustries.map((industry) => (
+                  {cityData.stats.keyIndustries.map((industry) => (
                     <div
                       key={industry}
                       className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -277,10 +281,10 @@ export default function NorfolkWebDevelopmentPage() {
           <RevealOnScroll>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Our {service.name} Process
+                Our {serviceData.name} Process
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                A proven, collaborative approach that delivers exceptional results for {city.name}{' '}
+                A proven, collaborative approach that delivers exceptional results for {cityData.name}{' '}
                 businesses.
               </p>
             </div>
@@ -336,7 +340,7 @@ export default function NorfolkWebDevelopmentPage() {
                 We Also Serve Other Hampton Roads Cities
               </h2>
               <p className="text-muted-foreground">
-                Explore our {service.name.toLowerCase()} services in nearby cities.
+                Explore our {serviceData.name.toLowerCase()} services in nearby cities.
               </p>
             </div>
           </RevealOnScroll>
@@ -346,7 +350,7 @@ export default function NorfolkWebDevelopmentPage() {
               <RevealOnScroll key={otherCity.slug}>
                 <Button asChild variant="outline" className="border-accent/30 hover:bg-accent/10">
                   <Link href={`/service-areas/${otherCity.slug}/${serviceSlug}`}>
-                    {service.name} in {otherCity.name}
+                    {serviceData.name} in {otherCity.name}
                   </Link>
                 </Button>
               </RevealOnScroll>
@@ -357,9 +361,9 @@ export default function NorfolkWebDevelopmentPage() {
 
       {/* CTA Section */}
       <LocalCTASection
-        cityName={city.name}
-        heading={`Ready to Build Your ${city.name} Website?`}
-        description={`Let's create a website that makes your ${city.name} business stand out and drives real results. Get started with a free consultation today.`}
+        cityName={cityData.name}
+        heading={`Ready to Build Your ${cityData.name} Website?`}
+        description={`Let's create a website that makes your ${cityData.name} business stand out and drives real results. Get started with a free consultation today.`}
       />
     </PageTransition>
   );

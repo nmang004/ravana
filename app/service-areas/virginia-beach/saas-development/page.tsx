@@ -28,31 +28,35 @@ if (!city || !service) {
   notFound();
 }
 
+// Type assertions to help TypeScript understand these are defined after notFound check
+const cityData = city!;
+const serviceData = service!;
+
 export const metadata: Metadata = {
-  title: generateCityServiceMetaTitle(city.name, service.name),
-  description: generateCityServiceMetaDescription(city.name, service.name),
+  title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+  description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
   keywords: [
-    `${service.name} ${city.name}`,
-    `SaaS platform ${city.name}`,
-    `software development ${city.name}`,
-    `custom SaaS ${city.name} VA`,
-    `${city.name} software company`,
-    `cloud platform development ${city.name}`,
+    `${serviceData.name} ${cityData.name}`,
+    `SaaS platform ${cityData.name}`,
+    `software development ${cityData.name}`,
+    `custom SaaS ${cityData.name} VA`,
+    `${cityData.name} software company`,
+    `cloud platform development ${cityData.name}`,
   ],
   alternates: {
     canonical: `/service-areas/${citySlug}/${serviceSlug}`,
   },
   openGraph: {
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    description: generateCityServiceMetaDescription(city.name, service.name),
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
     type: 'website',
     url: `https://www.ravanasolutions.com/service-areas/${citySlug}/${serviceSlug}`,
-    images: [{ url: city.ogImage, width: 1200, height: 630 }],
+    images: [{ url: cityData.ogImage, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    images: [city.ogImage],
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    images: [cityData.ogImage],
   },
 };
 
@@ -64,9 +68,9 @@ export default function VirginiaBeachSaaSDevelopmentPage() {
       <StructuredData
         type="service"
         data={{
-          name: `${service.name} in ${city.name}`,
-          description: `Professional ${service.name.toLowerCase()} services for ${city.name} businesses. Build scalable software platforms that drive revenue.`,
-          areaServed: { '@type': 'City', name: city.name, addressRegion: 'VA', addressCountry: 'US' },
+          name: `${serviceData.name} in ${cityData.name}`,
+          description: `Professional ${serviceData.name.toLowerCase()} services for ${cityData.name} businesses. Build scalable software platforms that drive revenue.`,
+          areaServed: { '@type': 'City', name: cityData.name, addressRegion: 'VA', addressCountry: 'US' },
         }}
       />
 
@@ -74,8 +78,8 @@ export default function VirginiaBeachSaaSDevelopmentPage() {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Service Areas', href: '/service-areas' },
-          { label: city.name, href: `/service-areas/${citySlug}` },
-          { label: service.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
+          { label: cityData.name, href: `/service-areas/${citySlug}` },
+          { label: serviceData.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
         ]}
       />
 
@@ -86,12 +90,12 @@ export default function VirginiaBeachSaaSDevelopmentPage() {
             <RevealOnScroll>
               <Badge variant="outline" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm border-accent/40 bg-accent/10 text-accent">
                 <Layers className="h-4 w-4" />
-                {service.name} in {city.name}
+                {serviceData.name} in {cityData.name}
               </Badge>
             </RevealOnScroll>
             <RevealOnScroll delay={0.1}>
               <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Enterprise-Grade <span className="text-accent">SaaS Development</span> for {city.name}
+                Enterprise-Grade <span className="text-accent">SaaS Development</span> for {cityData.name}
               </h1>
             </RevealOnScroll>
             <RevealOnScroll delay={0.2}>
@@ -118,7 +122,7 @@ export default function VirginiaBeachSaaSDevelopmentPage() {
           <RevealOnScroll>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Why {city.name} Innovators Choose Our SaaS Expertise
+                Why {cityData.name} Innovators Choose Our SaaS Expertise
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Virginia Beach&apos;s entrepreneurial spirit demands cutting-edge software solutions. We deliver enterprise-grade platforms built for growth and scalability.
@@ -148,7 +152,7 @@ export default function VirginiaBeachSaaSDevelopmentPage() {
         <div className="container mx-auto">
           <RevealOnScroll>
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-12 text-center">
-              What&apos;s Included in Your {city.name} SaaS Platform
+              What&apos;s Included in Your {cityData.name} SaaS Platform
             </h2>
           </RevealOnScroll>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -188,7 +192,7 @@ export default function VirginiaBeachSaaSDevelopmentPage() {
             {otherCities.map((otherCity) => (
               <RevealOnScroll key={otherCity.slug}>
                 <Button asChild variant="outline" className="border-accent/30 hover:bg-accent/10">
-                  <Link href={`/service-areas/${otherCity.slug}/${serviceSlug}`}>{service.name} in {otherCity.name}</Link>
+                  <Link href={`/service-areas/${otherCity.slug}/${serviceSlug}`}>{serviceData.name} in {otherCity.name}</Link>
                 </Button>
               </RevealOnScroll>
             ))}
@@ -197,8 +201,8 @@ export default function VirginiaBeachSaaSDevelopmentPage() {
       </section>
 
       <LocalCTASection
-        cityName={city.name}
-        heading={`Ready to Build Your ${city.name} SaaS Platform?`}
+        cityName={cityData.name}
+        heading={`Ready to Build Your ${cityData.name} SaaS Platform?`}
         description={`Let's turn your software idea into reality with a platform that scales, generates revenue, and dominates your market.`}
       />
     </PageTransition>

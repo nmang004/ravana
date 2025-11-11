@@ -28,41 +28,45 @@ if (!city || !service) {
   notFound();
 }
 
+// Type assertions to help TypeScript understand these are defined after notFound check
+const cityData = city!;
+const serviceData = service!;
+
 export const metadata: Metadata = {
-  title: generateCityServiceMetaTitle(city.name, service.name),
-  description: generateCityServiceMetaDescription(city.name, service.name),
+  title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+  description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
   keywords: [
-    `${service.name} ${city.name}`,
-    `${city.name} ${service.name}`,
-    `local SEO ${city.name}`,
-    `SEO services ${city.name} VA`,
-    `${city.name} search engine optimization`,
-    `Google ranking ${city.name}`,
-    `SEO company ${city.name}`,
-    `${city.name} SEO agency`,
+    `${serviceData.name} ${cityData.name}`,
+    `${cityData.name} ${serviceData.name}`,
+    `local SEO ${cityData.name}`,
+    `SEO services ${cityData.name} VA`,
+    `${cityData.name} search engine optimization`,
+    `Google ranking ${cityData.name}`,
+    `SEO company ${cityData.name}`,
+    `${cityData.name} SEO agency`,
   ],
   alternates: {
     canonical: `/service-areas/${citySlug}/${serviceSlug}`,
   },
   openGraph: {
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    description: generateCityServiceMetaDescription(city.name, service.name),
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
     type: 'website',
     url: `https://www.ravanasolutions.com/service-areas/${citySlug}/${serviceSlug}`,
     images: [
       {
-        url: city.ogImage,
+        url: cityData.ogImage,
         width: 1200,
         height: 630,
-        alt: `${service.name} in ${city.name} - Ravana Digital Agency`,
+        alt: `${serviceData.name} in ${cityData.name} - Ravana Digital Agency`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: generateCityServiceMetaTitle(city.name, service.name),
-    description: generateCityServiceMetaDescription(city.name, service.name),
-    images: [city.ogImage],
+    title: generateCityServiceMetaTitle(cityData.name, serviceData.name),
+    description: generateCityServiceMetaDescription(cityData.name, serviceData.name),
+    images: [cityData.ogImage],
   },
 };
 
@@ -75,11 +79,11 @@ export default function VirginiaBeachSEOPage() {
       <StructuredData
         type="service"
         data={{
-          name: `${service.name} in ${city.name}`,
-          description: `Professional ${service.name} services for ${city.name} businesses. Dominate local search results and attract more customers.`,
+          name: `${serviceData.name} in ${cityData.name}`,
+          description: `Professional ${serviceData.name} services for ${cityData.name} businesses. Dominate local search results and attract more customers.`,
           areaServed: {
             '@type': 'City',
-            name: city.name,
+            name: cityData.name,
             addressRegion: 'VA',
             addressCountry: 'US',
           },
@@ -91,8 +95,8 @@ export default function VirginiaBeachSEOPage() {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Service Areas', href: '/service-areas' },
-          { label: city.name, href: `/service-areas/${citySlug}` },
-          { label: service.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
+          { label: cityData.name, href: `/service-areas/${citySlug}` },
+          { label: serviceData.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
         ]}
       />
 
@@ -108,13 +112,13 @@ export default function VirginiaBeachSEOPage() {
                 className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm border-accent/40 bg-accent/10 text-accent"
               >
                 <TrendingUp className="h-4 w-4" />
-                {service.name} in {city.name}
+                {serviceData.name} in {cityData.name}
               </Badge>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.1}>
               <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 leading-tight">
-                Dominate {city.name} Search Results with Expert{' '}
+                Dominate {cityData.name} Search Results with Expert{' '}
                 <span className="text-accent">SEO Services</span>
               </h1>
             </RevealOnScroll>
@@ -158,7 +162,7 @@ export default function VirginiaBeachSEOPage() {
           <RevealOnScroll>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Why {city.name} Businesses Trust Our SEO Expertise
+                Why {cityData.name} Businesses Trust Our SEO Expertise
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Virginia Beach&apos;s competitive tourism and business landscape demands exceptional SEO. We deliver rankings that capture both visitor searches and local customer intent.
@@ -212,7 +216,7 @@ export default function VirginiaBeachSEOPage() {
             <RevealOnScroll>
               <div>
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                  Comprehensive SEO for {city.name} Businesses
+                  Comprehensive SEO for {cityData.name} Businesses
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   Our full-service SEO approach ensures every aspect of your online presence works
@@ -248,10 +252,10 @@ export default function VirginiaBeachSEOPage() {
             <RevealOnScroll delay={0.2}>
               <Card className="p-8 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/30">
                 <h3 className="text-2xl font-heading font-bold mb-6">
-                  Perfect for {city.name} Industries:
+                  Perfect for {cityData.name} Industries:
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {city.stats.keyIndustries.map((industry) => (
+                  {cityData.stats.keyIndustries.map((industry) => (
                     <div
                       key={industry}
                       className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -273,10 +277,10 @@ export default function VirginiaBeachSEOPage() {
           <RevealOnScroll>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Our {service.name} Process
+                Our {serviceData.name} Process
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                A systematic approach that delivers measurable results for {city.name} businesses.
+                A systematic approach that delivers measurable results for {cityData.name} businesses.
               </p>
             </div>
           </RevealOnScroll>
@@ -331,7 +335,7 @@ export default function VirginiaBeachSEOPage() {
                 We Also Serve Other Hampton Roads Cities
               </h2>
               <p className="text-muted-foreground">
-                Explore our {service.name} services in nearby cities.
+                Explore our {serviceData.name} services in nearby cities.
               </p>
             </div>
           </RevealOnScroll>
@@ -341,7 +345,7 @@ export default function VirginiaBeachSEOPage() {
               <RevealOnScroll key={otherCity.slug}>
                 <Button asChild variant="outline" className="border-accent/30 hover:bg-accent/10">
                   <Link href={`/service-areas/${otherCity.slug}/${serviceSlug}`}>
-                    {service.name} in {otherCity.name}
+                    {serviceData.name} in {otherCity.name}
                   </Link>
                 </Button>
               </RevealOnScroll>
@@ -352,9 +356,9 @@ export default function VirginiaBeachSEOPage() {
 
       {/* CTA Section */}
       <LocalCTASection
-        cityName={city.name}
-        heading={`Ready to Dominate ${city.name} Search Results?`}
-        description={`Let's create an SEO strategy that puts your ${city.name} business at the top of search results and drives consistent, qualified traffic. Get your free SEO audit today.`}
+        cityName={cityData.name}
+        heading={`Ready to Dominate ${cityData.name} Search Results?`}
+        description={`Let's create an SEO strategy that puts your ${cityData.name} business at the top of search results and drives consistent, qualified traffic. Get your free SEO audit today.`}
       />
     </PageTransition>
   );

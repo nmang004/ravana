@@ -18,32 +18,35 @@ if (!city) {
   notFound();
 }
 
+// Type assertion to help TypeScript understand city is defined after notFound check
+const cityData = city!;
+
 export const metadata: Metadata = {
-  title: generateCityMetaTitle(city.name),
-  description: generateCityMetaDescription(city.name),
-  keywords: city.metaKeywords,
+  title: generateCityMetaTitle(cityData.name),
+  description: generateCityMetaDescription(cityData.name),
+  keywords: cityData.metaKeywords,
   alternates: {
     canonical: `/service-areas/${citySlug}`,
   },
   openGraph: {
-    title: generateCityMetaTitle(city.name),
-    description: generateCityMetaDescription(city.name),
+    title: generateCityMetaTitle(cityData.name),
+    description: generateCityMetaDescription(cityData.name),
     type: 'website',
     url: `https://www.ravanasolutions.com/service-areas/${citySlug}`,
     images: [
       {
-        url: city.ogImage,
+        url: cityData.ogImage,
         width: 1200,
         height: 630,
-        alt: `${city.name} Digital Marketing & Web Development - Ravana Digital Agency`,
+        alt: `${cityData.name} Digital Marketing & Web Development - Ravana Digital Agency`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: generateCityMetaTitle(city.name),
-    description: generateCityMetaDescription(city.name),
-    images: [city.ogImage],
+    title: generateCityMetaTitle(cityData.name),
+    description: generateCityMetaDescription(cityData.name),
+    images: [cityData.ogImage],
   },
 };
 
@@ -54,19 +57,19 @@ export default function PortsmouthPage() {
       <StructuredData
         type="localBusiness"
         data={{
-          name: `Ravana Digital Agency - ${city.name}`,
-          city: city.name,
+          name: `Ravana Digital Agency - ${cityData.name}`,
+          city: cityData.name,
           state: 'VA',
           url: `https://www.ravanasolutions.com/service-areas/${citySlug}`,
           id: `https://www.ravanasolutions.com/service-areas/${citySlug}`,
           geo: {
             '@type': 'GeoCoordinates',
-            latitude: city.coordinates.lat,
-            longitude: city.coordinates.lng,
+            latitude: cityData.coordinates.lat,
+            longitude: cityData.coordinates.lng,
           },
           areaServed: {
             '@type': 'City',
-            name: city.name,
+            name: cityData.name,
             addressRegion: 'VA',
             addressCountry: 'US',
           },
@@ -78,27 +81,27 @@ export default function PortsmouthPage() {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Service Areas', href: '/service-areas' },
-          { label: city.name, href: `/service-areas/${citySlug}` },
+          { label: cityData.name, href: `/service-areas/${citySlug}` },
         ]}
       />
 
       {/* Hero Section */}
-      <CityHeroSection city={city} />
+      <CityHeroSection city={cityData} />
 
       {/* Why This City Section */}
-      <WhyCitySection city={city} />
+      <WhyCitySection city={cityData} />
 
       {/* Services Grid */}
-      <CityServicesGrid city={city} />
+      <CityServicesGrid city={cityData} />
 
       {/* Things to Do (Landmarks) */}
-      <ThingsToDoSection city={city} />
+      <ThingsToDoSection city={cityData} />
 
       {/* Testimonials */}
       <TestimonialsSection />
 
       {/* Local CTA */}
-      <LocalCTASection cityName={city.name} />
+      <LocalCTASection cityName={cityData.name} />
     </PageTransition>
   );
 }
