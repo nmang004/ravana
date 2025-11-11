@@ -7,113 +7,9 @@ import Link from "next/link";
 import Image from "next/image";
 import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
+import { getAllPortfolioProjects } from "@/lib/data";
 
-const portfolioProjects = [
-  {
-    id: "la-brioche",
-    title: "La Brioche Bakery",
-    category: "Web Development",
-    description: "A modern, high-performance web application for an artisan French bakery, combining cutting-edge web technology with timeless French elegance.",
-    image: "/images/portfolio/la-brioche.jpg",
-    technologies: ["Next.js", "React", "TypeScript", "Supabase", "Sanity.io"],
-    liveUrl: "https://labrioche.vercel.app",
-    featured: true,
-    completedDate: "2024-01-20",
-    client: "La Brioche Norfolk",
-    results: {
-      metric1: "200% increase in online orders",
-      metric2: "4.9/5 customer satisfaction rating",
-      metric3: "60% repeat customer rate"
-    }
-  },
-  {
-    id: "review-boost",
-    title: "ReviewBoost SaaS Platform",
-    category: "SaaS Development",
-    description: "A gamified employee review collection system designed to motivate teams and boost customer feedback.",
-    image: "/images/portfolio/review-boost.jpg",
-    technologies: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
-    liveUrl: "https://reviewboost-virid.vercel.app",
-    featured: false,
-    completedDate: "2024-03-10",
-    client: "ReviewBoost Inc.",
-    results: {
-      metric1: "95% increase in review collection rate",
-      metric2: "3x employee engagement boost",
-      metric3: "50+ businesses onboarded"
-    }
-  },
-  {
-    id: "wm-stone",
-    title: "W.M. Stone Logistics",
-    category: "Web Development",
-    description: "Modern website for a century-old customs brokerage and international freight forwarding company, combining heritage with cutting-edge logistics technology.",
-    image: "/images/portfolio/wm-stone.jpg",
-    technologies: ["Webflow", "HTML", "CSS", "JavaScript", "CMS Integration"],
-    liveUrl: "https://www.wmstone.com",
-    featured: false,
-    completedDate: "2023-11-05",
-    client: "W.M. Stone & Company",
-    results: {
-      metric1: "150% increase in lead generation",
-      metric2: "70% reduction in customer service calls",
-      metric3: "45% increase in online quote requests"
-    }
-  },
-  {
-    id: "jenna-eve",
-    title: "Jenna Eve Portfolio",
-    category: "Web Development",
-    description: "An animated portfolio that redefines the boundaries of web experience design, showcasing the pinnacle of web animation technology.",
-    image: "/images/portfolio/jenna-eve.jpg",
-    technologies: ["Next.js", "Framer Motion", "Three.js", "Tone.js"],
-    liveUrl: "https://jennaeve.vercel.app",
-    featured: false,
-    completedDate: "2023-09-20",
-    client: "Jenna Eve",
-    results: {
-      metric1: "60fps performance guarantee",
-      metric2: "95% user engagement rate",
-      metric3: "Award-winning design"
-    }
-  },
-  {
-    id: "red-rock-vet",
-    title: "Red Rock Veterinary Health",
-    category: "Web Development + SEO",
-    description: "Modern veterinary practice website featuring Fear Free® certified care, comprehensive service pages, and exceptional performance optimization.",
-    image: "/images/portfolio/SCR-20251111-kfzn.png",
-    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Sanity CMS", "Framer Motion"],
-    liveUrl: "https://www.redrockvet.com",
-    featured: true,
-    completedDate: "2024-08-20",
-    client: "Red Rock Veterinary Health",
-    results: {
-      metric1: "18% increase in organic keywords",
-      metric2: "94/100 PageSpeed Performance",
-      metric3: "5.0★ Google rating"
-    }
-  },
-  {
-    id: "blackbird-detailing",
-    title: "Blackbird Detailing",
-    category: "Web Development + SEO",
-    description: "Premium automotive detailing website with instant estimate engine, motorsport-grade branding, and local SEO optimization for Virginia Beach market.",
-    image: "/images/portfolio/blackbird.png",
-    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "Shadcn/ui"],
-    liveUrl: "https://www.blackbirddetailingus.com",
-    featured: false,
-    completedDate: "2024-10-15",
-    client: "Blackbird Detailing",
-    results: {
-      metric1: "32% increase in organic keywords",
-      metric2: "Multi-step instant estimate form",
-      metric3: "Virginia Beach market leader"
-    }
-  }
-];
-
-const categories = ["All", "SaaS Development", "Web Development", "Digital Marketing", "SEO Services"];
+const categories = ["All", "SaaS Development", "Web Development", "Digital Marketing", "SEO Services", "Web Development + SEO"];
 
 export const metadata: Metadata = {
   title: "Portfolio - Our Best Work & Case Studies",
@@ -127,6 +23,7 @@ export const metadata: Metadata = {
 };
 
 export default function PortfolioPage() {
+  const portfolioProjects = getAllPortfolioProjects();
   const featuredProjects = portfolioProjects.filter(project => project.featured);
   
   return (

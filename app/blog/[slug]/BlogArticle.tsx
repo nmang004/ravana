@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { BlogPost, getRelatedPosts } from '@/lib/blog-data';
 import PageTransition from '@/components/layout/PageTransition';
 import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumb from '@/components/seo/Breadcrumb';
 import BlogContentRenderer from '@/components/blog/BlogContentRenderer';
 import ReadingProgress from '@/components/insights/ReadingProgress';
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from 'lucide-react';
@@ -91,11 +92,22 @@ export default function BlogArticle({ post }: BlogArticleProps) {
               {/* Back Link */}
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-8"
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-4"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to Blog
               </Link>
+
+              {/* Breadcrumb Navigation */}
+              <Breadcrumb
+                items={[
+                  { label: "Home", href: "/" },
+                  { label: "Blog", href: "/blog" },
+                  { label: post.category, href: `/blog?category=${encodeURIComponent(post.category)}` },
+                  { label: post.title }
+                ]}
+                className="mb-8"
+              />
 
               {/* Category */}
               <motion.div

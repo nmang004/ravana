@@ -1,5 +1,5 @@
 interface StructuredDataProps {
-  type?: 'organization' | 'website' | 'article' | 'service';
+  type?: 'organization' | 'website' | 'article' | 'service' | 'creativeWork' | 'localBusiness' | 'faqPage';
   data?: Record<string, any>;
 }
 
@@ -137,10 +137,10 @@ export default function StructuredData({ type = 'organization', data }: Structur
           publisher: {
             '@type': 'Organization',
             name: 'Ravana Digital Agency',
-            url: 'https://ravana.agency',
+            url: 'https://www.ravanasolutions.com',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://ravana.agency/logo.png'
+              url: 'https://www.ravanasolutions.com/logo.png'
             }
           },
           datePublished: data?.datePublished,
@@ -152,6 +152,78 @@ export default function StructuredData({ type = 'organization', data }: Structur
           keywords: data?.keywords,
           articleSection: data?.category,
           wordCount: data?.wordCount,
+          ...data
+        };
+
+      case 'creativeWork':
+        return {
+          ...baseData,
+          '@type': 'CreativeWork',
+          name: data?.name,
+          description: data?.description,
+          image: data?.image,
+          url: data?.url,
+          author: {
+            '@type': 'Organization',
+            name: 'Ravana Digital Agency'
+          },
+          creator: {
+            '@type': 'Organization',
+            name: 'Ravana Digital Agency'
+          },
+          dateCreated: data?.dateCreated,
+          datePublished: data?.datePublished,
+          keywords: data?.keywords,
+          genre: data?.genre,
+          about: data?.about,
+          ...data
+        };
+
+      case 'localBusiness':
+        return {
+          ...baseData,
+          '@type': 'LocalBusiness',
+          name: 'Ravana Digital Agency',
+          image: 'https://www.ravanasolutions.com/logo.png',
+          '@id': 'https://www.ravanasolutions.com',
+          url: 'https://www.ravanasolutions.com',
+          telephone: data?.telephone || '+1-555-123-4567',
+          priceRange: '$$$',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: data?.streetAddress || '123 Innovation Drive',
+            addressLocality: data?.city || 'San Francisco',
+            addressRegion: data?.state || 'CA',
+            postalCode: data?.zipCode || '94105',
+            addressCountry: 'US'
+          },
+          geo: data?.geo,
+          openingHoursSpecification: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '09:00',
+            closes: '17:00'
+          },
+          sameAs: [
+            'https://twitter.com/ravana_agency',
+            'https://linkedin.com/company/ravana-agency',
+            'https://github.com/ravana-agency'
+          ],
+          ...data
+        };
+
+      case 'faqPage':
+        return {
+          ...baseData,
+          '@type': 'FAQPage',
+          mainEntity: data?.faqs?.map((faq: any) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer
+            }
+          })) || [],
           ...data
         };
 

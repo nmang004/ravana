@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next';
 import { getAllInsights } from '@/lib/insights';
+import { getAllBlogPostsServer } from '@/lib/blog-server';
+import { getAllPortfolioProjects } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ravana.agency';
-  
+  const baseUrl = 'https://www.ravanasolutions.com';
+
   // Static pages
   const staticPages = [
     '',
@@ -11,18 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/insights',
     '/portfolio',
+    '/blog',
     '/contact',
   ];
 
-  // Portfolio case studies
-  const portfolioSlugs = [
-    'nexus-saas',
-    'luxe-ecommerce',
-    'apex-marketing',
-    'vertex-seo',
-    'quantum-app',
-    'stellar-rebrand',
-  ];
+  // Get portfolio projects from centralized data
+  const portfolioProjects = getAllPortfolioProjects();
 
   // Service pages (if you plan to add individual service pages)
   const servicePages = [
@@ -34,6 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Get all insights articles
   const allInsights = getAllInsights();
+
+  // Get all blog posts
+  const allBlogPosts = getAllBlogPostsServer();
 
   const currentDate = new Date();
 
@@ -47,9 +46,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     
     // Portfolio case studies
-    ...portfolioSlugs.map((slug) => ({
-      url: `${baseUrl}/portfolio/${slug}`,
-      lastModified: currentDate,
+    ...portfolioProjects.map((project) => ({
+      url: `${baseUrl}/portfolio/${project.id}`,
+      lastModified: new Date(project.completedDate),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
@@ -66,6 +65,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...allInsights.map((insight) => ({
       url: `${baseUrl}/insights/${insight.slug}`,
       lastModified: new Date(insight.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+
+    // Blog posts
+    ...allBlogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),

@@ -7,6 +7,7 @@ import Link from "next/link";
 import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 import StaggerReveal from "@/components/interactive/StaggerReveal";
+import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const features = [
   {
@@ -147,6 +148,18 @@ export default function SaaSPage() {
   return (
     <PageTransition>
       <div className="pt-20">
+        {/* Breadcrumb */}
+        <section className="py-6 px-6">
+          <div className="container mx-auto">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Services", href: "/services" },
+                { label: "SaaS Development" }
+              ]}
+            />
+          </div>
+        </section>
         {/* Hero Section */}
         <section className="py-24 px-6 relative overflow-hidden">
           <div className="container mx-auto relative z-10">

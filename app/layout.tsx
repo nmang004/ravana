@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ravana.agency'),
+  metadataBase: new URL('https://www.ravanasolutions.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ravana.agency',
+    url: 'https://www.ravanasolutions.com',
     title: 'Ravana - Premium Digital Agency',
     description: 'Premium digital agency specializing in SaaS development, web creation, digital marketing, and SEO. Transform your business with cutting-edge technology.',
     siteName: 'Ravana Digital Agency',
@@ -86,6 +86,7 @@ export default function RootLayout({
       <head>
         <StructuredData type="organization" />
         <StructuredData type="website" />
+        <StructuredData type="localBusiness" />
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
         <LenisProvider>

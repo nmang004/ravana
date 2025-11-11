@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
+import StructuredData from "@/components/seo/StructuredData";
 
 const faqCategories = [
   {
@@ -182,8 +183,14 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
+  // Flatten all FAQs for structured data
+  const allFaqs = faqCategories.flatMap(category => category.questions);
+
   return (
     <PageTransition>
+      {/* FAQ Page Structured Data */}
+      <StructuredData type="faqPage" data={{ faqs: allFaqs }} />
+
       <div className="pt-20">
         {/* Hero Section */}
         <section className="py-24 px-6 text-center">

@@ -12,6 +12,7 @@ import TableOfContents from '@/components/insights/TableOfContents';
 import ArticleCard3D from '@/components/insights/ArticleCard3D';
 import RevealOnScroll from '@/components/interactive/RevealOnScroll';
 import StructuredData from '@/components/seo/StructuredData';
+import Breadcrumb from '@/components/seo/Breadcrumb';
 import { fadeInUp, revealText, staggerContainer, staggerChild } from '@/lib/animations/variants';
 
 interface InsightArticleProps {
@@ -82,15 +83,16 @@ export default function InsightArticle({
               className="max-w-4xl mx-auto text-center"
             >
               {/* Breadcrumb */}
-              <motion.nav variants={staggerChild} className="mb-8">
-                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                  <Link href="/insights" className="hover:text-accent transition-colors">
-                    Insights
-                  </Link>
-                  <span>/</span>
-                  <span className="text-accent">{insight.category}</span>
-                </div>
-              </motion.nav>
+              <motion.div variants={staggerChild} className="mb-8 flex justify-center">
+                <Breadcrumb
+                  items={[
+                    { label: "Home", href: "/" },
+                    { label: "Insights", href: "/insights" },
+                    { label: insight.category },
+                    { label: insight.title }
+                  ]}
+                />
+              </motion.div>
 
               {/* Category Badge */}
               <motion.div variants={staggerChild} className="mb-6">
