@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <circle cx="200" cy="315" r="150" fill="#FFD700" opacity="0.1"/>
+  <circle cx="1000" cy="200" r="120" fill="#FFD700" opacity="0.05"/>
+
+  <!-- Checklist -->
+  <rect x="400" y="200" width="400" height="60" rx="4" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.6"/>
+  <path d="M 420 230 L 440 250 L 480 210" stroke="#FFD700" stroke-width="3" fill="none"/>
+
+  <rect x="400" y="280" width="400" height="60" rx="4" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.6"/>
+  <path d="M 420 310 L 440 330 L 480 290" stroke="#FFD700" stroke-width="3" fill="none"/>
+
+  <rect x="400" y="360" width="400" height="60" rx="4" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.4"/>
+
+  <!-- Search Icon -->
+  <circle cx="750" cy="300" r="40" fill="none" stroke="#FFD700" stroke-width="3" opacity="0.8"/>
+  <line x1="780" y1="330" x2="810" y2="360" stroke="#FFD700" stroke-width="3" opacity="0.8"/>
+
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Technical SEO</text>
+  <text x="600" y="570" font-family="Arial, sans-serif" font-size="24" fill="#FFD700" text-anchor="middle">Checklist 2025</text>
+</svg>

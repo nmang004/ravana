@@ -1,4 +1,4 @@
-// Temporary blog data - replace with CMS or API integration
+// Blog post interface
 export interface BlogPost {
   slug: string;
   title: string;
@@ -13,7 +13,8 @@ export interface BlogPost {
   content: string;
 }
 
-export const blogPosts: BlogPost[] = [
+// Inline blog posts (can be migrated to MDX files later)
+const inlineBlogPosts: BlogPost[] = [
   {
     slug: "spothopper-pricing-hidden-costs-restaurant-marketing",
     title: "The Real Cost of Spothopper for Your Restaurant in 2024: Hidden Fees & Pricing Analysis",
@@ -173,6 +174,10 @@ Ravana's commitment isn't just to marketing—it's to making sure your restauran
 Your restaurant deserves better than risky shortcuts or locked-in contracts. Discover how our client-first philosophy can help you amplify your success. Contact Ravana today for a no-pressure strategy session and see what a true partnership can do for your business.`
   }
 ];
+
+// Export inline posts for client-side use
+// MDX posts will be loaded server-side only
+export const blogPosts: BlogPost[] = [...inlineBlogPosts];
 
 export function getAllBlogPosts(): BlogPost[] {
   return blogPosts.sort((a, b) => {

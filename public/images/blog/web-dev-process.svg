@@ -1,0 +1,30 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <circle cx="1000" cy="150" r="100" fill="#FFD700" opacity="0.1"/>
+  <circle cx="300" cy="480" r="80" fill="#FFD700" opacity="0.05"/>
+
+  <!-- Process Flow -->
+  <circle cx="350" cy="280" r="50" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <text x="350" y="290" font-family="Arial, sans-serif" font-size="20" fill="#FFD700" text-anchor="middle">1</text>
+
+  <line x1="400" y1="280" x2="470" y2="280" stroke="#FFD700" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M 470 280 L 460 275 L 460 285 Z" fill="#FFD700"/>
+
+  <circle cx="520" cy="280" r="50" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <text x="520" y="290" font-family="Arial, sans-serif" font-size="20" fill="#FFD700" text-anchor="middle">2</text>
+
+  <line x1="570" y1="280" x2="640" y2="280" stroke="#FFD700" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M 640 280 L 630 275 L 630 285 Z" fill="#FFD700"/>
+
+  <circle cx="690" cy="280" r="50" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <text x="690" y="290" font-family="Arial, sans-serif" font-size="20" fill="#FFD700" text-anchor="middle">3</text>
+
+  <line x1="740" y1="280" x2="810" y2="280" stroke="#FFD700" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M 810 280 L 800 275 L 800 285 Z" fill="#FFD700"/>
+
+  <circle cx="860" cy="280" r="50" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <text x="860" y="290" font-family="Arial, sans-serif" font-size="20" fill="#FFD700" text-anchor="middle">4</text>
+
+  <text x="600" y="480" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Web Development</text>
+  <text x="600" y="530" font-family="Arial, sans-serif" font-size="24" fill="#FFD700" text-anchor="middle">Design to Deployment</text>
+</svg>

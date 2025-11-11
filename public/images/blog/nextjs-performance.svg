@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <circle cx="900" cy="315" r="200" fill="#FFD700" opacity="0.1"/>
+  <circle cx="300" cy="150" r="100" fill="#FFD700" opacity="0.05"/>
+
+  <!-- Next.js Icon Representation -->
+  <path d="M 400 250 L 500 250 L 500 380 L 400 380 Z" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <path d="M 520 250 L 620 250 L 620 380" fill="none" stroke="#FFD700" stroke-width="3"/>
+  <path d="M 640 315 L 740 250 L 740 380 L 640 315 Z" fill="none" stroke="#FFD700" stroke-width="3"/>
+
+  <!-- Speed Lines -->
+  <line x1="450" y1="420" x2="550" y2="420" stroke="#FFD700" stroke-width="2" opacity="0.6"/>
+  <line x1="480" y1="440" x2="620" y2="440" stroke="#FFD700" stroke-width="2" opacity="0.4"/>
+  <line x1="500" y1="460" x2="680" y2="460" stroke="#FFD700" stroke-width="2" opacity="0.2"/>
+
+  <text x="600" y="540" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Next.js 15 Performance</text>
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="24" fill="#FFD700" text-anchor="middle">Optimization Guide</text>
+</svg>

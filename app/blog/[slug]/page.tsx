@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/blog-data';
+import { getBlogPostBySlugServer, getAllBlogPostsServer } from '@/lib/blog-server';
 import BlogArticle from './BlogArticle';
 
 interface BlogPostPageProps {
@@ -10,14 +10,14 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllBlogPosts();
+  const posts = getAllBlogPostsServer();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = getBlogPostBySlug(params.slug);
+  const post = getBlogPostBySlugServer(params.slug);
 
   if (!post) {
     return {
@@ -59,13 +59,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(params.slug);
+  const post = getBlogPostBySlugServer(params.slug);
 
   if (!post) {
     notFound();
   }
 
-  const allPosts = getAllBlogPosts();
+  const allPosts = getAllBlogPostsServer();
 
   return <BlogArticle post={post} allPosts={allPosts} />;
 }

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getAllBlogPosts, getFeaturedPosts, getAllBlogCategories } from '@/lib/blog-data';
+import { getAllBlogPostsServer, getFeaturedPostsServer, getAllBlogCategoriesServer } from '@/lib/blog-server';
 import BlogHub from './BlogHub';
 
 export const metadata: Metadata = {
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   try {
-    const allPosts = getAllBlogPosts();
-    const featuredPosts = getFeaturedPosts();
-    const categories = getAllBlogCategories();
+    const allPosts = getAllBlogPostsServer();
+    const featuredPosts = getFeaturedPostsServer();
+    const categories = getAllBlogCategoriesServer();
 
     // Get the latest featured post for the hero
     const heroPost = featuredPosts[0] || allPosts[0];

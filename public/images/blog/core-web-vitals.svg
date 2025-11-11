@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <circle cx="200" cy="450" r="120" fill="#FFD700" opacity="0.1"/>
+  <circle cx="950" cy="200" r="90" fill="#FFD700" opacity="0.05"/>
+
+  <!-- Performance Gauge -->
+  <circle cx="600" cy="280" r="120" fill="none" stroke="#262626" stroke-width="20"/>
+  <path d="M 600 160 A 120 120 0 0 1 720 280" fill="none" stroke="#FFD700" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Gauge Needle -->
+  <line x1="600" y1="280" x2="660" y2="220" stroke="#FFD700" stroke-width="4"/>
+  <circle cx="600" cy="280" r="12" fill="#FFD700"/>
+
+  <!-- Metrics -->
+  <text x="450" y="340" font-family="Arial, sans-serif" font-size="16" fill="#FFD700">LCP</text>
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="16" fill="#FFD700" text-anchor="middle">FID</text>
+  <text x="720" y="340" font-family="Arial, sans-serif" font-size="16" fill="#FFD700">CLS</text>
+
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Core Web Vitals</text>
+  <text x="600" y="570" font-family="Arial, sans-serif" font-size="24" fill="#FFD700" text-anchor="middle">Business Impact</text>
+</svg>

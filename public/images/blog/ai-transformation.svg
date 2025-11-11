@@ -1,0 +1,27 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <circle cx="250" cy="480" r="140" fill="#FFD700" opacity="0.1"/>
+  <circle cx="950" cy="200" r="100" fill="#FFD700" opacity="0.05"/>
+
+  <!-- AI Brain Network -->
+  <circle cx="600" cy="280" r="60" fill="none" stroke="#FFD700" stroke-width="3"/>
+
+  <!-- Neural Connections -->
+  <circle cx="480" cy="240" r="25" fill="none" stroke="#FFD700" stroke-width="2"/>
+  <line x1="540" y1="260" x2="500" y2="250" stroke="#FFD700" stroke-width="2"/>
+
+  <circle cx="720" cy="240" r="25" fill="none" stroke="#FFD700" stroke-width="2"/>
+  <line x1="660" y1="260" x2="700" y2="250" stroke="#FFD700" stroke-width="2"/>
+
+  <circle cx="520" cy="360" r="25" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.7"/>
+  <line x1="565" y1="330" x2="540" y2="350" stroke="#FFD700" stroke-width="2" opacity="0.7"/>
+
+  <circle cx="680" cy="360" r="25" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.7"/>
+  <line x1="635" y1="330" x2="660" y2="350" stroke="#FFD700" stroke-width="2" opacity="0.7"/>
+
+  <!-- AI Core -->
+  <text x="600" y="290" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#FFD700" text-anchor="middle">AI</text>
+
+  <text x="600" y="490" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" text-anchor="middle">The Generative Leap</text>
+  <text x="600" y="540" font-family="Arial, sans-serif" font-size="24" fill="#FFD700" text-anchor="middle">5 Shifts in SaaS</text>
+</svg>
