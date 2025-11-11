@@ -84,7 +84,6 @@ export const portfolioProjects: Record<string, PortfolioProject> = {
     client: "La Brioche Norfolk",
     industry: "Food & Beverage",
     teamSize: "3 developers",
-    featured: true,
 
     challenge: "La Brioche, an artisan French bakery in Norfolk, Virginia, needed a digital presence that mirrored the quality and tradition of their baking. The goal was to create a high-performance web application that was not only visually appealing but also offered a seamless e-commerce experience for their customers.",
 
@@ -211,6 +210,7 @@ export const portfolioProjects: Record<string, PortfolioProject> = {
     client: "W.M. Stone & Company",
     industry: "Logistics & Supply Chain",
     teamSize: "3 developers",
+    featured: true,
 
     challenge: "For over a century, businesses have faced the challenge of navigating the complex and ever-changing landscape of international trade. W.M. Stone needed a modern digital presence that could showcase their century-old expertise while providing intuitive access to their comprehensive logistics services and real-time tracking capabilities.",
 
