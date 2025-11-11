@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import PageTransition from '@/components/layout/PageTransition';
 import StructuredData from '@/components/seo/StructuredData';
-import Breadcrumb from '@/components/seo/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -88,16 +87,6 @@ export default function VirginiaBeachWebDevelopmentPage() {
             addressCountry: 'US',
           },
         }}
-      />
-
-      {/* Breadcrumbs */}
-      <Breadcrumb
-        items={[
-          { label: 'Home', href: '/' },
-          { label: 'Service Areas', href: '/service-areas' },
-          { label: cityData.name, href: `/service-areas/${citySlug}` },
-          { label: serviceData.name, href: `/service-areas/${citySlug}/${serviceSlug}` },
-        ]}
       />
 
       {/* Hero Section */}

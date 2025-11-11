@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import PageTransition from '@/components/layout/PageTransition';
 import StructuredData from '@/components/seo/StructuredData';
-import Breadcrumb from '@/components/seo/Breadcrumb';
 import CityHeroSection from '@/components/service-areas/CityHeroSection';
 import WhyCitySection from '@/components/service-areas/WhyCitySection';
 import CityServicesGrid from '@/components/service-areas/CityServicesGrid';
@@ -74,15 +73,6 @@ export default function ChesapeakePage() {
             addressCountry: 'US',
           },
         }}
-      />
-
-      {/* Breadcrumbs */}
-      <Breadcrumb
-        items={[
-          { label: 'Home', href: '/' },
-          { label: 'Service Areas', href: '/service-areas' },
-          { label: cityData.name, href: `/service-areas/${citySlug}` },
-        ]}
       />
 
       {/* Hero Section */}

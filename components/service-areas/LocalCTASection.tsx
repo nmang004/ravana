@@ -71,7 +71,7 @@ export default function LocalCTASection({
             {/* Contact Options */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 border-t border-accent/20">
               <motion.a
-                href="tel:+1234567890"
+                href="tel:+17576857209"
                 className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -81,14 +81,14 @@ export default function LocalCTASection({
                 </div>
                 <div className="text-left">
                   <p className="text-xs uppercase tracking-wide">Call Us</p>
-                  <p className="font-semibold">(123) 456-7890</p>
+                  <p className="font-semibold">(757) 685-7209</p>
                 </div>
               </motion.a>
 
               <div className="hidden sm:block w-px h-12 bg-accent/20" />
 
               <motion.a
-                href="mailto:hello@ravanasolutions.com"
+                href="mailto:nmangubat@ravanasolutions.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -98,7 +98,7 @@ export default function LocalCTASection({
                 </div>
                 <div className="text-left">
                   <p className="text-xs uppercase tracking-wide">Email Us</p>
-                  <p className="font-semibold">hello@ravanasolutions.com</p>
+                  <p className="font-semibold">nmangubat@ravanasolutions.com</p>
                 </div>
               </motion.a>
             </div>
