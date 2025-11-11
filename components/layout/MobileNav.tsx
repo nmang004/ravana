@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect } from 'react'
-import { X } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { X, ChevronDown } from 'lucide-react'
 import { navLinks } from '@/lib/data'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLenis } from '@/context/LenisContext'
+import { cn } from '@/lib/utils'
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -66,6 +67,7 @@ const closeButtonVariants = {
 
 const MobileNav = ({ isOpen, toggleMenu }: MobileNavProps) => {
   const { lenis } = useLenis()
+  const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null)
 
   useEffect(() => {
     if (isOpen) {
@@ -75,6 +77,7 @@ const MobileNav = ({ isOpen, toggleMenu }: MobileNavProps) => {
     } else {
       lenis?.start()
       document.body.style.overflow = 'unset'
+      setExpandedDropdown(null) // Reset expanded state when menu closes
     }
 
     return () => {
@@ -82,6 +85,10 @@ const MobileNav = ({ isOpen, toggleMenu }: MobileNavProps) => {
       document.body.style.overflow = 'unset'
     }
   }, [isOpen, lenis])
+
+  const toggleDropdown = (label: string) => {
+    setExpandedDropdown(expandedDropdown === label ? null : label)
+  }
 
   return (
     <AnimatePresence mode="wait">
@@ -144,37 +151,80 @@ const MobileNav = ({ isOpen, toggleMenu }: MobileNavProps) => {
             </motion.div>
             
             {/* Navigation Links */}
-            <motion.nav 
+            <motion.nav
               className="flex flex-col items-start justify-center flex-1 px-6 space-y-2"
               variants={menuVariants}
             >
               {navLinks.map((link, index) => (
                 <motion.div
-                  key={link.href}
+                  key={link.href || link.label}
                   variants={linkVariants}
                   transition={{ duration: 0.3, ease: [0.645, 0.045, 0.355, 1] }}
                   className="w-full"
                 >
-                  <Link
-                    href={link.href}
-                    className="block w-full text-xl font-semibold text-foreground hover:text-accent hover:bg-accent/5 px-4 py-3 rounded-lg transition-all duration-200 group"
-                    onClick={toggleMenu}
-                  >
-                    <motion.span
-                      className="flex items-center"
-                      whileHover={{ x: 8 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {link.label}
-                      <motion.span 
-                        className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                        initial={{ x: -10 }}
-                        whileHover={{ x: 0 }}
+                  {link.subLinks ? (
+                    // Dropdown item
+                    <div className="w-full">
+                      <button
+                        onClick={() => toggleDropdown(link.label)}
+                        className="flex items-center justify-between w-full text-xl font-semibold text-foreground hover:text-accent hover:bg-accent/5 px-4 py-3 rounded-lg transition-all duration-200"
                       >
-                        →
+                        <span>{link.label}</span>
+                        <ChevronDown
+                          size={20}
+                          className={cn(
+                            "transition-transform duration-200",
+                            expandedDropdown === link.label && "rotate-180"
+                          )}
+                        />
+                      </button>
+
+                      <AnimatePresence>
+                        {expandedDropdown === link.label && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            {link.subLinks.map((subLink) => (
+                              <Link
+                                key={subLink.href}
+                                href={subLink.href}
+                                className="block w-full text-lg text-foreground hover:text-accent hover:bg-accent/5 px-8 py-2 rounded-lg transition-all duration-200"
+                                onClick={toggleMenu}
+                              >
+                                {subLink.label}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    // Regular link
+                    <Link
+                      href={link.href!}
+                      className="block w-full text-xl font-semibold text-foreground hover:text-accent hover:bg-accent/5 px-4 py-3 rounded-lg transition-all duration-200 group"
+                      onClick={toggleMenu}
+                    >
+                      <motion.span
+                        className="flex items-center"
+                        whileHover={{ x: 8 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {link.label}
+                        <motion.span
+                          className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                          initial={{ x: -10 }}
+                          whileHover={{ x: 0 }}
+                        >
+                          →
+                        </motion.span>
                       </motion.span>
-                    </motion.span>
-                  </Link>
+                    </Link>
+                  )}
                 </motion.div>
               ))}
               
