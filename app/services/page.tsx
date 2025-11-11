@@ -7,26 +7,6 @@ import PageTransition from "@/components/layout/PageTransition";
 
 const services = [
   {
-    id: "saas",
-    icon: Code,
-    title: "SaaS Development",
-    shortDescription: "Full-stack SaaS applications built with modern technologies. From MVP to enterprise-scale solutions.",
-    description: "Transform your idea into a powerful Software-as-a-Service platform. We specialize in building scalable, secure, and user-friendly SaaS applications that grow with your business.",
-    features: [
-      "MVP Development & Rapid Prototyping",
-      "Full-Stack Development (React/Next.js + Node.js/Python)",
-      "Cloud Infrastructure Setup (AWS/Vercel/Digital Ocean)",
-      "Payment Integration (Stripe, PayPal)",
-      "User Authentication & Authorization",
-      "Multi-tenant Architecture",
-      "API Development & Integration",
-      "Database Design & Optimization"
-    ],
-    technologies: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "AWS", "Stripe"],
-    pricing: "Starting from $15,000",
-    timeline: "8-16 weeks"
-  },
-  {
     id: "web",
     icon: Palette,
     title: "Web Development",
@@ -47,26 +27,6 @@ const services = [
     timeline: "4-8 weeks"
   },
   {
-    id: "marketing",
-    icon: TrendingUp,
-    title: "Digital Marketing",
-    description: "Data-driven marketing strategies that grow your business. From social media to paid advertising, we help you reach your target audience effectively.",
-    shortDescription: "Data-driven marketing strategies that grow your business. From social media to paid advertising.",
-    features: [
-      "Social Media Marketing & Management",
-      "Pay-Per-Click (PPC) Advertising",
-      "Content Marketing Strategy",
-      "Email Marketing Campaigns",
-      "Conversion Rate Optimization",
-      "Marketing Analytics & Reporting",
-      "Brand Strategy & Positioning",
-      "Lead Generation Campaigns"
-    ],
-    technologies: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Google Analytics", "HubSpot", "Mailchimp"],
-    pricing: "Starting from $2,500/month",
-    timeline: "Ongoing campaigns"
-  },
-  {
     id: "seo",
     icon: Search,
     title: "SEO Services",
@@ -85,16 +45,56 @@ const services = [
     technologies: ["Google Search Console", "SEMrush", "Ahrefs", "Screaming Frog", "Google Analytics"],
     pricing: "Starting from $1,500/month",
     timeline: "3-6 months for results"
+  },
+  {
+    id: "saas",
+    icon: Code,
+    title: "SaaS Development",
+    shortDescription: "Full-stack SaaS applications built with modern technologies. From MVP to enterprise-scale solutions.",
+    description: "Transform your idea into a powerful Software-as-a-Service platform. We specialize in building scalable, secure, and user-friendly SaaS applications that grow with your business.",
+    features: [
+      "MVP Development & Rapid Prototyping",
+      "Full-Stack Development (React/Next.js + Node.js/Python)",
+      "Cloud Infrastructure Setup (AWS/Vercel/Digital Ocean)",
+      "Payment Integration (Stripe, PayPal)",
+      "User Authentication & Authorization",
+      "Multi-tenant Architecture",
+      "API Development & Integration",
+      "Database Design & Optimization"
+    ],
+    technologies: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "AWS", "Stripe"],
+    pricing: "Starting from $15,000",
+    timeline: "8-16 weeks"
+  },
+  {
+    id: "marketing",
+    icon: TrendingUp,
+    title: "Digital Marketing",
+    description: "Data-driven marketing strategies that grow your business. From social media to paid advertising, we help you reach your target audience effectively.",
+    shortDescription: "Data-driven marketing strategies that grow your business. From social media to paid advertising.",
+    features: [
+      "Social Media Marketing & Management",
+      "Pay-Per-Click (PPC) Advertising",
+      "Content Marketing Strategy",
+      "Email Marketing Campaigns",
+      "Conversion Rate Optimization",
+      "Marketing Analytics & Reporting",
+      "Brand Strategy & Positioning",
+      "Lead Generation Campaigns"
+    ],
+    technologies: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Google Analytics", "HubSpot", "Mailchimp"],
+    pricing: "Starting from $2,500/month",
+    timeline: "Ongoing campaigns"
   }
 ];
 
 export const metadata: Metadata = {
-  title: "Digital Services - SaaS Development, Web Design & Marketing",
-  description: "Comprehensive digital solutions including SaaS development, premium web design, digital marketing, and SEO services. Transform your business with our expert team.",
-  keywords: ["SaaS development", "web development", "digital marketing", "SEO services", "React development", "Next.js", "custom software"],
+  title: "Digital Services - Web Development, SEO & Digital Marketing",
+  description: "Expert web development and SEO services to grow your business. Premium websites, search engine optimization, SaaS development, and digital marketing solutions.",
+  keywords: ["web development", "SEO services", "search engine optimization", "website design", "SaaS development", "digital marketing", "Next.js", "React development"],
   openGraph: {
-    title: "Digital Services | Ravana Digital Agency",
-    description: "Comprehensive digital solutions including SaaS development, premium web design, digital marketing, and SEO services.",
+    title: "Web Development & SEO Services | Ravana Digital Agency",
+    description: "Expert web development and SEO services to grow your business. Premium websites, search engine optimization, and digital marketing solutions.",
     type: "website",
   },
 };

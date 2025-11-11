@@ -119,11 +119,9 @@ export default function HeroSection() {
           className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mb-8 leading-relaxed"
         >
           Premium digital agency specializing in{" "}
-          <span className="text-accent font-semibold">SaaS development</span>,{" "}
-          <span className="text-accent font-semibold">web creation</span>,{" "}
-          <span className="text-accent font-semibold">marketing</span>, and{" "}
+          <span className="text-accent font-semibold">web development</span> and{" "}
           <span className="text-accent font-semibold">SEO</span>.{" "}
-          We craft digital experiences that drive results.
+          We craft websites that rank, convert, and drive measurable business results.
         </motion.p>
 
         {/* CTA Buttons */}

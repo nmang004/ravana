@@ -10,69 +10,6 @@ import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 
 // This would typically come from a CMS or database
 const portfolioProjects = {
-  "seo-auditer": {
-    id: "seo-auditer",
-    title: "SEOAuditer Platform",
-    category: "SaaS Development",
-    description: "A premium, full-stack SEO analysis dashboard for advanced site audits, competitor tracking, and real-time insights.",
-    image: "/images/portfolio/seo-auditer.jpg",
-    technologies: ["Next.js", "React", "Node.js", "Express", "Prisma", "PostgreSQL", "Redis", "Socket.IO", "Jest", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://seoauditer.netlify.app",
-    completedDate: "2024-02-15",
-    projectDuration: "16 weeks",
-    client: "SEOAuditer Inc.",
-    industry: "SEO & Digital Marketing",
-    teamSize: "6 developers",
-    
-    challenge: "The project aimed to create a comprehensive and robust SEO analysis tool that could provide users with advanced auditing capabilities, competitor tracking, and real-time insights. The challenge was to build a full-stack application with a secure and scalable architecture that could handle complex data analysis and deliver a seamless user experience.",
-    
-    solution: "We developed SEOAuditer, a premium, full-stack SEO analysis dashboard. The platform offers a complete suite of tools for in-depth site audits, competitor analysis, and real-time monitoring. The application is built with a modern tech stack and features a secure, RESTful API, real-time updates via WebSockets, and a CI/CD pipeline for automated testing and deployment.",
-    
-    results: [
-      {
-        metric: "500+",
-        description: "SEO agencies onboarded",
-        icon: User
-      },
-      {
-        metric: "1M+",
-        description: "Websites analyzed",
-        icon: BarChart3
-      },
-      {
-        metric: "98%",
-        description: "Accuracy in audits",
-        icon: Target
-      }
-    ],
-    
-    features: [
-      "Comprehensive SEO Analysis - Projects, analyses, issues, trends, and notifications",
-      "Real-time Updates - WebSocket-powered notifications and events for instant insights",
-      "RESTful API - Robust API documented with OpenAPI/Swagger",
-      "Advanced Security - JWT authentication, Zod validation, rate limiting, and resource ownership checks",
-      "Developer Experience - Enhanced with Prettier, ESLint, and Husky pre-commit hooks",
-      "CI/CD Pipeline - Automated testing, linting, building, and deployment with GitHub Actions",
-      "Competitor Tracking - Monitor and compare competitor SEO performance",
-      "Custom Reporting - Generate detailed SEO reports with actionable insights"
-    ],
-    
-    technicalDetails: {
-      frontend: "Built with Next.js 14, React 18, and Tailwind CSS for a modern, responsive interface. Implemented real-time data visualization with Chart.js and D3.js for comprehensive analytics dashboards.",
-      backend: "Node.js and Express backend with Prisma as the ORM for PostgreSQL database. Redis used for caching frequently accessed data and improving response times. Implemented microservices architecture for scalability.",
-      realtime: "Socket.IO powers real-time updates and notifications, enabling instant alerts for SEO issues and competitor changes. WebSocket connections managed with Redis adapter for horizontal scaling.",
-      security: "Implemented JWT for authentication with access and refresh tokens, Zod for data validation, rate limiting, and comprehensive security headers. Regular penetration testing and security audits ensure platform integrity."
-    },
-    
-    testimonial: {
-      quote: "SEOAuditer has revolutionized how we manage SEO for our clients. The real-time insights and comprehensive auditing capabilities have given us a significant competitive edge in the market.",
-      author: "David Thompson",
-      position: "CEO, Digital Growth Agency"
-    },
-    
-    nextProject: "la-brioche"
-  },
-  
   "la-brioche": {
     id: "la-brioche",
     title: "La Brioche Bakery",
@@ -133,9 +70,9 @@ const portfolioProjects = {
       position: "Owner, La Brioche Norfolk"
     },
     
-    nextProject: "rival-outranker"
+    nextProject: "review-boost"
   },
-  
+
   "review-boost": {
     id: "review-boost",
     title: "ReviewBoost SaaS Platform",
@@ -259,72 +196,9 @@ const portfolioProjects = {
       position: "President, W.M. Stone & Company"
     },
     
-    nextProject: "rival-outranker"
-  },
-  
-  "rival-outranker": {
-    id: "rival-outranker",
-    title: "Rival Outranker",
-    category: "SaaS Development",
-    description: "A professional-grade SEO analysis platform with a modular architecture and comprehensive audit capabilities.",
-    image: "/images/portfolio/rival-outranker.jpg",
-    technologies: ["TypeScript", "JavaScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Playwright", "Vitest", "GitHub Actions", "Netlify", "Railway"],
-    liveUrl: "https://rival-outranker.netlify.app",
-    completedDate: "2023-10-15",
-    projectDuration: "14 weeks",
-    client: "Rival Digital Solutions",
-    industry: "SEO & Digital Marketing",
-    teamSize: "5 developers",
-    
-    challenge: "The project aimed to create a sophisticated SEO analysis tool with a clean, maintainable, and scalable architecture. The initial monolithic structure of the application presented challenges in terms of scalability and maintainability. The goal was to refactor the codebase into a modular architecture while implementing a robust set of features for in-depth SEO analysis.",
-    
-    solution: "We developed Rival Outranker, a professional-grade SEO analysis platform that features a modular architecture and a comprehensive audit system. The platform is designed to analyze over 50 ranking factors and check over 140 factors in its professional audit system. The backend is organized into domain-specific services, and the frontend uses a feature-based organization. Security is a key focus, with JWT authentication, input sanitization, rate limiting, and other security measures implemented.",
-    
-    results: [
-      {
-        metric: "50+",
-        description: "Ranking factors analyzed",
-        icon: BarChart3
-      },
-      {
-        metric: "140+",
-        description: "Audit checkpoints",
-        icon: Target
-      },
-      {
-        metric: "85%",
-        description: "Performance improvement",
-        icon: User
-      }
-    ],
-    
-    features: [
-      "SEO Analysis Engine - Analyzes over 50 ranking factors and provides real-time scoring and actionable recommendations",
-      "Professional Audit System - A comprehensive audit system that checks over 140 factors with detailed reporting",
-      "Modular Architecture - Clean and scalable architecture with separation of concerns between frontend and backend",
-      "Advanced Security - Robust security features including JWT authentication, input sanitization, and rate limiting",
-      "Architectural Principles - Codebase adheres to SOLID principles, ensuring maintainability and scalability",
-      "Real-time Monitoring - Continuous monitoring of website changes and competitor movements",
-      "Custom Reporting - Generate white-label reports for agencies and enterprises",
-      "API Access - RESTful API for integration with third-party tools and custom workflows"
-    ],
-    
-    technicalDetails: {
-      backend: "Built with Node.js and organized into domain-specific services following microservices patterns. PostgreSQL database with optimized queries for large-scale data analysis. Redis caching for improved performance.",
-      frontend: "Feature-based organization using TypeScript for type safety. Custom hooks for API interaction and state management. Tailwind CSS for consistent, responsive design with dark mode support.",
-      testing: "Comprehensive testing strategy with end-to-end testing using Playwright for critical user flows, and unit testing with Vitest achieving 90%+ code coverage. Automated testing in CI/CD pipeline.",
-      deployment: "Multi-environment deployment with frontend on Netlify for global CDN distribution and backend on Railway for scalable container hosting. GitHub Actions for automated CI/CD with staging and production environments."
-    },
-    
-    testimonial: {
-      quote: "Rival Outranker has transformed our SEO workflow. The modular architecture allows us to scale effortlessly, and the comprehensive audit system catches issues we would have missed. It's become an indispensable tool for our agency.",
-      author: "Maria Rodriguez",
-      position: "Technical SEO Director, Growth Marketing Pro"
-    },
-    
     nextProject: "jenna-eve"
   },
-  
+
   "jenna-eve": {
     id: "jenna-eve",
     title: "Jenna Eve Portfolio",
@@ -387,6 +261,132 @@ const portfolioProjects = {
       position: "Creative Director & Digital Artist"
     },
     
+    nextProject: null
+  },
+
+  "red-rock-vet": {
+    id: "red-rock-vet",
+    title: "Red Rock Veterinary Health",
+    category: "Web Development + SEO",
+    description: "Modern veterinary practice website featuring Fear Free® certified care, comprehensive service pages, and exceptional performance optimization.",
+    image: "/images/portfolio/SCR-20251111-kfzn.png",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Sanity CMS", "Framer Motion", "Vercel", "Google Fonts"],
+    liveUrl: "https://www.redrockvet.com",
+    completedDate: "2024-08-20",
+    projectDuration: "4 weeks",
+    client: "Red Rock Veterinary Health",
+    industry: "Veterinary Services",
+    teamSize: "1 developer",
+
+    challenge: "Red Rock Veterinary Health, a Fear Free® certified veterinary practice in Colorado Springs, lacked a thorough digital presence. Their existing basic Squarespace site wasn't converting visitors or providing comprehensive information about their specialized fear-free approach and full range of veterinary services. The practice needed a modern, informative website that would communicate their unique value proposition and convert online visitors into appointments.",
+
+    solution: "We developed a comprehensive, high-performance veterinary website built on Next.js 15 with complete rebranding and custom design. The site features six dedicated service pages with detailed information and pricing, a responsive mobile-first design optimized for pet owners on the go, and seamless Sanity CMS integration for easy content management. The Fear Free® branding was integrated throughout, emphasizing the practice's commitment to reducing pet anxiety. We implemented smooth Framer Motion animations and achieved exceptional PageSpeed scores through performance optimization.",
+
+    results: [
+      {
+        metric: "18%",
+        description: "Increase in organic keywords",
+        icon: BarChart3
+      },
+      {
+        metric: "94/100",
+        description: "PageSpeed Performance score",
+        icon: Target
+      },
+      {
+        metric: "5.0★",
+        description: "Google rating maintained",
+        icon: User
+      }
+    ],
+
+    features: [
+      "Comprehensive Service Pages - Six detailed service pages covering wellness exams, surgery, dental care, emergency services, vaccinations, and diagnostics with transparent pricing",
+      "Fear Free® Branding - Integrated fear-free veterinary approach throughout site design and messaging",
+      "Content Management System - Full Sanity CMS integration with custom schemas for services, team members, blog posts, and testimonials",
+      "Responsive Design - Mobile-first design optimized for all devices with professional veterinary branding",
+      "Performance Optimized - Achieved 94/100 PageSpeed Performance score with optimized images and fast loading",
+      "SEO Foundation - Proper meta tags, Open Graph support, semantic HTML structure, and local SEO optimization",
+      "Smooth Animations - Framer Motion animations including scroll-triggered effects and counter animations",
+      "Accessibility Focused - WCAG 2.1 AA compliant design with proper ARIA labels and keyboard navigation"
+    ],
+
+    technicalDetails: {
+      frontend: "Built with Next.js 15 and TypeScript for a robust, type-safe application with the latest React 19 features. Tailwind CSS v4 provides professional styling with custom veterinary brand colors (deep red #B31B1B primary with dark gray and light gray accents). Framer Motion powers smooth animations throughout the site.",
+      cms: "Sanity CMS integration provides a user-friendly content management system for non-technical staff to easily update services, pricing, team information, and blog content. Custom schemas were created for all content types with proper validation.",
+      performance: "Achieved exceptional performance metrics with 94/100 PageSpeed Performance, 91 SEO score, and 100/100 Best Practices. Implemented image optimization, code splitting, lazy loading, and edge caching for sub-second load times on all pages.",
+      seo: "Implemented comprehensive SEO strategy resulting in 18% increase in organic keywords. Includes proper meta tags, structured data, local business schema, service-specific pages optimized for veterinary search terms, and mobile-first responsive design for improved search rankings."
+    },
+
+    testimonial: {
+      quote: "The new website has transformed how pet owners discover and connect with our Fear Free® practice. The comprehensive service pages and easy navigation have made it simple for clients to understand our approach and book appointments online.",
+      author: "Red Rock Veterinary Team",
+      position: "Practice Management"
+    },
+
+    nextProject: "blackbird-detailing"
+  },
+
+  "blackbird-detailing": {
+    id: "blackbird-detailing",
+    title: "Blackbird Detailing",
+    category: "Web Development + SEO",
+    description: "Premium automotive detailing website with instant estimate engine, motorsport-grade branding, and local SEO optimization for Virginia Beach market.",
+    image: "/images/portfolio/blackbird.png",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "Shadcn/ui", "React Hook Form", "Zod", "Vercel Analytics"],
+    liveUrl: "https://www.blackbirddetailingus.com",
+    completedDate: "2024-10-15",
+    projectDuration: "4 weeks",
+    client: "Blackbird Detailing",
+    industry: "Automotive Detailing",
+    teamSize: "1 developer",
+
+    challenge: "Blackbird Detailing needed to establish a strong digital presence in the competitive Virginia Beach automotive detailing market. They required a premium website that would reflect their motorsport-grade precision, differentiate them from competitors, and capture leads through an intuitive instant estimate system. The challenge was to create a conversion-focused website with local SEO optimization to dominate search results in Virginia Beach, Chesapeake, and Norfolk.",
+
+    solution: "We built a premium automotive detailing website using Next.js 15 with a striking motorsport-inspired design featuring matte black (#111111) and ignition blue (#00A8FF) branding. The site includes a sophisticated multi-step instant estimate form with React Hook Form and Zod validation, comprehensive service pages showcasing ceramic coating, paint correction, and detailing packages, and a portfolio gallery with before/after showcases. We implemented Supabase for lead management and integrated local SEO optimization targeting the Virginia Beach market with service area pages for key locations.",
+
+    results: [
+      {
+        metric: "32%",
+        description: "Increase in organic keywords",
+        icon: BarChart3
+      },
+      {
+        metric: "Multi-Step",
+        description: "Instant estimate form with validation",
+        icon: Target
+      },
+      {
+        metric: "3 Markets",
+        description: "Virginia Beach, Chesapeake, Norfolk",
+        icon: User
+      }
+    ],
+
+    features: [
+      "Instant Estimate Engine - Multi-step form with vehicle selection, service customization, and instant pricing calculation using React Hook Form and Zod validation",
+      "Service Showcases - Comprehensive pages for ceramic coating, paint correction, interior detailing, and full detail packages with transparent pricing",
+      "Portfolio Galleries - Before/after image galleries showcasing premium detailing work and results",
+      "Local SEO Optimization - Service area pages targeting Virginia Beach, Chesapeake, and Norfolk with location-specific content",
+      "Motorsport-Grade Branding - Premium design with matte black and ignition blue color scheme reflecting automotive excellence",
+      "Lead Management - Supabase integration for capturing and managing customer estimates and inquiries",
+      "Performance Optimized - Fast loading times with Next.js 15 optimization and Vercel deployment",
+      "Mobile-Responsive - Fully responsive design optimized for mobile users researching detailing services on the go"
+    ],
+
+    technicalDetails: {
+      frontend: "Built with Next.js 15 and TypeScript using the App Router for optimal performance. Tailwind CSS provides the premium motorsport-inspired design with Shadcn/ui components for consistent, accessible UI elements. Custom animations and transitions create a premium user experience.",
+      backend: "Supabase (PostgreSQL) handles all backend functionality including estimate form submissions, contact inquiries, and lead management. Service role authentication ensures secure data handling. React Hook Form with Zod schema validation provides robust form handling with type-safe validation.",
+      features: "Multi-step instant estimate form guides users through vehicle selection, service options, and pricing. Portfolio galleries showcase work with optimized images. Service pages detail ceramic coating, paint correction, and detailing packages with clear pricing and benefits.",
+      seo: "Implemented comprehensive local SEO strategy resulting in 32% increase in organic keywords. Service area pages target Virginia Beach, Chesapeake, and Norfolk markets. Optimized for key automotive detailing search terms including 'ceramic coating Virginia Beach', 'paint correction', and 'auto detailing'. Structured data and local business schema improve search visibility."
+    },
+
+    testimonial: {
+      quote: "The website perfectly captures our motorsport-grade precision and attention to detail. The instant estimate form has streamlined our lead generation, and we're seeing strong growth in organic search traffic from our target markets.",
+      author: "Blackbird Detailing Team",
+      position: "Business Operations"
+    },
+
     nextProject: null
   }
 };

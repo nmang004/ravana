@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Metadata } from "next";
 import { SearchParams } from "@/types";
 import PageTransition from "@/components/layout/PageTransition";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar } from "lucide-react";
 import ContactForm from "@/components/forms/ContactForm";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,52 +12,45 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "hello@ravana.agency",
+    content: "nmangubat@ravanasolutions.com",
     description: "Send us an email and we'll respond within 24 hours",
-    action: "mailto:hello@ravana.agency"
+    action: "mailto:nmangubat@ravanasolutions.com"
   },
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (555) 123-4567",
-    description: "Mon-Fri from 8am to 6pm PST",
-    action: "tel:+15551234567"
-  },
-  {
-    icon: MessageCircle,
-    title: "Live Chat",
-    content: "Available Now",
-    description: "Chat with our team in real-time",
-    action: "#"
+    content: "+1 (757) 685-7209",
+    description: "Mon-Fri from 9am to 6pm EST",
+    action: "tel:+17576857209"
   },
   {
     icon: Calendar,
     title: "Book a Meeting",
     content: "Schedule a Call",
     description: "30-minute free consultation",
-    action: "https://calendly.com/ravana-agency"
+    action: "https://calendly.com/nmangubat-ravanasolutions/30min"
   }
 ];
 
 const officeInfo = [
   {
     icon: MapPin,
-    title: "San Francisco Office",
-    address: "123 Innovation Drive\nSan Francisco, CA 94105",
-    hours: "Mon-Fri: 8am-6pm PST"
+    title: "Service Area",
+    address: "Remote-First Agency\nServing Clients Nationwide",
+    hours: "Based in Norfolk, Virginia"
   },
   {
     icon: Clock,
     title: "Response Time",
-    address: "Email: Within 24 hours\nPhone: Same day",
-    hours: "Emergency: 2-4 hours"
+    address: "Email: Within 24 hours\nPhone: Same business day",
+    hours: "Available: Mon-Fri 9am-6pm EST"
   }
 ];
 
 export const metadata: Metadata = {
   title: "Contact Us - Start Your Digital Transformation",
   description: "Get in touch with Ravana Digital Agency. Free consultation for SaaS development, web design, and digital marketing projects. Let's discuss your goals.",
-  keywords: ["contact ravana", "free consultation", "project quote", "digital agency contact", "get started", "san francisco"],
+  keywords: ["contact ravana", "free consultation", "project quote", "digital agency contact", "web development", "SEO services"],
   openGraph: {
     title: "Contact Ravana Digital Agency | Free Consultation",
     description: "Get in touch for a free consultation on your SaaS development, web design, or digital marketing project.",
@@ -87,7 +80,7 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
       {/* Contact Methods */}
       <section className="py-12 px-6">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (

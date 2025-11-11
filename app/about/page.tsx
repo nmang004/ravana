@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ArrowRight, Users, Award, Target, Zap, Heart, Globe, Code2, Palette, TrendingUp } from "lucide-react";
+import { ArrowRight, Users, Award, Target, Zap, Heart, Globe, Code2, Palette, Search } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -77,19 +77,19 @@ const values = [
 
 const services = [
   {
-    icon: Code2,
-    title: "SaaS Development",
-    description: "Full-stack applications that scale"
-  },
-  {
     icon: Palette,
     title: "Web Development",
     description: "Premium websites that convert"
   },
   {
-    icon: TrendingUp,
-    title: "Digital Marketing",
-    description: "Data-driven growth strategies"
+    icon: Search,
+    title: "SEO Services",
+    description: "Rank higher and drive organic traffic"
+  },
+  {
+    icon: Code2,
+    title: "SaaS Development",
+    description: "Full-stack applications that scale"
   }
 ];
 
@@ -300,8 +300,8 @@ export default function AboutPage() {
                   What We Do Best
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  We specialize in three core areas that drive business growth 
-                  in the digital age.
+                  We specialize in web development and SEO, with additional expertise
+                  in SaaS applications that drive business growth.
                 </p>
               </div>
             </RevealOnScroll>

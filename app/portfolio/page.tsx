@@ -10,23 +10,6 @@ import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 
 const portfolioProjects = [
   {
-    id: "seo-auditer",
-    title: "SEOAuditer Platform",
-    category: "SaaS Development",
-    description: "A premium, full-stack SEO analysis dashboard for advanced site audits, competitor tracking, and real-time insights.",
-    image: "/images/portfolio/seo-auditer.jpg",
-    technologies: ["Next.js", "Express", "PostgreSQL", "Redis", "Socket.IO"],
-    liveUrl: "https://seoauditer.netlify.app",
-    featured: true,
-    completedDate: "2024-02-15",
-    client: "SEOAuditer Inc.",
-    results: {
-      metric1: "500+ SEO agencies onboarded",
-      metric2: "1M+ websites analyzed",
-      metric3: "98% accuracy in audits"
-    }
-  },
-  {
     id: "la-brioche",
     title: "La Brioche Bakery",
     category: "Web Development",
@@ -78,23 +61,6 @@ const portfolioProjects = [
     }
   },
   {
-    id: "rival-outranker",
-    title: "Rival Outranker",
-    category: "SaaS Development",
-    description: "A professional-grade SEO analysis platform with a modular architecture and comprehensive audit capabilities.",
-    image: "/images/portfolio/rival-outranker.jpg",
-    technologies: ["TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    liveUrl: "https://rival-outranker.netlify.app",
-    featured: true,
-    completedDate: "2023-10-15",
-    client: "Rival Digital Solutions",
-    results: {
-      metric1: "50+ ranking factors analyzed",
-      metric2: "140+ audit checkpoints",
-      metric3: "85% performance improvement"
-    }
-  },
-  {
     id: "jenna-eve",
     title: "Jenna Eve Portfolio",
     category: "Web Development",
@@ -109,6 +75,40 @@ const portfolioProjects = [
       metric1: "60fps performance guarantee",
       metric2: "95% user engagement rate",
       metric3: "Award-winning design"
+    }
+  },
+  {
+    id: "red-rock-vet",
+    title: "Red Rock Veterinary Health",
+    category: "Web Development + SEO",
+    description: "Modern veterinary practice website featuring Fear Free® certified care, comprehensive service pages, and exceptional performance optimization.",
+    image: "/images/portfolio/SCR-20251111-kfzn.png",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Sanity CMS", "Framer Motion"],
+    liveUrl: "https://www.redrockvet.com",
+    featured: true,
+    completedDate: "2024-08-20",
+    client: "Red Rock Veterinary Health",
+    results: {
+      metric1: "18% increase in organic keywords",
+      metric2: "94/100 PageSpeed Performance",
+      metric3: "5.0★ Google rating"
+    }
+  },
+  {
+    id: "blackbird-detailing",
+    title: "Blackbird Detailing",
+    category: "Web Development + SEO",
+    description: "Premium automotive detailing website with instant estimate engine, motorsport-grade branding, and local SEO optimization for Virginia Beach market.",
+    image: "/images/portfolio/blackbird.png",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "Shadcn/ui"],
+    liveUrl: "https://www.blackbirddetailingus.com",
+    featured: false,
+    completedDate: "2024-10-15",
+    client: "Blackbird Detailing",
+    results: {
+      metric1: "32% increase in organic keywords",
+      metric2: "Multi-step instant estimate form",
+      metric3: "Virginia Beach market leader"
     }
   }
 ];

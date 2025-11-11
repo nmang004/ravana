@@ -7,25 +7,11 @@ import Link from "next/link";
 
 const services = [
   {
-    icon: Code,
-    title: "SaaS Development",
-    description: "Full-stack SaaS applications built with modern technologies. From MVP to enterprise-scale solutions.",
-    features: ["React/Next.js", "Node.js/Python", "Cloud Infrastructure", "Payment Integration"],
-    href: "/services/saas"
-  },
-  {
     icon: Palette,
-    title: "Web Development", 
+    title: "Web Development",
     description: "Premium websites that convert. Custom designs that reflect your brand and drive business results.",
     features: ["Custom Design", "Responsive Layout", "Performance Optimized", "CMS Integration"],
     href: "/services/web"
-  },
-  {
-    icon: TrendingUp,
-    title: "Digital Marketing",
-    description: "Data-driven marketing strategies that grow your business. From social media to paid advertising.",
-    features: ["Social Media", "PPC Campaigns", "Content Strategy", "Analytics & Reporting"],
-    href: "/services/marketing"
   },
   {
     icon: Search,
@@ -33,6 +19,20 @@ const services = [
     description: "Dominate search results with our proven SEO strategies. Technical and content optimization.",
     features: ["Technical SEO", "Content Optimization", "Link Building", "Local SEO"],
     href: "/services/seo"
+  },
+  {
+    icon: Code,
+    title: "SaaS Development",
+    description: "Full-stack SaaS applications built with modern technologies. From MVP to enterprise-scale solutions.",
+    features: ["React/Next.js", "Node.js/Python", "Cloud Infrastructure", "Payment Integration"],
+    href: "/services/saas"
+  },
+  {
+    icon: TrendingUp,
+    title: "Digital Marketing",
+    description: "Data-driven marketing strategies that grow your business. From social media to paid advertising.",
+    features: ["Social Media", "PPC Campaigns", "Content Strategy", "Analytics & Reporting"],
+    href: "/services/marketing"
   }
 ];
 
