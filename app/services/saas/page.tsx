@@ -137,10 +137,27 @@ export const metadata: Metadata = {
   title: "SaaS Development Services - Custom Software Solutions",
   description: "Build scalable SaaS applications with our expert development team. Full-stack development, cloud infrastructure, and enterprise security. From MVP to enterprise scale.",
   keywords: ["SaaS development", "custom software", "web application", "React development", "Next.js", "full-stack development", "MVP development"],
+  alternates: {
+    canonical: '/services/saas',
+  },
   openGraph: {
     title: "SaaS Development Services | Ravana Digital Agency",
     description: "Build scalable SaaS applications with our expert development team. Full-stack development, cloud infrastructure, and enterprise security.",
     type: "website",
+    images: [
+      {
+        url: '/og-saas-development.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ravana SaaS Development Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SaaS Development Services | Ravana',
+    description: 'Build scalable SaaS applications with expert full-stack development team.',
+    images: ['/og-saas-development.jpg'],
   },
 };
 

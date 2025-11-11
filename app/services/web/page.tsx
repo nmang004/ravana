@@ -7,6 +7,7 @@ import Link from "next/link";
 import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 import StaggerReveal from "@/components/interactive/StaggerReveal";
+import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const features = [
   {
@@ -154,10 +155,27 @@ export const metadata: Metadata = {
   title: "Web Development Services - Custom Websites That Convert",
   description: "Premium web development services that create stunning, high-performance websites. Custom design, mobile-first approach, and SEO optimization included.",
   keywords: ["web development", "custom website design", "responsive design", "Next.js development", "React development", "e-commerce website"],
+  alternates: {
+    canonical: '/services/web',
+  },
   openGraph: {
     title: "Web Development Services | Ravana Digital Agency",
     description: "Premium web development services that create stunning, high-performance websites. Custom design, mobile-first approach, and SEO optimization included.",
     type: "website",
+    images: [
+      {
+        url: '/og-web-development.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ravana Web Development Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Development Services | Ravana',
+    description: 'Premium web development that creates stunning, high-performance websites.',
+    images: ['/og-web-development.jpg'],
   },
 };
 
@@ -165,6 +183,19 @@ export default function WebDevelopmentPage() {
   return (
     <PageTransition>
       <div className="pt-20">
+        {/* Breadcrumb */}
+        <section className="py-6 px-6">
+          <div className="container mx-auto">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Services", href: "/services" },
+                { label: "Web Development" }
+              ]}
+            />
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="py-24 px-6 relative overflow-hidden">
           <div className="container mx-auto relative z-10">

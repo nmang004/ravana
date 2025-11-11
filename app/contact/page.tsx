@@ -51,10 +51,27 @@ export const metadata: Metadata = {
   title: "Contact Us - Start Your Digital Transformation",
   description: "Get in touch with Ravana Digital Agency. Free consultation for SaaS development, web design, and digital marketing projects. Let's discuss your goals.",
   keywords: ["contact ravana", "free consultation", "project quote", "digital agency contact", "web development", "SEO services"],
+  alternates: {
+    canonical: '/contact',
+  },
   openGraph: {
     title: "Contact Ravana Digital Agency | Free Consultation",
     description: "Get in touch for a free consultation on your SaaS development, web design, or digital marketing project.",
     type: "website",
+    images: [
+      {
+        url: '/og-contact.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Ravana Digital Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Ravana Digital Agency',
+    description: 'Get in touch for a free consultation on your next digital project.',
+    images: ['/og-contact.jpg'],
   },
 };
 

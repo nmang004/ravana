@@ -15,10 +15,27 @@ export const metadata: Metadata = {
   title: "Portfolio - Our Best Work & Case Studies",
   description: "Explore our portfolio of successful digital projects including SaaS platforms, e-commerce websites, and marketing campaigns. See detailed case studies and results.",
   keywords: ["portfolio", "case studies", "SaaS projects", "web development examples", "digital marketing results", "client success stories"],
+  alternates: {
+    canonical: '/portfolio',
+  },
   openGraph: {
     title: "Portfolio & Case Studies | Ravana Digital Agency",
     description: "Explore our portfolio of successful digital projects including SaaS platforms, e-commerce websites, and marketing campaigns.",
     type: "website",
+    images: [
+      {
+        url: '/og-portfolio.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ravana Digital Agency Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portfolio & Case Studies | Ravana',
+    description: 'Explore our successful digital projects and detailed case studies.',
+    images: ['/og-portfolio.jpg'],
   },
 };
 

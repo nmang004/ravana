@@ -16,6 +16,9 @@ const footerLinks = {
   ],
   Resources: [
     { href: "/insights", label: "Insights" },
+    { href: "/blog", label: "Blog" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/project-brief", label: "Project Brief" },
     { href: "/privacy", label: "Privacy Policy" },
     { href: "/terms", label: "Terms of Service" },
   ],

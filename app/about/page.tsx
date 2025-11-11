@@ -97,10 +97,27 @@ export const metadata: Metadata = {
   title: "About Us - Meet the Ravana Digital Agency Team",
   description: "Learn about Ravana Digital Agency - our story, team, values, and commitment to delivering exceptional digital experiences. Founded by Silicon Valley veterans.",
   keywords: ["about ravana", "digital agency team", "company story", "silicon valley", "web development team", "agency values"],
+  alternates: {
+    canonical: '/about',
+  },
   openGraph: {
     title: "About Ravana Digital Agency | Our Story & Team",
     description: "Learn about our story, team, and commitment to delivering exceptional digital experiences. Founded by Silicon Valley veterans.",
     type: "website",
+    images: [
+      {
+        url: '/og-about.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'About Ravana Digital Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Ravana Digital Agency',
+    description: 'Learn about our story, team, and commitment to exceptional digital experiences.',
+    images: ['/og-about.jpg'],
   },
 };
 

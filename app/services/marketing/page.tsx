@@ -8,6 +8,7 @@ import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 import StaggerReveal from "@/components/interactive/StaggerReveal";
 import AnimatedCounter from "@/components/interactive/AnimatedCounter";
+import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const services = [
   {
@@ -159,10 +160,27 @@ export const metadata: Metadata = {
   title: "Digital Marketing Services - Data-Driven Growth Strategies",
   description: "Accelerate your business growth with our data-driven digital marketing strategies. PPC advertising, social media marketing, and comprehensive analytics.",
   keywords: ["digital marketing", "PPC advertising", "social media marketing", "Google Ads", "Facebook Ads", "marketing analytics", "growth marketing"],
+  alternates: {
+    canonical: '/services/marketing',
+  },
   openGraph: {
     title: "Digital Marketing Services | Ravana Digital Agency",
     description: "Accelerate your business growth with our data-driven digital marketing strategies. PPC advertising, social media marketing, and comprehensive analytics.",
     type: "website",
+    images: [
+      {
+        url: '/og-digital-marketing.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ravana Digital Marketing Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Digital Marketing Services | Ravana',
+    description: 'Accelerate your growth with data-driven digital marketing strategies.',
+    images: ['/og-digital-marketing.jpg'],
   },
 };
 
@@ -170,6 +188,19 @@ export default function DigitalMarketingPage() {
   return (
     <PageTransition>
       <div className="pt-20">
+        {/* Breadcrumb */}
+        <section className="py-6 px-6">
+          <div className="container mx-auto">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Services", href: "/services" },
+                { label: "Digital Marketing" }
+              ]}
+            />
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="py-24 px-6 relative overflow-hidden">
           <div className="container mx-auto relative z-10">

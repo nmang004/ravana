@@ -8,6 +8,7 @@ import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 import StaggerReveal from "@/components/interactive/StaggerReveal";
 import AnimatedCounter from "@/components/interactive/AnimatedCounter";
+import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const services = [
   {
@@ -184,10 +185,27 @@ export const metadata: Metadata = {
   title: "SEO Services - Dominate Search Results & Drive Organic Traffic",
   description: "Boost your search engine rankings with our proven SEO strategies. Technical optimization, keyword research, content creation, and link building services.",
   keywords: ["SEO services", "search engine optimization", "organic traffic", "keyword research", "link building", "local SEO", "technical SEO"],
+  alternates: {
+    canonical: '/services/seo',
+  },
   openGraph: {
     title: "SEO Services | Ravana Digital Agency",
     description: "Boost your search engine rankings with our proven SEO strategies. Technical optimization, keyword research, content creation, and link building services.",
     type: "website",
+    images: [
+      {
+        url: '/og-seo-services.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ravana SEO Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO Services | Ravana',
+    description: 'Dominate search results with proven SEO strategies and technical optimization.',
+    images: ['/og-seo-services.jpg'],
   },
 };
 
@@ -195,6 +213,19 @@ export default function SEOServicesPage() {
   return (
     <PageTransition>
       <div className="pt-20">
+        {/* Breadcrumb */}
+        <section className="py-6 px-6">
+          <div className="container mx-auto">
+            <Breadcrumb
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Services", href: "/services" },
+                { label: "SEO Services" }
+              ]}
+            />
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="py-24 px-6 relative overflow-hidden">
           <div className="container mx-auto relative z-10">
