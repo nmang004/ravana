@@ -16,7 +16,13 @@ export const navLinks: NavLink[] = [
       { href: "/blog", label: "Blog" }
     ]
   },
-  { href: "/about", label: "About" },
+  {
+    label: "About",
+    subLinks: [
+      { href: "/about", label: "About Us" },
+      { href: "/service-areas", label: "Service Areas" }
+    ]
+  },
   { href: "/contact", label: "Contact" },
 ];
 

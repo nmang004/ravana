@@ -82,13 +82,13 @@ export default function StructuredData({ type = 'organization', data }: Structur
           provider: {
             '@type': 'Organization',
             name: 'Ravana Digital Agency',
-            url: 'https://ravana.agency'
+            url: 'https://www.ravanasolutions.com'
           },
-          areaServed: {
+          areaServed: data?.areaServed || {
             '@type': 'Country',
             name: 'United States'
           },
-          hasOfferCatalog: {
+          hasOfferCatalog: data?.hasOfferCatalog || {
             '@type': 'OfferCatalog',
             name: 'Digital Services',
             itemListElement: [
@@ -183,12 +183,12 @@ export default function StructuredData({ type = 'organization', data }: Structur
         return {
           ...baseData,
           '@type': 'LocalBusiness',
-          name: 'Ravana Digital Agency',
-          image: 'https://www.ravanasolutions.com/logo.png',
-          '@id': 'https://www.ravanasolutions.com',
-          url: 'https://www.ravanasolutions.com',
+          name: data?.name || 'Ravana Digital Agency',
+          image: data?.image || 'https://www.ravanasolutions.com/logo.png',
+          '@id': data?.id || 'https://www.ravanasolutions.com',
+          url: data?.url || 'https://www.ravanasolutions.com',
           telephone: data?.telephone || '+1-555-123-4567',
-          priceRange: '$$$',
+          priceRange: data?.priceRange || '$$$',
           address: {
             '@type': 'PostalAddress',
             streetAddress: data?.streetAddress || '123 Innovation Drive',
@@ -198,7 +198,8 @@ export default function StructuredData({ type = 'organization', data }: Structur
             addressCountry: 'US'
           },
           geo: data?.geo,
-          openingHoursSpecification: {
+          areaServed: data?.areaServed,
+          openingHoursSpecification: data?.openingHoursSpecification || {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
             opens: '09:00',
