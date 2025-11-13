@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   return {
-    title: `${post.title} | Ravana Blog`,
+    title: post.title,
     description: post.excerpt,
     keywords: post.tags,
     authors: [{ name: post.author }],
