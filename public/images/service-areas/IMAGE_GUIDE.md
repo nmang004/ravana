@@ -84,7 +84,7 @@ This guide helps you source and optimize images for all service area pages.
 - Dimensions: 1200x630px (exact)
 - Format: JPG
 - File size: < 200KB
-- Include: City name + "Ravana Digital Agency" text overlay
+- Include: City name + "Ravana Solutions" text overlay
 - Background: City image with dark overlay for text readability
 - Colors: Use Ravana brand colors (gold #FFD700 on dark)
 

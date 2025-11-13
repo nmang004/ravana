@@ -6,15 +6,15 @@ import CTASection from "@/components/sections/CTASection";
 import PageTransition from "@/components/layout/PageTransition";
 
 export const metadata: Metadata = {
-  title: "Ravana - Premium Digital Agency | Web Development & SEO Services",
-  description: "Transform your business with premium web development and SEO services. We craft websites that rank, convert, and drive measurable business results. Expert SaaS development, digital marketing, and technical SEO.",
-  keywords: ["digital agency", "web development", "SEO services", "SaaS development", "Next.js development", "React development", "technical SEO", "digital marketing", "premium web design", "conversion optimization"],
+  title: "Ravana Solutions | Web Development & SEO Services",
+  description: "Expert web development and SEO services in Hampton Roads. We build custom websites and implement proven search optimization strategies that drive real results.",
+  keywords: ["web development", "SEO services", "Hampton Roads web design", "custom websites", "web applications", "search engine optimization", "Next.js development", "React development", "technical SEO", "Virginia web development"],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Ravana - Premium Digital Agency | Web Development & SEO",
-    description: "Transform your business with premium web development and SEO services. We craft websites that rank, convert, and drive measurable results.",
+    title: "Ravana Solutions | Web Development & SEO Services",
+    description: "Expert web development and SEO services in Hampton Roads. We build custom websites and implement proven search optimization strategies that drive real results.",
     type: "website",
     url: "https://www.ravanasolutions.com",
     images: [
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
         url: '/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ravana Digital Agency - Premium Web Development & SEO Services',
+        alt: 'Ravana Solutions - Professional Web Development & SEO Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ravana - Premium Digital Agency',
-    description: 'Transform your business with cutting-edge web development and SEO services that drive results.',
+    title: 'Ravana Solutions | Web Development & SEO',
+    description: 'Expert web development and SEO services in Hampton Roads. Custom websites and proven search optimization strategies that drive results.',
     images: ['/og-home.jpg'],
   },
 };

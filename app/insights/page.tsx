@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Deep insights, proven strategies, and transformative ideas from the forefront of digital innovation. Your competitive edge starts here.',
   keywords: ['digital strategy', 'SaaS insights', 'growth strategies', 'AI trends', 'product development', 'business innovation'],
   openGraph: {
-    title: 'The Insights Hub - Ravana Digital Agency',
+    title: 'The Insights Hub - Ravana Solutions',
     description: 'Deep insights, proven strategies, and transformative ideas from the forefront of digital innovation.',
     type: 'website',
     url: 'https://ravana.agency/insights',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Insights Hub - Ravana Digital Agency',
+    title: 'The Insights Hub - Ravana Solutions',
     description: 'Deep insights, proven strategies, and transformative ideas from the forefront of digital innovation.',
     images: ['/images/insights/insights-hub-og.jpg'],
   },

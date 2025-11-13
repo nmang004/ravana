@@ -12,7 +12,7 @@ import { getAllCities, getCityPath } from '@/lib/location-data';
 
 export const metadata: Metadata = {
   title: 'Service Areas - Hampton Roads Digital Marketing & Web Development | Ravana',
-  description: 'Serving Norfolk, Virginia Beach, Chesapeake, Hampton, and Portsmouth with expert web development, SEO, SaaS development, and digital marketing services. Dominate your local market with Ravana Digital Agency.',
+  description: 'Serving Norfolk, Virginia Beach, Chesapeake, Hampton, and Portsmouth with expert web development, SEO, SaaS development, and digital marketing services. Dominate your local market with Ravana Solutions.',
   keywords: [
     'Hampton Roads web development',
     'Hampton Roads digital marketing',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: '/images/service-areas/og/service-areas-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ravana Digital Agency - Hampton Roads Service Areas',
+        alt: 'Ravana Solutions - Hampton Roads Service Areas',
       },
     ],
   },

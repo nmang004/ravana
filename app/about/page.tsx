@@ -94,29 +94,29 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-  title: "About Us - Meet the Ravana Digital Agency Team",
-  description: "Learn about Ravana Digital Agency - our story, team, values, and commitment to delivering exceptional digital experiences. Founded by Silicon Valley veterans.",
-  keywords: ["about ravana", "digital agency team", "company story", "silicon valley", "web development team", "agency values"],
+  title: "About Ravana Solutions | Our Web Development Team",
+  description: "Learn about Ravana Solutions - our story, team, and commitment to delivering exceptional web development and SEO services in Hampton Roads, Virginia.",
+  keywords: ["about ravana solutions", "web development team", "Hampton Roads web developers", "Norfolk Virginia", "SEO team", "web design agency"],
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: "About Ravana Digital Agency | Our Story & Team",
-    description: "Learn about our story, team, and commitment to delivering exceptional digital experiences. Founded by Silicon Valley veterans.",
+    title: "About Ravana Solutions | Our Web Development Team",
+    description: "Learn about our story, team, and commitment to delivering exceptional web development and SEO services in Hampton Roads, Virginia.",
     type: "website",
     images: [
       {
         url: '/og-about.jpg',
         width: 1200,
         height: 630,
-        alt: 'About Ravana Digital Agency',
+        alt: 'About Ravana Solutions - Web Development Team',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Ravana Digital Agency',
-    description: 'Learn about our story, team, and commitment to exceptional digital experiences.',
+    title: 'About Ravana Solutions',
+    description: 'Learn about our web development and SEO team based in Hampton Roads, Virginia, committed to exceptional digital experiences.',
     images: ['/og-about.jpg'],
   },
 };

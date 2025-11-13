@@ -51,7 +51,7 @@ export default function BlogHub({
       <StructuredData 
         type="website" 
         data={{
-          name: 'Blog - Ravana Digital Agency',
+          name: 'Blog - Ravana Solutions',
           description: 'Explore the latest insights on digital transformation, web development, marketing strategies, and technology trends.',
           url: 'https://ravana.agency/blog'
         }}

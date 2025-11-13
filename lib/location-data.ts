@@ -502,17 +502,17 @@ export function getCityPath(citySlug: string): string {
 // Metadata generators
 
 export function generateCityMetaTitle(cityName: string): string {
-  return `${cityName} Web Development & Digital Marketing | Ravana Digital Agency`;
+  return `${cityName} Web Development & SEO | Ravana Solutions`;
 }
 
 export function generateCityMetaDescription(cityName: string): string {
-  return `Expert web development, SEO, and digital marketing services in ${cityName}, VA. Helping Hampton Roads businesses grow with proven digital strategies. Get a free consultation today.`;
+  return `Expert web development and SEO services in ${cityName}, VA. Helping Hampton Roads businesses grow with custom websites and proven search optimization. Call (757) 394-0583.`;
 }
 
 export function generateCityServiceMetaTitle(cityName: string, serviceName: string): string {
-  return `${serviceName} in ${cityName} | Ravana Digital Agency`;
+  return `${serviceName} in ${cityName} | Ravana Solutions`;
 }
 
 export function generateCityServiceMetaDescription(cityName: string, serviceName: string): string {
-  return `Professional ${serviceName.toLowerCase()} services for ${cityName} businesses. Drive growth with expert strategies tailored to the Hampton Roads market. Contact us for a free consultation.`;
+  return `Professional ${serviceName.toLowerCase()} services for ${cityName} businesses. Drive growth with expert web development and SEO strategies tailored to Hampton Roads. Call (757) 394-0583.`;
 }

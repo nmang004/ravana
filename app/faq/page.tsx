@@ -18,7 +18,7 @@ const faqCategories = [
     category: "General & Services",
     questions: [
       {
-        question: "What services does Ravana Digital Agency offer?",
+        question: "What services does Ravana Solutions offer?",
         answer:
           "We specialize in three core areas: Web Development (premium websites that convert), SEO Services (rank higher and drive organic traffic), and SaaS Development (full-stack applications that scale). We also offer digital marketing services including content strategy, social media management, and paid advertising campaigns.",
       },
@@ -162,9 +162,9 @@ const faqCategories = [
 ];
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions - Ravana Digital Agency",
+  title: "Frequently Asked Questions - Ravana Solutions",
   description:
-    "Find answers to common questions about our services, pricing, process, timelines, and support. Learn how Ravana Digital Agency can help transform your digital presence.",
+    "Find answers to common questions about our services, pricing, process, timelines, and support. Learn how Ravana Solutions can help transform your digital presence.",
   keywords: [
     "faq",
     "frequently asked questions",
@@ -175,7 +175,7 @@ export const metadata: Metadata = {
     "digital agency support",
   ],
   openGraph: {
-    title: "FAQ - Ravana Digital Agency",
+    title: "FAQ - Ravana Solutions",
     description:
       "Find answers to common questions about our services, pricing, process, and support.",
     type: "website",

@@ -18,7 +18,7 @@ export default function LocalCTASection({
   description,
 }: LocalCTASectionProps) {
   const defaultHeading = `Ready to Grow Your ${cityName} Business?`;
-  const defaultDescription = `Join the ${cityName} businesses already dominating their market with Ravana Digital Agency. Let's create your success story.`;
+  const defaultDescription = `Join the ${cityName} businesses already dominating their market with Ravana Solutions. Let's create your success story.`;
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
@@ -71,7 +71,7 @@ export default function LocalCTASection({
             {/* Contact Options */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 border-t border-accent/20">
               <motion.a
-                href="tel:+17576857209"
+                href="tel:+17573940583"
                 className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -81,7 +81,7 @@ export default function LocalCTASection({
                 </div>
                 <div className="text-left">
                   <p className="text-xs uppercase tracking-wide">Call Us</p>
-                  <p className="font-semibold">(757) 685-7209</p>
+                  <p className="font-semibold">(757) 394-0583</p>
                 </div>
               </motion.a>
 

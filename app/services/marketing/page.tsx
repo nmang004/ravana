@@ -157,29 +157,29 @@ const pricingTiers = [
 ];
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services - Data-Driven Growth Strategies",
-  description: "Accelerate your business growth with our data-driven digital marketing strategies. PPC advertising, social media marketing, and comprehensive analytics.",
-  keywords: ["digital marketing", "PPC advertising", "social media marketing", "Google Ads", "Facebook Ads", "marketing analytics", "growth marketing"],
+  title: "Digital Marketing Services | Ravana Solutions",
+  description: "Data-driven digital marketing services including PPC advertising, social media marketing, and analytics. Complement your web presence with strategic marketing.",
+  keywords: ["digital marketing", "PPC advertising", "social media marketing", "Google Ads", "Facebook Ads", "marketing analytics", "Hampton Roads marketing"],
   alternates: {
     canonical: '/services/marketing',
   },
   openGraph: {
-    title: "Digital Marketing Services | Ravana Digital Agency",
-    description: "Accelerate your business growth with our data-driven digital marketing strategies. PPC advertising, social media marketing, and comprehensive analytics.",
+    title: "Digital Marketing Services | Ravana Solutions",
+    description: "Data-driven digital marketing services including PPC advertising, social media marketing, and analytics to grow your business.",
     type: "website",
     images: [
       {
         url: '/og-digital-marketing.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ravana Digital Marketing Services',
+        alt: 'Ravana Solutions Digital Marketing Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Services | Ravana',
-    description: 'Accelerate your growth with data-driven digital marketing strategies.',
+    title: 'Digital Marketing | Ravana Solutions',
+    description: 'Data-driven digital marketing strategies including PPC, social media, and comprehensive analytics.',
     images: ['/og-digital-marketing.jpg'],
   },
 };

@@ -182,29 +182,29 @@ const pricingTiers = [
 ];
 
 export const metadata: Metadata = {
-  title: "SEO Services - Dominate Search Results & Drive Organic Traffic",
-  description: "Boost your search engine rankings with our proven SEO strategies. Technical optimization, keyword research, content creation, and link building services.",
-  keywords: ["SEO services", "search engine optimization", "organic traffic", "keyword research", "link building", "local SEO", "technical SEO"],
+  title: "SEO Services Hampton Roads | Ravana Solutions",
+  description: "Professional SEO services in Hampton Roads. Technical optimization, keyword research, local SEO, and link building to boost your search rankings and organic traffic.",
+  keywords: ["SEO services", "search engine optimization", "Hampton Roads SEO", "local SEO", "organic traffic", "keyword research", "link building", "technical SEO"],
   alternates: {
     canonical: '/services/seo',
   },
   openGraph: {
-    title: "SEO Services | Ravana Digital Agency",
-    description: "Boost your search engine rankings with our proven SEO strategies. Technical optimization, keyword research, content creation, and link building services.",
+    title: "SEO Services Hampton Roads | Ravana Solutions",
+    description: "Professional SEO services in Hampton Roads. Technical optimization, keyword research, local SEO, and link building to boost your rankings.",
     type: "website",
     images: [
       {
         url: '/og-seo-services.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ravana SEO Services',
+        alt: 'Ravana Solutions SEO Services Hampton Roads',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Services | Ravana',
-    description: 'Dominate search results with proven SEO strategies and technical optimization.',
+    title: 'SEO Services | Ravana Solutions',
+    description: 'Professional SEO services in Hampton Roads. Boost your search rankings and drive organic traffic with proven strategies.',
     images: ['/og-seo-services.jpg'],
   },
 };

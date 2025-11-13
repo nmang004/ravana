@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         url: cityData.ogImage,
         width: 1200,
         height: 630,
-        alt: `${serviceData.name} in ${cityData.name} - Ravana Digital Agency`,
+        alt: `${serviceData.name} in ${cityData.name} - Ravana Solutions`,
       },
     ],
   },

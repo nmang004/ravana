@@ -50,7 +50,7 @@ export default function InsightsHub({
       <StructuredData 
         type="website" 
         data={{
-          name: 'The Insights Hub - Ravana Digital Agency',
+          name: 'The Insights Hub - Ravana Solutions',
           description: 'Deep insights, proven strategies, and transformative ideas from the forefront of digital innovation.',
           url: 'https://ravana.agency/insights'
         }}

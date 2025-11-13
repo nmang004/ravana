@@ -48,29 +48,29 @@ const officeInfo = [
 ];
 
 export const metadata: Metadata = {
-  title: "Contact Us - Start Your Digital Transformation",
-  description: "Get in touch with Ravana Digital Agency. Free consultation for SaaS development, web design, and digital marketing projects. Let's discuss your goals.",
-  keywords: ["contact ravana", "free consultation", "project quote", "digital agency contact", "web development", "SEO services"],
+  title: "Contact Ravana Solutions | Get Your Free Quote",
+  description: "Contact Ravana Solutions for web development and SEO services. Free consultation and project quotes. Call (757) 394-0583 or schedule a meeting today.",
+  keywords: ["contact ravana solutions", "free consultation", "web development quote", "SEO services contact", "Hampton Roads web developer", "Virginia web design"],
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
-    title: "Contact Ravana Digital Agency | Free Consultation",
-    description: "Get in touch for a free consultation on your SaaS development, web design, or digital marketing project.",
+    title: "Contact Ravana Solutions | Web Development & SEO",
+    description: "Contact us for web development and SEO services. Free consultation and project quotes available. Call (757) 394-0583 today.",
     type: "website",
     images: [
       {
         url: '/og-contact.jpg',
         width: 1200,
         height: 630,
-        alt: 'Contact Ravana Digital Agency',
+        alt: 'Contact Ravana Solutions - Web Development & SEO',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Ravana Digital Agency',
-    description: 'Get in touch for a free consultation on your next digital project.',
+    title: 'Contact Ravana Solutions',
+    description: 'Get in touch for web development and SEO services. Free consultation available. Call (757) 394-0583 today.',
     images: ['/og-contact.jpg'],
   },
 };

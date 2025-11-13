@@ -73,11 +73,11 @@ const cookieList = [
 
 export const metadata: Metadata = {
   title: "Cookie Policy - How We Use Cookies",
-  description: "Learn about how Ravana Digital Agency uses cookies to improve your browsing experience and provide better services.",
+  description: "Learn about how Ravana Solutions uses cookies to improve your browsing experience and provide better services.",
   keywords: ["cookie policy", "privacy", "data protection", "website cookies", "analytics"],
   openGraph: {
-    title: "Cookie Policy | Ravana Digital Agency",
-    description: "Learn about how Ravana Digital Agency uses cookies to improve your browsing experience and provide better services.",
+    title: "Cookie Policy | Ravana Solutions",
+    description: "Learn about how Ravana Solutions uses cookies to improve your browsing experience and provide better services.",
     type: "website",
   },
 };

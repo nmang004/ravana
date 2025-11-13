@@ -1,10 +1,10 @@
-# 🤖 Ravana Digital Agency - Claude Code Documentation
+# 🤖 Ravana Solutions - Claude Code Documentation
 
-This file contains project-specific information for AI assistants working on the Ravana Digital Agency website.
+This file contains project-specific information for AI assistants working on the Ravana Solutions website.
 
 ## 📋 Project Overview
 
-**Project Name**: Ravana Digital Agency Website  
+**Project Name**: Ravana Solutions Website  
 **Type**: Premium Next.js 14 website with TypeScript  
 **Purpose**: Showcase digital agency services with stunning animations  
 **Theme**: Dark theme with molten gold (#FFD700) accents  
@@ -269,4 +269,4 @@ For technical issues with this project:
 
 ---
 
-*This documentation is maintained for AI assistants working on the Ravana Digital Agency project. Keep it updated with any significant changes to the codebase.*
+*This documentation is maintained for AI assistants working on the Ravana Solutions project. Keep it updated with any significant changes to the codebase.*

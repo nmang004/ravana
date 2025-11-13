@@ -14,34 +14,21 @@ export default function StructuredData({ type = 'organization', data }: Structur
         return {
           ...baseData,
           '@type': 'Organization',
-          name: 'Ravana Digital Agency',
+          name: 'Ravana Solutions',
           alternateName: 'Ravana',
-          url: 'https://ravana.agency',
-          logo: 'https://ravana.agency/logo.png',
+          url: 'https://www.ravanasolutions.com/',
+          logo: 'https://www.ravanasolutions.com/logo.png',
           contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+1-555-123-4567',
+            telephone: '+1-757-394-0583',
             contactType: 'customer service',
             availableLanguage: 'English'
           },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '123 Innovation Drive',
-            addressLocality: 'San Francisco',
-            addressRegion: 'CA',
-            postalCode: '94105',
-            addressCountry: 'US'
-          },
-          sameAs: [
-            'https://twitter.com/ravana_agency',
-            'https://linkedin.com/company/ravana-agency',
-            'https://github.com/ravana-agency'
-          ],
           foundingDate: '2020',
           founders: [
             {
               '@type': 'Person',
-              name: 'Alex Rivera'
+              name: 'Nicholas Mangubat'
             }
           ],
           numberOfEmployees: {
@@ -55,18 +42,18 @@ export default function StructuredData({ type = 'organization', data }: Structur
         return {
           ...baseData,
           '@type': 'WebSite',
-          name: 'Ravana Digital Agency',
-          url: 'https://ravana.agency',
-          description: 'Premium digital agency specializing in SaaS development, web creation, digital marketing, and SEO.',
+          name: 'Ravana Solutions',
+          url: 'https://www.ravanasolutions.com/',
+          description: 'Premium web development and SEO services specializing in custom websites, web applications, and search engine optimization.',
           publisher: {
             '@type': 'Organization',
-            name: 'Ravana Digital Agency'
+            name: 'Ravana Solutions'
           },
           potentialAction: {
             '@type': 'SearchAction',
             target: {
               '@type': 'EntryPoint',
-              urlTemplate: 'https://ravana.agency/search?q={search_term_string}'
+              urlTemplate: 'https://www.ravanasolutions.com/search?q={search_term_string}'
             },
             'query-input': 'required name=search_term_string'
           },
@@ -77,12 +64,12 @@ export default function StructuredData({ type = 'organization', data }: Structur
         return {
           ...baseData,
           '@type': 'Service',
-          name: data?.name || 'Digital Agency Services',
-          description: data?.description || 'Professional digital services including SaaS development, web design, and digital marketing.',
+          name: data?.name || 'Web Development & SEO Services',
+          description: data?.description || 'Professional web development and SEO services including custom websites, web applications, and search engine optimization.',
           provider: {
             '@type': 'Organization',
-            name: 'Ravana Digital Agency',
-            url: 'https://www.ravanasolutions.com'
+            name: 'Ravana Solutions',
+            url: 'https://www.ravanasolutions.com/'
           },
           areaServed: data?.areaServed || {
             '@type': 'Country',
@@ -136,8 +123,8 @@ export default function StructuredData({ type = 'organization', data }: Structur
           },
           publisher: {
             '@type': 'Organization',
-            name: 'Ravana Digital Agency',
-            url: 'https://www.ravanasolutions.com',
+            name: 'Ravana Solutions',
+            url: 'https://www.ravanasolutions.com/',
             logo: {
               '@type': 'ImageObject',
               url: 'https://www.ravanasolutions.com/logo.png'
@@ -165,11 +152,11 @@ export default function StructuredData({ type = 'organization', data }: Structur
           url: data?.url,
           author: {
             '@type': 'Organization',
-            name: 'Ravana Digital Agency'
+            name: 'Ravana Solutions'
           },
           creator: {
             '@type': 'Organization',
-            name: 'Ravana Digital Agency'
+            name: 'Ravana Solutions'
           },
           dateCreated: data?.dateCreated,
           datePublished: data?.datePublished,
@@ -183,21 +170,12 @@ export default function StructuredData({ type = 'organization', data }: Structur
         return {
           ...baseData,
           '@type': 'LocalBusiness',
-          name: data?.name || 'Ravana Digital Agency',
+          name: data?.name || 'Ravana Solutions',
           image: data?.image || 'https://www.ravanasolutions.com/logo.png',
-          '@id': data?.id || 'https://www.ravanasolutions.com',
-          url: data?.url || 'https://www.ravanasolutions.com',
-          telephone: data?.telephone || '+1-555-123-4567',
+          '@id': data?.id || 'https://www.ravanasolutions.com/',
+          url: data?.url || 'https://www.ravanasolutions.com/',
+          telephone: data?.telephone || '+1-757-394-0583',
           priceRange: data?.priceRange || '$$$',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: data?.streetAddress || '123 Innovation Drive',
-            addressLocality: data?.city || 'San Francisco',
-            addressRegion: data?.state || 'CA',
-            postalCode: data?.zipCode || '94105',
-            addressCountry: 'US'
-          },
-          geo: data?.geo,
           areaServed: data?.areaServed,
           openingHoursSpecification: data?.openingHoursSpecification || {
             '@type': 'OpeningHoursSpecification',
@@ -205,11 +183,6 @@ export default function StructuredData({ type = 'organization', data }: Structur
             opens: '09:00',
             closes: '17:00'
           },
-          sameAs: [
-            'https://twitter.com/ravana_agency',
-            'https://linkedin.com/company/ravana-agency',
-            'https://github.com/ravana-agency'
-          ],
           ...data
         };
 
@@ -232,8 +205,8 @@ export default function StructuredData({ type = 'organization', data }: Structur
         return {
           ...baseData,
           '@type': 'WebPage',
-          name: data?.title || 'Ravana Digital Agency',
-          description: data?.description || 'Premium digital agency services',
+          name: data?.title || 'Ravana Solutions',
+          description: data?.description || 'Premium web development and SEO services',
           ...data
         };
     }

@@ -89,12 +89,12 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-  title: "Digital Services - Web Development, SEO & Digital Marketing",
-  description: "Expert web development and SEO services to grow your business. Premium websites, search engine optimization, SaaS development, and digital marketing solutions.",
-  keywords: ["web development", "SEO services", "search engine optimization", "website design", "SaaS development", "digital marketing", "Next.js", "React development"],
+  title: "Web Development & SEO Services | Ravana Solutions",
+  description: "Expert web development and SEO services in Hampton Roads. We build custom websites, web applications, and implement proven search optimization strategies.",
+  keywords: ["web development", "SEO services", "search engine optimization", "website design", "custom web development", "Hampton Roads", "Next.js", "React development"],
   openGraph: {
-    title: "Web Development & SEO Services | Ravana Digital Agency",
-    description: "Expert web development and SEO services to grow your business. Premium websites, search engine optimization, and digital marketing solutions.",
+    title: "Web Development & SEO Services | Ravana Solutions",
+    description: "Expert web development and SEO services in Hampton Roads. Custom websites, web applications, and proven search optimization strategies.",
     type: "website",
   },
 };

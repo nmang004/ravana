@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Explore the latest insights on digital transformation, web development, marketing strategies, and technology trends. Stay informed with our expert articles.',
   keywords: ['digital marketing blog', 'web development tips', 'technology trends', 'business insights', 'startup advice', 'digital transformation'],
   openGraph: {
-    title: 'Blog - Ravana Digital Agency',
+    title: 'Blog - Ravana Solutions',
     description: 'Explore the latest insights on digital transformation, web development, marketing strategies, and technology trends.',
     type: 'website',
     url: 'https://ravana.agency/blog',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog - Ravana Digital Agency',
+    title: 'Blog - Ravana Solutions',
     description: 'Explore the latest insights on digital transformation, web development, marketing strategies, and technology trends.',
     images: ['/images/blog/blog-og.jpg'],
   },

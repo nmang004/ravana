@@ -1,0 +1,14 @@
+<svg width="200" height="65" viewBox="0 0 200 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap');
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 32px;
+      fill: #FFFFFF;
+      letter-spacing: 0.05em;
+    }
+  </style>
+  <text x="0" y="40" class="logo-text">RAVANA</text>
+  <line x1="0" y1="50" x2="200" y2="50" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+</svg>

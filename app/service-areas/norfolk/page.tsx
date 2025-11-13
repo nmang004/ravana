@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: cityData.ogImage,
         width: 1200,
         height: 630,
-        alt: `${cityData.name} Digital Marketing & Web Development - Ravana Digital Agency`,
+        alt: `${cityData.name} Web Development & SEO - Ravana Solutions`,
       },
     ],
   },
@@ -56,7 +56,7 @@ export default function NorfolkPage() {
       <StructuredData
         type="localBusiness"
         data={{
-          name: `Ravana Digital Agency - ${cityData.name}`,
+          name: `Ravana Solutions - ${cityData.name}`,
           city: cityData.name,
           state: 'VA',
           url: `https://www.ravanasolutions.com/service-areas/${citySlug}`,

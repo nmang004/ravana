@@ -6,7 +6,7 @@ import ProjectBriefForm from "@/components/forms/ProjectBriefForm";
 import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Project Brief - Start Your Project with Ravana Digital Agency",
+  title: "Project Brief - Start Your Project with Ravana Solutions",
   description:
     "Complete our project brief questionnaire to help us understand your needs and provide you with an accurate proposal. Get started with your digital transformation today.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "digital agency proposal",
   ],
   openGraph: {
-    title: "Project Brief - Ravana Digital Agency",
+    title: "Project Brief - Ravana Solutions",
     description:
       "Complete our project brief to get a detailed proposal tailored to your needs.",
     type: "website",

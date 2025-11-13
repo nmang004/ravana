@@ -19,14 +19,14 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ravana - Premium Digital Agency | SaaS Development & Web Design",
-    template: "%s | Ravana Digital Agency"
+    default: "Ravana Solutions | Web Development & SEO Services",
+    template: "%s | Ravana Solutions"
   },
-  description: "Premium digital agency specializing in SaaS development, web creation, digital marketing, and SEO. Transform your business with cutting-edge technology and exceptional design.",
-  keywords: ["digital agency", "SaaS development", "web development", "digital marketing", "SEO services", "Next.js", "React", "premium web design"],
-  authors: [{ name: "Ravana Digital Agency" }],
-  creator: "Ravana Digital Agency",
-  publisher: "Ravana Digital Agency",
+  description: "Professional web development and SEO services in Hampton Roads. We build custom websites, web applications, and implement proven search optimization strategies.",
+  keywords: ["web development", "SEO services", "Hampton Roads web design", "custom websites", "web applications", "search engine optimization", "Next.js", "React", "Virginia web development"],
+  authors: [{ name: "Nicholas Mangubat" }],
+  creator: "Nicholas Mangubat",
+  publisher: "Ravana Solutions",
   formatDetection: {
     email: false,
     address: false,
@@ -40,24 +40,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.ravanasolutions.com',
-    title: 'Ravana - Premium Digital Agency',
-    description: 'Premium digital agency specializing in SaaS development, web creation, digital marketing, and SEO. Transform your business with cutting-edge technology.',
-    siteName: 'Ravana Digital Agency',
+    title: 'Ravana Solutions | Web Development & SEO',
+    description: 'Expert web development and SEO services in Hampton Roads. Custom websites, web applications, and strategic search optimization that deliver results.',
+    siteName: 'Ravana Solutions',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ravana Digital Agency - Premium Web Development & Design',
+        alt: 'Ravana Solutions - Professional Web Development & SEO Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ravana - Premium Digital Agency',
-    description: 'Transform your business with cutting-edge SaaS development, web design, and digital marketing services.',
+    title: 'Ravana Solutions | Web Development & SEO',
+    description: 'Expert web development and SEO services in Hampton Roads. Custom websites, web applications, and strategic search optimization that deliver results.',
     images: ['/og-image.jpg'],
-    creator: '@ravana_agency',
   },
   robots: {
     index: true,

@@ -174,7 +174,7 @@ export const metadata: Metadata = {
   description: "Transform your restaurant with targeted marketing strategies. Local SEO, commission-free online ordering, social media management, and loyalty programs that drive results.",
   keywords: ["restaurant marketing", "restaurant SEO", "online ordering", "restaurant social media", "local restaurant marketing", "restaurant loyalty programs"],
   openGraph: {
-    title: "Restaurant Marketing Services | Ravana Digital Agency",
+    title: "Restaurant Marketing Services | Ravana Solutions",
     description: "Transform your restaurant with targeted marketing strategies. Local SEO, commission-free online ordering, and loyalty programs that drive results.",
     type: "website",
   },

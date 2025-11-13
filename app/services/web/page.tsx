@@ -152,29 +152,29 @@ const pricingTiers = [
 ];
 
 export const metadata: Metadata = {
-  title: "Web Development Services - Custom Websites That Convert",
-  description: "Premium web development services that create stunning, high-performance websites. Custom design, mobile-first approach, and SEO optimization included.",
-  keywords: ["web development", "custom website design", "responsive design", "Next.js development", "React development", "e-commerce website"],
+  title: "Web Development Hampton Roads | Ravana Solutions",
+  description: "Professional web development services in Hampton Roads. Custom websites, web applications, mobile-first design, and SEO optimization for local businesses.",
+  keywords: ["web development", "Hampton Roads web design", "custom website design", "responsive design", "Next.js development", "React development", "Virginia web developer"],
   alternates: {
     canonical: '/services/web',
   },
   openGraph: {
-    title: "Web Development Services | Ravana Digital Agency",
-    description: "Premium web development services that create stunning, high-performance websites. Custom design, mobile-first approach, and SEO optimization included.",
+    title: "Web Development Services Hampton Roads | Ravana Solutions",
+    description: "Professional web development in Hampton Roads. Custom websites, web applications, mobile-first design, and SEO optimization for local businesses.",
     type: "website",
     images: [
       {
         url: '/og-web-development.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ravana Web Development Services',
+        alt: 'Ravana Solutions Web Development Services Hampton Roads',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Development Services | Ravana',
-    description: 'Premium web development that creates stunning, high-performance websites.',
+    title: 'Web Development | Ravana Solutions',
+    description: 'Professional web development services in Hampton Roads. Custom websites, web applications, and mobile-first design.',
     images: ['/og-web-development.jpg'],
   },
 };

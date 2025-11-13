@@ -1,4 +1,4 @@
-# 🔥 Ravana Digital Agency
+# 🔥 Ravana Solutions
 
 <div align="center">
 
@@ -27,7 +27,7 @@
 
 ## ✨ Overview
 
-Ravana Digital Agency is a **premium, production-ready website** showcasing the pinnacle of modern web development. Born from Norfolk, Virginia, this project demonstrates enterprise-level architecture, stunning animations, and exceptional user experience design that drives real business results.
+Ravana Solutions is a **premium, production-ready website** showcasing the pinnacle of modern web development. Born from Norfolk, Virginia, this project demonstrates enterprise-level architecture, stunning animations, and exceptional user experience design that drives real business results.
 
 > **"Where creativity meets code, and ideas transform into digital masterpieces"**
 
@@ -538,7 +538,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ```
 MIT License
 
-Copyright (c) 2024 Ravana Digital Agency
+Copyright (c) 2024 Ravana Solutions
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -571,7 +571,7 @@ We extend our gratitude to the amazing open-source community:
 
 <div align="center">
 
-**🌟 Ravana Digital Agency**
+**🌟 Ravana Solutions**
 
 *Crafting digital experiences that drive results*
 

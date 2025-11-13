@@ -12,29 +12,29 @@ import { getAllPortfolioProjects } from "@/lib/data";
 const categories = ["All", "SaaS Development", "Web Development", "Digital Marketing", "SEO Services", "Web Development + SEO"];
 
 export const metadata: Metadata = {
-  title: "Portfolio - Our Best Work & Case Studies",
-  description: "Explore our portfolio of successful digital projects including SaaS platforms, e-commerce websites, and marketing campaigns. See detailed case studies and results.",
-  keywords: ["portfolio", "case studies", "SaaS projects", "web development examples", "digital marketing results", "client success stories"],
+  title: "Portfolio | Ravana Solutions Web Development Projects",
+  description: "Explore our portfolio of successful web development and SEO projects. See detailed case studies showcasing custom websites, web applications, and proven results.",
+  keywords: ["portfolio", "web development case studies", "website examples", "SEO results", "custom web applications", "client success stories", "Hampton Roads web design"],
   alternates: {
     canonical: '/portfolio',
   },
   openGraph: {
-    title: "Portfolio & Case Studies | Ravana Digital Agency",
-    description: "Explore our portfolio of successful digital projects including SaaS platforms, e-commerce websites, and marketing campaigns.",
+    title: "Portfolio & Case Studies | Ravana Solutions",
+    description: "Explore our portfolio of successful web development and SEO projects. See detailed case studies showcasing custom websites and proven results.",
     type: "website",
     images: [
       {
         url: '/og-portfolio.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ravana Digital Agency Portfolio',
+        alt: 'Ravana Solutions Portfolio - Web Development Projects',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio & Case Studies | Ravana',
-    description: 'Explore our successful digital projects and detailed case studies.',
+    title: 'Portfolio | Ravana Solutions',
+    description: 'Explore our successful web development and SEO projects with detailed case studies and proven results.',
     images: ['/og-portfolio.jpg'],
   },
 };

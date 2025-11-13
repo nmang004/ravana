@@ -36,7 +36,7 @@ const termsSections = [
     content: [
       {
         subtitle: "Agreement to Terms",
-        text: "By accessing and using Ravana Digital Agency's website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services."
+        text: "By accessing and using Ravana Solutions's website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services."
       },
       {
         subtitle: "Legal Capacity",
@@ -55,7 +55,7 @@ const termsSections = [
     content: [
       {
         subtitle: "Service Description",
-        text: "Ravana Digital Agency provides premium digital services including SaaS development, web development, digital marketing, SEO services, and related consulting. Our services are provided subject to availability and may be modified or discontinued at our discretion."
+        text: "Ravana Solutions provides premium digital services including SaaS development, web development, digital marketing, SEO services, and related consulting. Our services are provided subject to availability and may be modified or discontinued at our discretion."
       },
       {
         subtitle: "Service Level Commitments",
@@ -193,7 +193,7 @@ const termsSections = [
       },
       {
         subtitle: "Entire Agreement",
-        text: "These terms, together with any applicable service agreements and privacy policy, constitute the entire agreement between you and Ravana Digital Agency regarding the use of our services."
+        text: "These terms, together with any applicable service agreements and privacy policy, constitute the entire agreement between you and Ravana Solutions regarding the use of our services."
       },
       {
         subtitle: "Force Majeure",

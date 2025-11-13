@@ -1,4 +1,4 @@
-# robots.txt for Ravana Digital Agency
+# robots.txt for Ravana Solutions
 # https://www.ravanasolutions.com
 
 # Allow all bots to crawl the site
