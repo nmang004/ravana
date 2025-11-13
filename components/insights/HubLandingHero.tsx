@@ -13,7 +13,7 @@ interface HubLandingHeroProps {
 
 export default function HubLandingHero({ featuredArticle }: HubLandingHeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 pt-20">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />

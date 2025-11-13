@@ -23,6 +23,23 @@ export const LenisProvider = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname()
 
   useEffect(() => {
+    // Detect if user is on a mobile/touch device
+    const isMobile = () => {
+      if (typeof window === 'undefined') return false
+      return (
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.innerWidth < 768
+      )
+    }
+
+    // Only initialize Lenis on desktop devices
+    // Mobile devices will use native scroll for better compatibility
+    if (isMobile()) {
+      setLenis(null)
+      return
+    }
+
     const newLenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

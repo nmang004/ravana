@@ -57,7 +57,7 @@ export default function BlogHub({
         }}
       />
       
-      <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="min-h-[100dvh] bg-background">
         {/* Hero Section - More casual and welcoming */}
         <div className="relative z-10">
           <BlogHero featuredPost={heroPost} />

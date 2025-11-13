@@ -70,10 +70,23 @@ const MobileNav = ({ isOpen, toggleMenu }: MobileNavProps) => {
   const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null)
 
   useEffect(() => {
+    // Safety timeout to automatically restore scrolling if something goes wrong
+    let safetyTimeout: NodeJS.Timeout | null = null
+
     if (isOpen) {
       lenis?.stop()
       // Prevent body scroll
       document.body.style.overflow = 'hidden'
+
+      // Safety: Force restore scroll after 30 seconds if menu is still open
+      // This prevents permanent scroll-lock if state becomes inconsistent
+      safetyTimeout = setTimeout(() => {
+        if (document.body.style.overflow === 'hidden') {
+          console.warn('Mobile menu safety timeout: Restoring scroll capability')
+          document.body.style.overflow = 'unset'
+          lenis?.start()
+        }
+      }, 30000)
     } else {
       lenis?.start()
       document.body.style.overflow = 'unset'
@@ -81,6 +94,8 @@ const MobileNav = ({ isOpen, toggleMenu }: MobileNavProps) => {
     }
 
     return () => {
+      // Cleanup: Always restore scroll and clear safety timeout
+      if (safetyTimeout) clearTimeout(safetyTimeout)
       lenis?.start()
       document.body.style.overflow = 'unset'
     }

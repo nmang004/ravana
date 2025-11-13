@@ -56,7 +56,7 @@ export default function InsightsHub({
         }}
       />
       
-      <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="min-h-[100dvh] bg-background">
         {/* Hero Section */}
         <div className="relative z-10">
           <HubLandingHero featuredArticle={heroArticle} />
