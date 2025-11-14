@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 import StaggerReveal from "@/components/interactive/StaggerReveal";
@@ -124,6 +125,7 @@ const tools = [
 const caseStudy = {
   client: "Red Rock Veterinary Health",
   industry: "Veterinary Services",
+  image: "/images/portfolio/SCR-20251111-kfzn.png",
   challenge: "Basic Squarespace site lacking comprehensive digital presence and SEO optimization for veterinary search terms",
   solution: "Complete website redesign with Next.js 15, comprehensive SEO strategy with service-specific pages, local business schema, and mobile-first responsive design",
   results: [
@@ -369,13 +371,22 @@ export default function SEOServicesPage() {
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.2}>
-              <Card className="p-8 md:p-12 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                  <div>
-                    <Badge variant="outline" className="mb-4">
-                      {caseStudy.industry}
-                    </Badge>
-                    <h3 className="text-3xl font-heading font-bold mb-6">{caseStudy.client}</h3>
+              <Card className="overflow-hidden bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
+                <div className="aspect-video relative bg-muted">
+                  <Image
+                    src={caseStudy.image}
+                    alt={caseStudy.client}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-8 md:p-12">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                      <Badge variant="outline" className="mb-4">
+                        {caseStudy.industry}
+                      </Badge>
+                      <h3 className="text-3xl font-heading font-bold mb-6">{caseStudy.client}</h3>
                     
                     <div className="space-y-6">
                       <div>
@@ -414,6 +425,7 @@ export default function SEOServicesPage() {
                       ))}
                     </div>
                   </div>
+                </div>
                 </div>
               </Card>
             </RevealOnScroll>

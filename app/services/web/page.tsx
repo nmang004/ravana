@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 import StaggerReveal from "@/components/interactive/StaggerReveal";
@@ -285,11 +286,14 @@ export default function WebDevelopmentPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {portfolioShowcase.map((project, index) => (
                   <Card key={index} className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500">
-                    <div className="aspect-video bg-gradient-to-br from-accent/20 to-accent/5 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-accent/10 group-hover:bg-accent/20 transition-colors duration-300"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <MonitorSpeaker className="w-16 h-16 text-accent/40 group-hover:scale-110 transition-transform duration-300" />
-                      </div>
+                    <div className="aspect-video relative overflow-hidden bg-muted">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div className="p-6">
                       <Badge variant="outline" className="mb-3 text-xs">

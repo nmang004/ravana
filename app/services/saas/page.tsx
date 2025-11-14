@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import PageTransition from "@/components/layout/PageTransition";
 import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 import StaggerReveal from "@/components/interactive/StaggerReveal";
@@ -126,6 +127,21 @@ const packageTiers = [
       "Dedicated infrastructure",
       "Priority support & SLA",
       "12 months of support"
+    ]
+  }
+];
+
+const portfolioShowcase = [
+  {
+    title: "ReviewBoost SaaS",
+    category: "SaaS Platform",
+    description: "Customer review management platform with analytics dashboard and automated workflows",
+    image: "/images/portfolio/review-boost.jpg",
+    tech: ["Next.js 15", "TypeScript", "PostgreSQL", "Stripe"],
+    results: [
+      "Real-time analytics dashboard",
+      "Automated review workflows",
+      "Multi-tenant architecture"
     ]
   }
 ];
@@ -366,6 +382,70 @@ export default function SaaSPage() {
                         Get Started
                       </Link>
                     </Button>
+                  </Card>
+                ))}
+              </div>
+            </StaggerReveal>
+          </div>
+        </section>
+
+        {/* Portfolio Showcase */}
+        <section className="py-24 px-6">
+          <div className="container mx-auto">
+            <RevealOnScroll>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
+                  Featured <span className="text-accent">SaaS Projects</span>
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Explore our successful SaaS applications built with cutting-edge technology.
+                </p>
+              </div>
+            </RevealOnScroll>
+
+            <StaggerReveal>
+              <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+                {portfolioShowcase.map((project, index) => (
+                  <Card key={index} className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                      <div className="aspect-video lg:aspect-auto relative overflow-hidden bg-muted">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-8 flex flex-col justify-center">
+                        <Badge variant="outline" className="mb-4 w-fit">
+                          {project.category}
+                        </Badge>
+                        <h3 className="text-2xl font-heading font-bold mb-3 group-hover:text-accent transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-6">{project.description}</p>
+
+                        <div className="mb-6">
+                          <h4 className="font-semibold mb-3 text-accent">Key Features:</h4>
+                          <ul className="space-y-2">
+                            {project.results.map((result, resultIndex) => (
+                              <li key={resultIndex} className="flex items-start">
+                                <Check className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                                <span className="text-sm text-muted-foreground">{result}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2">
+                          {project.tech.map((tech, techIndex) => (
+                            <Badge key={techIndex} variant="secondary" className="text-xs">
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </Card>
                 ))}
               </div>
