@@ -101,13 +101,13 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center">
         {/* Main Headline */}
         <div className="mb-6">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold leading-tight">
+          <h2 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold leading-tight">
             {words.map((word, index) => renderAnimatedWord(word, index))}
-          </h1>
+          </h2>
         </div>
 
         {/* Subtitle */}
-        <motion.p
+        <motion.h1
           variants={textVariants}
           initial="hidden"
           animate="visible"
@@ -122,7 +122,7 @@ export default function HeroSection() {
           <span className="text-accent font-semibold">web development</span> and{" "}
           <span className="text-accent font-semibold">SEO</span>.{" "}
           We craft websites that rank, convert, and drive measurable business results.
-        </motion.p>
+        </motion.h1>
 
         {/* CTA Buttons */}
         <motion.div
