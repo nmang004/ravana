@@ -14,6 +14,13 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
     { href: "/careers", label: "Careers" },
   ],
+  "Service Areas": [
+    { href: "/service-areas/norfolk/web-development", label: "Norfolk" },
+    { href: "/service-areas/virginia-beach/web-development", label: "Virginia Beach" },
+    { href: "/service-areas/chesapeake/web-development", label: "Chesapeake" },
+    { href: "/service-areas/hampton/web-development", label: "Hampton" },
+    { href: "/service-areas/portsmouth/web-development", label: "Portsmouth" },
+  ],
   Resources: [
     { href: "/insights", label: "Insights" },
     { href: "/blog", label: "Blog" },
@@ -33,7 +40,7 @@ export default function Footer() {
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
