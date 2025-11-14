@@ -205,7 +205,7 @@ export const ProjectBriefConfirmation = ({
           <Text style={questionsTitle}>Have Questions?</Text>
           <Text style={questionsText}>
             We're here to help! Feel free to reply to this email or give us a call at
-            +1-757-394-0583. Our team is ready to answer any questions you might have
+            (757) 394-0583. Our team is ready to answer any questions you might have
             about your project.
           </Text>
         </Section>

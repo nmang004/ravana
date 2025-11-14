@@ -93,15 +93,17 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
 
   return (
     <Card className="p-8">
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
         {/* Success Message */}
         {submitStatus === "success" && (
           <motion.div
+            role="alert"
+            aria-live="polite"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center space-x-3"
           >
-            <CheckCircle className="w-5 h-5 text-green-500" />
+            <CheckCircle className="w-5 h-5 text-green-500" aria-hidden="true" />
             <div>
               <p className="font-semibold text-green-500">Message sent successfully!</p>
               <p className="text-sm text-muted-foreground">We'll get back to you within 24 hours.</p>
@@ -112,11 +114,13 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
         {/* Error Message */}
         {submitStatus === "error" && (
           <motion.div
+            role="alert"
+            aria-live="assertive"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-destructive/10 border border-destructive/20 rounded-lg flex items-center space-x-3"
           >
-            <AlertCircle className="w-5 h-5 text-destructive" />
+            <AlertCircle className="w-5 h-5 text-destructive" aria-hidden="true" />
             <div>
               <p className="font-semibold text-destructive">Failed to send message</p>
               <p className="text-sm text-muted-foreground">{errorMessage}</p>
@@ -207,17 +211,18 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
         <Button
           type="submit"
           disabled={isSubmitting}
+          aria-label={isSubmitting ? "Sending message" : "Send message"}
           className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 group"
         >
           {isSubmitting ? (
             <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+              <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" aria-hidden="true" />
               <span>Sending...</span>
             </div>
           ) : (
             <div className="flex items-center space-x-2">
               <span>Send Message</span>
-              <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </div>
           )}
         </Button>
