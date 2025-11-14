@@ -94,43 +94,6 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
         </div>
       </section>
 
-      {/* Contact Methods */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-border hover:border-accent/50">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-lg mb-2">
-                    {info.title}
-                  </h3>
-                  <p className="text-accent font-medium mb-2">
-                    {info.content}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {info.description}
-                  </p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    className="w-full"
-                  >
-                    <Link href={info.action}>
-                      Contact
-                    </Link>
-                  </Button>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Main Contact Section */}
       <section className="py-12 px-6">
         <div className="container mx-auto">
@@ -142,11 +105,11 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
                   Send us a message
                 </h2>
                 <p className="text-muted-foreground">
-                  Fill out the form below and we'll get back to you as soon as possible. 
+                  Fill out the form below and we'll get back to you as soon as possible.
                   For urgent matters, please call us directly.
                 </p>
               </div>
-              
+
               <Suspense fallback={<div>Loading form...</div>}>
                 <ContactForm selectedService={selectedService} />
               </Suspense>
@@ -159,7 +122,7 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
                   Get in Touch
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  We're here to help you succeed. Reach out to us through any of 
+                  We're here to help you succeed. Reach out to us through any of
                   the channels below and let's start building something amazing together.
                 </p>
               </div>
@@ -199,6 +162,43 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
                 </Button>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Methods */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {contactInfo.map((info, index) => {
+              const Icon = info.icon;
+              return (
+                <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-border hover:border-accent/50">
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg mb-2">
+                    {info.title}
+                  </h3>
+                  <p className="text-accent font-medium mb-2">
+                    {info.content}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {info.description}
+                  </p>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                  >
+                    <Link href={info.action}>
+                      Contact
+                    </Link>
+                  </Button>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
