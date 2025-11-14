@@ -39,9 +39,9 @@ const clientLogos = [
 ];
 
 const stats = [
-  { value: 150, suffix: "+", label: "Projects Completed" },
-  { value: 98, suffix: "%", label: "Client Satisfaction" },
-  { value: 50, suffix: "+", label: "Happy Clients" },
+  { value: 50, suffix: "+", label: "Projects Completed" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { value: 20, suffix: "+", label: "Happy Clients" },
   { value: 24, suffix: "h", label: "Response Time" }
 ];
 

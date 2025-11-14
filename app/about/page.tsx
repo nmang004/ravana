@@ -11,19 +11,19 @@ import RevealOnScroll from "@/components/interactive/RevealOnScroll";
 const stats = [
   {
     icon: Users,
-    value: "50+",
+    value: "20+",
     label: "Happy Clients",
     description: "Successful partnerships built on trust"
   },
   {
     icon: Award,
-    value: "100+",
+    value: "50+",
     label: "Projects Completed",
     description: "From startups to enterprise solutions"
   },
   {
     icon: Target,
-    value: "99%",
+    value: "100%",
     label: "Client Satisfaction",
     description: "Exceeding expectations consistently"
   },
