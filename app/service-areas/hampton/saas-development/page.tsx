@@ -96,7 +96,7 @@ export default function HamptonSaaSDevelopmentPage() {
             <RevealOnScroll delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-accent text-background hover:bg-accent/90 group">
-                  <Link href="/contact">Start Your Project<ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" /></Link>
+                  <Link href="/project-brief">Start Your Project<ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" /></Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-accent/40 hover:bg-accent/10">
                   <Link href="/portfolio">View Case Studies</Link>

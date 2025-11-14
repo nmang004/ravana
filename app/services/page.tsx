@@ -119,7 +119,7 @@ export default function ServicesPage() {
               return (
                 <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
                   {/* Content */}
-                  <div className={`p-4 md:p-6 lg:p-0 ${!isEven ? 'lg:col-start-2' : ''}`}>
+                  <div className={`p-4 md:p-6 lg:p-0 order-2 lg:order-none ${!isEven ? 'lg:col-start-2' : ''}`}>
                     <div className="flex items-center mb-6">
                       <div className="w-14 h-14 md:w-16 md:h-16 lg:w-12 lg:h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
                         <Icon className="w-7 h-7 md:w-8 md:h-8 lg:w-6 lg:h-6 text-accent" />
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Visual */}
-                  <Card className={`p-6 md:p-8 lg:p-6 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20 ${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <Card className={`p-6 md:p-8 lg:p-6 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20 order-1 lg:order-none ${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                     <div className="aspect-square min-h-[300px] md:min-h-[400px] lg:min-h-0 flex items-center justify-center">
                       <Icon className="w-24 h-24 md:w-32 md:h-32 lg:w-32 lg:h-32 text-accent opacity-20" />
                     </div>

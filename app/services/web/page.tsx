@@ -86,25 +86,25 @@ const technologies = [
 
 const portfolioShowcase = [
   {
-    title: "SaaS Platform",
-    category: "B2B Software",
-    image: "/images/portfolio/saas-dashboard.jpg",
-    description: "Modern dashboard interface with complex data visualization",
-    tech: ["Next.js", "React", "Chart.js"]
+    title: "Blackbird Detailing",
+    category: "Automotive Detailing",
+    image: "/images/portfolio/blackbird.png",
+    description: "Premium automotive detailing website with instant estimate engine and motorsport-grade branding",
+    tech: ["Next.js 15", "TypeScript", "Tailwind CSS"]
   },
   {
-    title: "E-commerce Store",
-    category: "Retail",
-    image: "/images/portfolio/ecommerce-store.jpg",
-    description: "High-converting online store with seamless checkout",
-    tech: ["Shopify", "React", "Stripe"]
+    title: "W.M. Stone Logistics",
+    category: "Logistics & Supply Chain",
+    image: "/images/portfolio/wm-stone.jpg",
+    description: "Modern website for a century-old customs brokerage and international freight forwarding company",
+    tech: ["Webflow", "HTML5", "CSS3"]
   },
   {
-    title: "Creative Agency",
-    category: "Creative",
-    image: "/images/portfolio/agency-website.jpg",
-    description: "Award-winning design with stunning animations",
-    tech: ["Next.js", "Framer Motion", "GSAP"]
+    title: "Red Rock Veterinary Health",
+    category: "Veterinary Services",
+    image: "/images/portfolio/SCR-20251111-kfzn.png",
+    description: "Modern veterinary practice website featuring Fear Free® certified care and comprehensive service pages",
+    tech: ["Next.js 15", "TypeScript", "Tailwind CSS v4"]
   }
 ];
 

@@ -127,7 +127,7 @@ export default function HamptonSEOPage() {
                   size="lg"
                   className="bg-accent text-background hover:bg-accent/90 group"
                 >
-                  <Link href="/contact">
+                  <Link href="/project-brief">
                     Get Your Free SEO Audit
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -246,13 +246,13 @@ export default function HamptonSEOPage() {
                 <h3 className="text-2xl font-heading font-bold mb-6">
                   Perfect for {cityData.name} Industries:
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {cityData.stats.keyIndustries.map((industry) => (
                     <div
                       key={industry}
-                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                      className="flex items-center gap-2 text-sm text-muted-foreground break-words"
                     >
-                      <div className="w-2 h-2 rounded-full bg-accent" />
+                      <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                       {industry}
                     </div>
                   ))}
@@ -305,8 +305,8 @@ export default function HamptonSEOPage() {
               },
             ].map((phase, index) => (
               <RevealOnScroll key={phase.step} delay={index * 0.1}>
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 border-2 border-accent/30 text-accent font-bold text-xl mb-4">
+                <div className="text-left">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 border-2 border-accent/30 text-accent font-bold text-xl mb-4">
                     {phase.step}
                   </div>
                   <h3 className="text-xl font-heading font-bold mb-3">{phase.title}</h3>

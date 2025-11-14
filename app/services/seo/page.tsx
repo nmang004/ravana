@@ -122,17 +122,17 @@ const tools = [
 ];
 
 const caseStudy = {
-  client: "E-commerce Fashion Brand",
-  industry: "Retail Fashion",
-  challenge: "Low organic visibility and poor local search presence",
-  solution: "Comprehensive SEO strategy focusing on product pages and local optimization",
+  client: "Red Rock Veterinary Health",
+  industry: "Veterinary Services",
+  challenge: "Basic Squarespace site lacking comprehensive digital presence and SEO optimization for veterinary search terms",
+  solution: "Complete website redesign with Next.js 15, comprehensive SEO strategy with service-specific pages, local business schema, and mobile-first responsive design",
   results: [
-    { metric: "420%", description: "Organic Traffic Increase" },
-    { metric: "150+", description: "First Page Keywords" },
-    { metric: "280%", description: "Local Search Visibility" },
-    { metric: "65%", description: "Conversion Rate Improvement" }
+    { metric: "18%", description: "Increase in Organic Keywords" },
+    { metric: "94", description: "PageSpeed Performance Score" },
+    { metric: "91", description: "SEO Score" },
+    { metric: "5.0★", description: "Google Rating Maintained" }
   ],
-  duration: "6 months"
+  duration: "4 weeks"
 };
 
 const packageTiers = [
@@ -363,7 +363,7 @@ export default function SEOServicesPage() {
                   Success <span className="text-accent">Case Study</span>
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  See how we helped a fashion e-commerce brand dominate their market through strategic SEO.
+                  See how we helped a veterinary practice improve their search visibility and performance through comprehensive SEO.
                 </p>
               </div>
             </RevealOnScroll>

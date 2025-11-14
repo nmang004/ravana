@@ -80,39 +80,39 @@ const values = [
 
 const jobOpenings = [
   {
-    id: "senior-fullstack-developer",
-    title: "Senior Full-Stack Developer",
+    id: "junior-fullstack-developer",
+    title: "Junior Full-Stack Developer",
     department: "Engineering",
     location: "Remote / San Francisco",
     type: "Full-time",
-    salary: "$120k - $180k",
+    salary: "$60k - $85k",
     icon: Code,
     skills: ["React", "Node.js", "TypeScript", "Next.js", "PostgreSQL", "AWS"],
-    description: "Lead the development of cutting-edge SaaS applications and client projects. Work with modern technologies and shape our technical architecture.",
+    description: "Join our engineering team to build cutting-edge SaaS applications and client projects. Learn from experienced developers and grow your skills with modern technologies.",
     responsibilities: [
-      "Architect and develop scalable web applications",
-      "Mentor junior developers and conduct code reviews",
-      "Collaborate with design and product teams",
-      "Optimize application performance and user experience",
-      "Implement best practices for security and testing"
+      "Develop and maintain web applications under guidance",
+      "Write clean, well-documented code",
+      "Participate in code reviews and team meetings",
+      "Debug and fix issues in existing applications",
+      "Learn and apply best practices for development and testing"
     ]
   },
   {
-    id: "ui-ux-designer",
-    title: "Senior UI/UX Designer",
+    id: "junior-ui-ux-designer",
+    title: "Junior UI/UX Designer",
     department: "Design",
     location: "Remote / New York",
     type: "Full-time",
-    salary: "$90k - $140k",
+    salary: "$50k - $70k",
     icon: Palette,
     skills: ["Figma", "Adobe Creative Suite", "Prototyping", "User Research", "Design Systems"],
-    description: "Create beautiful, intuitive user experiences that delight users and drive business results. Lead design projects from concept to implementation.",
+    description: "Create beautiful, intuitive user experiences under the guidance of senior designers. Work on real client projects and build your design portfolio.",
     responsibilities: [
-      "Design user interfaces for web and mobile applications",
-      "Conduct user research and usability testing",
-      "Create and maintain design systems",
-      "Collaborate with developers to ensure design implementation",
-      "Present design concepts to clients and stakeholders"
+      "Assist in designing user interfaces for web and mobile applications",
+      "Support user research and usability testing efforts",
+      "Help maintain and expand design systems",
+      "Work with developers to ensure proper design implementation",
+      "Participate in design reviews and client presentations"
     ]
   },
   {
@@ -152,21 +152,21 @@ const jobOpenings = [
     ]
   },
   {
-    id: "project-manager",
-    title: "Senior Project Manager",
+    id: "junior-project-manager",
+    title: "Junior Project Manager",
     department: "Operations",
     location: "Remote / Chicago",
     type: "Full-time",
-    salary: "$75k - $110k",
+    salary: "$45k - $65k",
     icon: Briefcase,
     skills: ["Agile", "Scrum", "Project Planning", "Client Relations", "Risk Management"],
-    description: "Lead complex digital projects from inception to delivery. Ensure projects are completed on time, within scope, and exceed client expectations.",
+    description: "Support digital projects from inception to delivery while learning project management best practices. Work with experienced PMs to grow your skills.",
     responsibilities: [
-      "Manage multiple client projects simultaneously",
-      "Coordinate cross-functional teams and resources",
-      "Maintain client relationships and communications",
-      "Implement project management best practices",
-      "Identify and mitigate project risks"
+      "Assist in managing client projects under supervision",
+      "Help coordinate team meetings and project documentation",
+      "Support client communications and status updates",
+      "Learn and apply project management methodologies",
+      "Track project progress and help identify potential issues"
     ]
   },
   {
@@ -190,16 +190,16 @@ const jobOpenings = [
 ];
 
 const benefits = [
-  "🏥 Comprehensive health, dental, and vision insurance",
-  "💰 Competitive salary with performance bonuses",
-  "🏖️ Unlimited PTO and flexible work arrangements",
-  "💻 Top-tier equipment and home office stipend",
-  "📚 $3,000 annual learning and development budget",
-  "🎯 Stock options and profit sharing",
-  "🌍 Annual team retreats and company events",
-  "⚡ High-impact projects with industry leaders",
-  "🚀 Fast-track career growth opportunities",
-  "🤝 Collaborative and inclusive culture"
+  "Comprehensive health, dental, and vision insurance",
+  "Competitive salary with performance bonuses",
+  "Unlimited PTO and flexible work arrangements",
+  "Top-tier equipment and home office stipend",
+  "$3,000 annual learning and development budget",
+  "Stock options and profit sharing",
+  "Annual team retreats and company events",
+  "High-impact projects with industry leaders",
+  "Fast-track career growth opportunities",
+  "Collaborative and inclusive culture"
 ];
 
 export default function CareersContent() {

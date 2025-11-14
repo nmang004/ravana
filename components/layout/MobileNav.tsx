@@ -249,7 +249,7 @@ const MobileNav = ({ isOpen, toggleMenu }: MobileNavProps) => {
                 transition={{ duration: 0.3, ease: [0.645, 0.045, 0.355, 1] }}
                 className="w-full pt-4"
               >
-                <Link href="/contact" onClick={toggleMenu}>
+                <Link href="/project-brief" onClick={toggleMenu}>
                   <motion.div
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-4 py-3 rounded-lg text-center transition-colors"
                     whileHover={{ scale: 1.02 }}

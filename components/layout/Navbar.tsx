@@ -178,7 +178,7 @@ export default function Navbar() {
                   asChild
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
                 >
-                  <Link href="/contact">Get Started</Link>
+                  <Link href="/project-brief">Get Started</Link>
                 </Button>
               </motion.div>
             </div>
