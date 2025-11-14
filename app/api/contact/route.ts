@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { render } from '@react-email/components';
+import ContactNotification from '@/emails/templates/ContactNotification';
+import ContactConfirmation from '@/emails/templates/ContactConfirmation';
 
 interface ContactSubmission {
   name: string;
@@ -51,37 +54,74 @@ export async function POST(request: NextRequest) {
     // Initialize Resend
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Send email notification to you
-    const { data, error } = await resend.emails.send({
-      from: 'Ravana Solutions <contact@ravanasolutions.com>',
-      to: ['nmangubat@ravanasolutions.com'],
-      replyTo: body.email.trim(),
-      subject: `New Contact Form Submission${body.service ? ` - ${body.service}` : ''}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${body.name.trim()}</p>
-        <p><strong>Email:</strong> ${body.email.trim()}</p>
-        ${body.company ? `<p><strong>Company:</strong> ${body.company.trim()}</p>` : ''}
-        ${body.service ? `<p><strong>Service Interest:</strong> ${body.service}</p>` : ''}
-        <p><strong>Message:</strong></p>
-        <p>${body.message.trim().replace(/\n/g, '<br>')}</p>
-        <hr>
-        <p><small>Submitted from ravanasolutions.com contact form</small></p>
-      `,
+    const receivedAt = new Date().toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZoneName: 'short',
     });
 
-    if (error) {
-      console.error('Resend error:', error);
+    // Render email templates
+    const internalEmailHtml = await render(
+      ContactNotification({
+        name: body.name.trim(),
+        email: body.email.trim().toLowerCase(),
+        company: body.company?.trim(),
+        message: body.message.trim(),
+        service: body.service,
+        receivedAt,
+      })
+    );
+
+    const confirmationEmailHtml = await render(
+      ContactConfirmation({
+        name: body.name.trim(),
+        email: body.email.trim().toLowerCase(),
+        company: body.company?.trim(),
+        message: body.message.trim(),
+        service: body.service,
+        calendlyUrl: 'https://calendly.com/ravanasolutions',
+      })
+    );
+
+    // Send internal notification email
+    const { data: internalData, error: internalError } = await resend.emails.send({
+      from: 'Ravana Solutions <contact@ravanasolutions.com>',
+      to: ['nmangubat@ravanasolutions.com'],
+      replyTo: body.email.trim().toLowerCase(),
+      subject: `New Contact Request${body.service ? ` - ${body.service}` : ''}`,
+      html: internalEmailHtml,
+    });
+
+    if (internalError) {
+      console.error('Failed to send internal notification:', internalError);
       return NextResponse.json(
         { success: false, error: 'Failed to send notification' },
         { status: 500 }
       );
     }
 
+    // Send confirmation email to user
+    const { error: confirmationError } = await resend.emails.send({
+      from: 'Ravana Solutions <contact@ravanasolutions.com>',
+      to: [body.email.trim().toLowerCase()],
+      subject: 'Thank you for contacting Ravana Solutions',
+      html: confirmationEmailHtml,
+    });
+
+    if (confirmationError) {
+      console.error('Failed to send confirmation email:', confirmationError);
+      // Don't fail the request if confirmation email fails
+      // Internal notification was successful
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Contact form submitted successfully. We\'ll be in touch soon!',
-      data: { id: data?.id }
+      data: { id: internalData?.id }
     });
 
   } catch (error) {

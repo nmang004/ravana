@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { render } from '@react-email/components';
+import ProjectBriefNotification from '@/emails/templates/ProjectBriefNotification';
+import ProjectBriefConfirmation from '@/emails/templates/ProjectBriefConfirmation';
 
 interface ProjectBriefSubmission {
   // Contact Info
@@ -97,62 +100,91 @@ export async function POST(request: NextRequest) {
     // Initialize Resend
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Format services list
-    const servicesFormatted = body.services.map(s => serviceLabels[s] || s).join(", ");
-
-    // Format budget
-    const budgetFormatted = budgetLabels[body.budgetRange] || body.budgetRange;
-
-    // Format hosting
-    const hostingFormatted = body.hostingPreference ? (hostingLabels[body.hostingPreference] || body.hostingPreference) : "Not specified";
-
-    // Send email notification
-    const { data, error } = await resend.emails.send({
-      from: 'Ravana Solutions <projects@ravanasolutions.com>',
-      to: ['nmangubat@ravanasolutions.com'],
-      replyTo: body.email.trim(),
-      subject: `New Project Brief from ${body.company} - ${servicesFormatted}`,
-      html: `
-        <h2>New Project Brief Submission</h2>
-
-        <h3>Contact Information</h3>
-        <p><strong>Name:</strong> ${body.name.trim()}</p>
-        <p><strong>Email:</strong> ${body.email.trim()}</p>
-        <p><strong>Company:</strong> ${body.company.trim()}</p>
-        ${body.phone ? `<p><strong>Phone:</strong> ${body.phone.trim()}</p>` : ''}
-
-        <h3>Project Details</h3>
-        <p><strong>Services Requested:</strong> ${servicesFormatted}</p>
-        <p><strong>Project Goals:</strong></p>
-        <p>${body.projectGoals.trim().replace(/\n/g, '<br>')}</p>
-        ${body.targetAudience ? `<p><strong>Target Audience:</strong> ${body.targetAudience.trim()}</p>` : ''}
-
-        <h3>Timeline & Budget</h3>
-        <p><strong>Desired Launch Date:</strong> ${body.launchDate}</p>
-        <p><strong>Budget Range:</strong> ${budgetFormatted}</p>
-
-        <h3>Technical Details</h3>
-        ${body.existingWebsite ? `<p><strong>Existing Website:</strong> <a href="${body.existingWebsite.trim()}">${body.existingWebsite.trim()}</a></p>` : '<p><strong>Existing Website:</strong> None specified</p>'}
-        <p><strong>Hosting Preference:</strong> ${hostingFormatted}</p>
-        ${body.requiredIntegrations ? `<p><strong>Required Integrations:</strong></p><p>${body.requiredIntegrations.trim().replace(/\n/g, '<br>')}</p>` : ''}
-
-        <hr>
-        <p><small>Submitted from ravanasolutions.com project brief form</small></p>
-      `,
+    const receivedAt = new Date().toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZoneName: 'short',
     });
 
-    if (error) {
-      console.error('Resend error:', error);
+    // Format services list for subject
+    const servicesFormatted = body.services.map(s => serviceLabels[s] || s).join(", ");
+
+    // Render email templates
+    const internalEmailHtml = await render(
+      ProjectBriefNotification({
+        name: body.name.trim(),
+        email: body.email.trim().toLowerCase(),
+        company: body.company.trim(),
+        phone: body.phone?.trim(),
+        services: body.services,
+        projectGoals: body.projectGoals.trim(),
+        targetAudience: body.targetAudience?.trim(),
+        launchDate: body.launchDate,
+        budgetRange: body.budgetRange,
+        existingWebsite: body.existingWebsite?.trim(),
+        hostingPreference: body.hostingPreference,
+        requiredIntegrations: body.requiredIntegrations?.trim(),
+        receivedAt,
+      })
+    );
+
+    const confirmationEmailHtml = await render(
+      ProjectBriefConfirmation({
+        name: body.name.trim(),
+        email: body.email.trim().toLowerCase(),
+        company: body.company.trim(),
+        phone: body.phone?.trim(),
+        services: body.services,
+        projectGoals: body.projectGoals.trim(),
+        targetAudience: body.targetAudience?.trim(),
+        launchDate: body.launchDate,
+        budgetRange: body.budgetRange,
+        existingWebsite: body.existingWebsite?.trim(),
+        hostingPreference: body.hostingPreference,
+        requiredIntegrations: body.requiredIntegrations?.trim(),
+        calendlyUrl: 'https://calendly.com/ravanasolutions',
+      })
+    );
+
+    // Send internal notification email
+    const { data: internalData, error: internalError } = await resend.emails.send({
+      from: 'Ravana Solutions <projects@ravanasolutions.com>',
+      to: ['nmangubat@ravanasolutions.com'],
+      replyTo: body.email.trim().toLowerCase(),
+      subject: `New Project Brief from ${body.company.trim()} - ${servicesFormatted}`,
+      html: internalEmailHtml,
+    });
+
+    if (internalError) {
+      console.error('Failed to send internal notification:', internalError);
       return NextResponse.json(
         { success: false, error: 'Failed to send notification' },
         { status: 500 }
       );
     }
 
+    // Send confirmation email to user
+    const { error: confirmationError } = await resend.emails.send({
+      from: 'Ravana Solutions <projects@ravanasolutions.com>',
+      to: [body.email.trim().toLowerCase()],
+      subject: 'Thank you for your project brief - Ravana Solutions',
+      html: confirmationEmailHtml,
+    });
+
+    if (confirmationError) {
+      console.error('Failed to send confirmation email:', confirmationError);
+      // Don't fail the request if confirmation email fails
+      // Internal notification was successful
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Project brief submitted successfully. We\'ll be in touch within 24-48 hours!',
-      data: { id: data?.id }
+      data: { id: internalData?.id }
     });
 
   } catch (error) {
