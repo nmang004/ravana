@@ -47,7 +47,7 @@ export default function PortfolioPage() {
     <PageTransition>
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6 text-center">
+        <section className="py-12 md:py-16 lg:py-24 px-2 md:px-6 text-center">
           <div className="container mx-auto">
             <RevealOnScroll>
               <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">
@@ -62,7 +62,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* Featured Projects */}
-        <section className="py-8 md:py-12 lg:py-16 px-3 md:px-6">
+        <section className="py-8 md:py-12 lg:py-16 px-2 md:px-6">
           <div className="container mx-auto">
             <RevealOnScroll>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
@@ -70,7 +70,7 @@ export default function PortfolioPage() {
               </h2>
             </RevealOnScroll>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 lg:gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-8 mb-16">
               {featuredProjects.slice(0, 2).map((project, index) => (
                 <RevealOnScroll key={project.id} delay={index * 0.2}>
                   <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-border hover:border-accent/50">
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
                       />
                     </div>
 
-                    <div className="p-3 md:p-6">
+                    <div className="p-2 md:p-6">
                       <div className="flex items-center justify-between mb-3">
                         <Badge variant="secondary" className="bg-accent/10 text-accent">
                           {project.category}
@@ -144,7 +144,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* All Projects Grid */}
-        <section className="py-8 md:py-12 lg:py-16 px-3 md:px-6">
+        <section className="py-8 md:py-12 lg:py-16 px-2 md:px-6">
           <div className="container mx-auto">
             <RevealOnScroll>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
@@ -152,7 +152,7 @@ export default function PortfolioPage() {
               </h2>
             </RevealOnScroll>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
               {portfolioProjects.map((project, index) => (
                 <RevealOnScroll key={project.id} delay={index * 0.1}>
                   <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover:border-accent/50">
@@ -225,10 +225,10 @@ export default function PortfolioPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6">
+        <section className="py-12 md:py-16 lg:py-24 px-2 md:px-6">
           <div className="container mx-auto text-center">
             <RevealOnScroll>
-              <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-4 sm:p-8 md:p-12 lg:p-16">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-3 sm:p-8 md:p-12 lg:p-16">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
                   Ready to Join Our Success Stories?
                 </h2>

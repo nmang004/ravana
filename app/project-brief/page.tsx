@@ -54,7 +54,7 @@ export default function ProjectBriefPage() {
     <PageTransition>
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6 text-center">
+        <section className="py-12 md:py-16 lg:py-24 px-2 md:px-6 text-center">
           <div className="container mx-auto">
             <RevealOnScroll>
               <div className="flex items-center justify-center mb-6">
@@ -73,7 +73,7 @@ export default function ProjectBriefPage() {
         </section>
 
         {/* Why Complete a Project Brief */}
-        <section className="py-8 md:py-12 lg:py-16 px-3 md:px-6 bg-muted/20">
+        <section className="py-8 md:py-12 lg:py-16 px-2 md:px-6 bg-muted/20">
           <div className="container mx-auto">
             <RevealOnScroll>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
@@ -81,10 +81,10 @@ export default function ProjectBriefPage() {
               </h2>
             </RevealOnScroll>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
               {whyProjectBrief.map((item, index) => (
                 <RevealOnScroll key={index} delay={index * 0.1}>
-                  <Card className="p-3 md:p-6 h-full hover:shadow-lg transition-shadow duration-300">
+                  <Card className="p-2 md:p-6 h-full hover:shadow-lg transition-shadow duration-300">
                     <h3 className="text-lg font-heading font-bold mb-3 text-accent">
                       {item.title}
                     </h3>
@@ -99,7 +99,7 @@ export default function ProjectBriefPage() {
         </section>
 
         {/* Project Brief Form */}
-        <section className="py-12 md:py-16 px-3 md:px-6">
+        <section className="py-12 md:py-16 px-2 md:px-6">
           <div className="container mx-auto max-w-4xl">
             <RevealOnScroll>
               <div className="mb-8">
@@ -119,7 +119,7 @@ export default function ProjectBriefPage() {
 
             {/* Help Text */}
             <RevealOnScroll delay={0.3}>
-              <Card className="mt-8 p-3 md:p-6 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
+              <Card className="mt-8 p-2 md:p-6 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
                 <h3 className="font-heading font-semibold text-lg mb-2">
                   Need Help?
                 </h3>
@@ -157,7 +157,7 @@ export default function ProjectBriefPage() {
         </section>
 
         {/* What Happens Next */}
-        <section className="py-12 md:py-16 px-3 md:px-6 bg-muted/20">
+        <section className="py-12 md:py-16 px-2 md:px-6 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
             <RevealOnScroll>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
@@ -167,7 +167,7 @@ export default function ProjectBriefPage() {
 
             <div className="space-y-6">
               <RevealOnScroll delay={0.1}>
-                <Card className="p-3 md:p-6">
+                <Card className="p-2 md:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-accent">1</span>
@@ -186,7 +186,7 @@ export default function ProjectBriefPage() {
               </RevealOnScroll>
 
               <RevealOnScroll delay={0.2}>
-                <Card className="p-3 md:p-6">
+                <Card className="p-2 md:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-accent">2</span>
@@ -205,7 +205,7 @@ export default function ProjectBriefPage() {
               </RevealOnScroll>
 
               <RevealOnScroll delay={0.3}>
-                <Card className="p-3 md:p-6">
+                <Card className="p-2 md:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-accent">3</span>
@@ -224,7 +224,7 @@ export default function ProjectBriefPage() {
               </RevealOnScroll>
 
               <RevealOnScroll delay={0.4}>
-                <Card className="p-3 md:p-6">
+                <Card className="p-2 md:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-accent">4</span>

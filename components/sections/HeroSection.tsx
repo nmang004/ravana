@@ -98,7 +98,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background pointer-events-none" style={{ zIndex: 2 }} />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-3 md:px-6 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center px-2 md:px-6 text-center">
         {/* Main Headline */}
         <div className="mb-6">
           <h2 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold leading-tight">
