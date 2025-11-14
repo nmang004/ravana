@@ -175,7 +175,7 @@ export default function ServiceAreasPage() {
                 size="lg"
                 className="bg-accent text-background hover:bg-accent/90 group"
               >
-                <Link href="/contact">
+                <Link href="/project-brief">
                   Get Your Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>

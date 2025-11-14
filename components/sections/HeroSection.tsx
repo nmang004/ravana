@@ -141,7 +141,7 @@ export default function HeroSection() {
             size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg group"
           >
-            <Link href="/contact">
+            <Link href="/project-brief">
               Start Your Project
               <motion.span
                 className="ml-2 inline-block"

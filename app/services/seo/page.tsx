@@ -237,7 +237,7 @@ export default function SEOServicesPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                    <Link href="/contact?service=seo">
+                    <Link href="/project-brief?service=seo">
                       Boost Your Rankings
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
@@ -541,7 +541,7 @@ export default function SEOServicesPage() {
                       ))}
                     </ul>
                     <Button asChild className={`w-full ${tier.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}>
-                      <Link href={`/contact?service=seo&package=${tier.name.toLowerCase()}`}>
+                      <Link href={`/project-brief?service=seo&package=${tier.name.toLowerCase()}`}>
                         Get Started
                       </Link>
                     </Button>
@@ -564,13 +564,13 @@ export default function SEOServicesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link href="/contact?service=seo">
+                  <Link href="/project-brief?service=seo">
                     Start Ranking Today
                     <Search className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">
+                  <Link href="/project-brief?service=seo">
                     Free SEO Audit
                   </Link>
                 </Button>

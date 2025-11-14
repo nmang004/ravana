@@ -212,7 +212,7 @@ export default function DigitalMarketingPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                    <Link href="/contact?service=marketing">
+                    <Link href="/project-brief?service=marketing">
                       Grow Your Business
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
@@ -436,7 +436,7 @@ export default function DigitalMarketingPage() {
                     ))}
                   </ul>
                   <Button asChild className={`w-full ${tier.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}>
-                    <Link href={`/contact?service=marketing&package=${tier.name.toLowerCase()}`}>
+                    <Link href={`/project-brief?service=marketing&package=${tier.name.toLowerCase()}`}>
                       Get Started
                     </Link>
                   </Button>
@@ -458,7 +458,7 @@ export default function DigitalMarketingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link href="/contact?service=marketing">
+                  <Link href="/project-brief?service=marketing">
                     Start Growing Today
                     <Rocket className="ml-2 w-4 h-4" />
                   </Link>

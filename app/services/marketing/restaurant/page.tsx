@@ -198,7 +198,7 @@ export default function RestaurantMarketingPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
-                    <Link href="/contact?service=restaurant-marketing">
+                    <Link href="/project-brief?service=restaurant-marketing">
                       Start Growing Today
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -561,7 +561,7 @@ export default function RestaurantMarketingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground group">
-                  <Link href="/contact?service=restaurant-marketing">
+                  <Link href="/project-brief?service=restaurant-marketing">
                     Get Your Free Consultation
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
