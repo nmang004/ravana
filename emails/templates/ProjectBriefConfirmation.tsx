@@ -35,7 +35,7 @@ export const ProjectBriefConfirmation = ({
   existingWebsite,
   hostingPreference,
   requiredIntegrations,
-  calendlyUrl = 'https://calendly.com/ravanasolutions',
+  calendlyUrl = 'https://calendly.com/nmangubat-ravanasolutions/30min',
 }: ProjectBriefConfirmationProps) => {
   const firstName = name.split(' ')[0];
 

@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
         company: body.company?.trim(),
         message: body.message.trim(),
         service: body.service,
-        calendlyUrl: 'https://calendly.com/ravanasolutions',
+        calendlyUrl: 'https://calendly.com/nmangubat-ravanasolutions/30min',
       })
     );
 

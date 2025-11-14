@@ -146,7 +146,7 @@ export async function POST(request: NextRequest) {
         existingWebsite: body.existingWebsite?.trim(),
         hostingPreference: body.hostingPreference,
         requiredIntegrations: body.requiredIntegrations?.trim(),
-        calendlyUrl: 'https://calendly.com/ravanasolutions',
+        calendlyUrl: 'https://calendly.com/nmangubat-ravanasolutions/30min',
       })
     );
 

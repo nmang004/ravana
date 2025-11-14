@@ -21,7 +21,7 @@ export const ContactConfirmation = ({
   company,
   message,
   service,
-  calendlyUrl = 'https://calendly.com/ravanasolutions',
+  calendlyUrl = 'https://calendly.com/nmangubat-ravanasolutions/30min',
 }: ContactConfirmationProps) => {
   const firstName = name.split(' ')[0];
 
