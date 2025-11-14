@@ -7,10 +7,10 @@ import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations/variants";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CEO, TechFlow",
-    company: "TechFlow Solutions",
-    content: "Ravana transformed our vision into a stunning SaaS platform. Their attention to detail and technical expertise exceeded our expectations. The team delivered on time and within budget.",
+    name: "Judah Cates",
+    role: "Founder",
+    company: "Blackbird Detailing",
+    content: "Nick did an incredible job creating and optimizing our website. Communication was seamless, every step was easy, and the results exceeded my expectations. Truly knowledgeable and reliable!",
     rating: 5
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
 ];
 
 const clientLogos = [
-  { name: "TechFlow" },
+  { name: "Blackbird Detailing" },
   { name: "GrowthLab" },
   { name: "DataViz" },
   { name: "InnovateCorp" },
