@@ -434,7 +434,7 @@ export default function ProjectBriefForm() {
 
             <div className="space-y-6">
               {/* Contact Info Review */}
-              <Card className="p-6 bg-muted/20">
+              <Card className="p-4 md:p-6 bg-muted/20">
                 <h4 className="font-semibold text-accent mb-3">Contact Information</h4>
                 <div className="space-y-2 text-sm">
                   <p><span className="text-muted-foreground">Name:</span> {formData.name}</p>
@@ -445,7 +445,7 @@ export default function ProjectBriefForm() {
               </Card>
 
               {/* Project Details Review */}
-              <Card className="p-6 bg-muted/20">
+              <Card className="p-4 md:p-6 bg-muted/20">
                 <h4 className="font-semibold text-accent mb-3">Project Details</h4>
                 <div className="space-y-2 text-sm">
                   <p><span className="text-muted-foreground">Services:</span> {formData.services.map(s => services.find(srv => srv.value === s)?.label).join(", ")}</p>
@@ -455,7 +455,7 @@ export default function ProjectBriefForm() {
               </Card>
 
               {/* Timeline & Budget Review */}
-              <Card className="p-6 bg-muted/20">
+              <Card className="p-4 md:p-6 bg-muted/20">
                 <h4 className="font-semibold text-accent mb-3">Timeline & Budget</h4>
                 <div className="space-y-2 text-sm">
                   <p><span className="text-muted-foreground">Launch Date:</span> {formData.launchDate}</p>
@@ -465,7 +465,7 @@ export default function ProjectBriefForm() {
 
               {/* Technical Details Review */}
               {(formData.existingWebsite || formData.hostingPreference || formData.requiredIntegrations) && (
-                <Card className="p-6 bg-muted/20">
+                <Card className="p-4 md:p-6 bg-muted/20">
                   <h4 className="font-semibold text-accent mb-3">Technical Details</h4>
                   <div className="space-y-2 text-sm">
                     {formData.existingWebsite && <p><span className="text-muted-foreground">Existing Website:</span> {formData.existingWebsite}</p>}
@@ -513,9 +513,9 @@ export default function ProjectBriefForm() {
   };
 
   return (
-    <Card className="p-8">
+    <Card className="p-4 sm:p-6 md:p-8">
       {/* Progress Indicator */}
-      <div className="mb-8">
+      <div className="mb-6 md:mb-8">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm font-medium text-muted-foreground">
             Step {currentStep} of {totalSteps}

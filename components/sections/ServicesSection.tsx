@@ -41,7 +41,7 @@ export default function ServicesSection() {
     const Icon = service.icon;
     return (
       <Link key={index} href={service.href}>
-        <Card className="p-8 transition-all duration-300 border-border group md:hover:shadow-lg md:hover:border-accent/50 cursor-pointer">
+        <Card className="p-4 md:p-6 lg:p-8 transition-all duration-300 border-border group md:hover:shadow-lg md:hover:border-accent/50 cursor-pointer">
           <div className="flex items-start space-x-4">
             <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 md:group-hover:bg-accent/20 transition-colors duration-300">
               <Icon className="w-6 h-6 text-accent md:group-hover:scale-110 transition-transform duration-300" />
@@ -69,7 +69,7 @@ export default function ServicesSection() {
   });
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 md:py-16 lg:py-24 px-4 md:px-6">
       <div className="container mx-auto">
         <RevealOnScroll variants={fadeInUp} className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6">
@@ -80,8 +80,8 @@ export default function ServicesSection() {
           </p>
         </RevealOnScroll>
 
-        <StaggerReveal 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        <StaggerReveal
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8"
           staggerDelay={0.2}
         >
           {serviceCards}

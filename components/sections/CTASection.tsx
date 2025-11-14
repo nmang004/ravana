@@ -6,10 +6,10 @@ import { scaleIn } from "@/lib/animations/variants";
 
 export default function CTASection() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 md:py-16 lg:py-24 px-4 md:px-6">
       <div className="container mx-auto">
         <RevealOnScroll variants={scaleIn}>
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-12 md:p-16 text-center border border-accent/20 shadow-lg">
+          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16 text-center border border-accent/20 shadow-lg">
             <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6">
               Ready to Build Something{" "}
               <span className="text-accent">Extraordinary?</span>

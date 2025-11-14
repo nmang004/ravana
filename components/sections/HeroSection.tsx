@@ -98,7 +98,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background pointer-events-none" style={{ zIndex: 2 }} />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 md:px-6 text-center">
         {/* Main Headline */}
         <div className="mb-6">
           <h2 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold leading-tight">
@@ -134,7 +134,7 @@ export default function HeroSection() {
             delay: 2.5,
             ease: [0.645, 0.045, 0.355, 1],
           }}
-          className="flex flex-col sm:flex-row gap-4 mb-20 md:mb-24"
+          className="flex flex-col sm:flex-row gap-4 mb-12 sm:mb-16 md:mb-20 lg:mb-24"
         >
           <Button
             asChild
