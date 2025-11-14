@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
 
     // Send email notification
     const { data, error } = await resend.emails.send({
-      from: 'Ravana Project Brief <onboarding@resend.dev>', // Change to your verified domain later
+      from: 'Ravana Solutions <projects@ravanasolutions.com>',
       to: ['nmangubat@ravanasolutions.com'],
       replyTo: body.email.trim(),
       subject: `New Project Brief from ${body.company} - ${servicesFormatted}`,
@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
         ${body.requiredIntegrations ? `<p><strong>Required Integrations:</strong></p><p>${body.requiredIntegrations.trim().replace(/\n/g, '<br>')}</p>` : ''}
 
         <hr>
-        <p><small>Submitted from ravana.agency project brief form</small></p>
+        <p><small>Submitted from ravanasolutions.com project brief form</small></p>
       `,
     });
 

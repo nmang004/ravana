@@ -11,34 +11,31 @@ const testimonials = [
     role: "CEO, TechFlow",
     company: "TechFlow Solutions",
     content: "Ravana transformed our vision into a stunning SaaS platform. Their attention to detail and technical expertise exceeded our expectations. The team delivered on time and within budget.",
-    rating: 5,
-    avatar: "/api/placeholder/64/64"
+    rating: 5
   },
   {
     name: "Marcus Rodriguez",
     role: "Founder, GrowthLab",
     company: "GrowthLab Marketing",
     content: "Working with Ravana was a game-changer. They didn't just build us a website, they created a digital experience that converts. Our leads increased by 300% in the first quarter.",
-    rating: 5,
-    avatar: "/api/placeholder/64/64"
+    rating: 5
   },
   {
     name: "Emily Watson",
     role: "Product Manager, DataViz",
     company: "DataViz Corp",
     content: "The level of professionalism and creativity from Ravana is unmatched. They took our complex requirements and delivered a beautiful, functional solution that our users love.",
-    rating: 5,
-    avatar: "/api/placeholder/64/64"
+    rating: 5
   }
 ];
 
 const clientLogos = [
-  { name: "TechFlow", logo: "/api/placeholder/120/40" },
-  { name: "GrowthLab", logo: "/api/placeholder/120/40" },
-  { name: "DataViz", logo: "/api/placeholder/120/40" },
-  { name: "InnovateCorp", logo: "/api/placeholder/120/40" },
-  { name: "ScaleUp", logo: "/api/placeholder/120/40" },
-  { name: "DigitalEdge", logo: "/api/placeholder/120/40" }
+  { name: "TechFlow" },
+  { name: "GrowthLab" },
+  { name: "DataViz" },
+  { name: "InnovateCorp" },
+  { name: "ScaleUp" },
+  { name: "DigitalEdge" }
 ];
 
 const stats = [

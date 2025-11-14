@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Blog - Ravana Solutions',
     description: 'Explore the latest insights on digital transformation, web development, marketing strategies, and technology trends.',
     type: 'website',
-    url: 'https://ravana.agency/blog',
+    url: 'https://www.ravanasolutions.com/blog',
     images: [
       {
         url: '/images/blog/blog-og.jpg',

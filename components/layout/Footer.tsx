@@ -25,10 +25,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { href: "https://github.com", icon: Github, label: "GitHub" },
-  { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:hello@ravana.agency", icon: Mail, label: "Email" },
+  { href: "mailto:nmangubat@ravanasolutions.com", icon: Mail, label: "Email" },
 ];
 
 export default function Footer() {

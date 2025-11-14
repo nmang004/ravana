@@ -333,7 +333,7 @@ export default function PrivacyPolicyContent() {
               >
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Mail className="w-4 h-4" />
-                  <span>privacy@ravana.agency</span>
+                  <span>nmangubat@ravanasolutions.com</span>
                 </div>
                 <div className="hidden sm:block text-muted-foreground">•</div>
                 <div className="flex items-center gap-2 text-muted-foreground">

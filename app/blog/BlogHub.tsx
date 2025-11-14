@@ -53,7 +53,7 @@ export default function BlogHub({
         data={{
           name: 'Blog - Ravana Solutions',
           description: 'Explore the latest insights on digital transformation, web development, marketing strategies, and technology trends.',
-          url: 'https://ravana.agency/blog'
+          url: 'https://www.ravanasolutions.com/blog'
         }}
       />
       

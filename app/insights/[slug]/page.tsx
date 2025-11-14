@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: InsightPageProps): Promise<Me
       title: insight.title,
       description: insight.excerpt,
       type: 'article',
-      url: `https://ravana.agency/insights/${insight.slug}`,
+      url: `https://www.ravanasolutions.com/insights/${insight.slug}`,
       images: [
         {
           url: insight.coverImage,

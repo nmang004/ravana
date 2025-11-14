@@ -37,7 +37,7 @@ export default function InsightArticle({
           coverImage: insight.coverImage,
           author: insight.author,
           datePublished: insight.date,
-          url: `https://ravana.agency/insights/${insight.slug}`,
+          url: `https://www.ravanasolutions.com/insights/${insight.slug}`,
           keywords: insight.tags.join(', '),
           category: insight.category,
           wordCount: insight.content.split(' ').length

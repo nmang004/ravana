@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'The Insights Hub - Ravana Solutions',
     description: 'Deep insights, proven strategies, and transformative ideas from the forefront of digital innovation.',
     type: 'website',
-    url: 'https://ravana.agency/insights',
+    url: 'https://www.ravanasolutions.com/insights',
     images: [
       {
         url: '/images/insights/insights-hub-og.jpg',
