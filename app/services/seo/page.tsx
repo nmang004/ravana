@@ -135,6 +135,46 @@ const caseStudy = {
   duration: "6 months"
 };
 
+const packageTiers = [
+  {
+    name: "Local",
+    description: "Perfect for local businesses",
+    features: [
+      "Local SEO optimization",
+      "Google My Business management",
+      "15 target keywords",
+      "Monthly reporting",
+      "Basic technical SEO",
+      "Review management"
+    ]
+  },
+  {
+    name: "Growth",
+    description: "Ideal for growing businesses",
+    features: [
+      "50 target keywords",
+      "Content optimization",
+      "Link building (5/month)",
+      "Technical SEO audit",
+      "Competitor analysis",
+      "Bi-weekly reporting"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    description: "For large-scale SEO campaigns",
+    features: [
+      "Unlimited keywords",
+      "Dedicated SEO manager",
+      "Advanced link building",
+      "Custom content creation",
+      "Priority support",
+      "Weekly reporting & calls"
+    ]
+  }
+];
+
 export const metadata: Metadata = {
   title: "SEO Services Hampton Roads | Ravana Solutions",
   description: "Professional SEO services in Hampton Roads. Technical optimization, keyword research, local SEO, and link building to boost your search rankings and organic traffic.",
@@ -457,6 +497,53 @@ export default function SEOServicesPage() {
                 </RevealOnScroll>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Package Options Section */}
+        <section className="py-24 px-6">
+          <div className="container mx-auto">
+            <RevealOnScroll>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
+                  SEO <span className="text-accent">Packages</span>
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Choose an SEO package that fits your business size and growth objectives. All plans include detailed reporting.
+                </p>
+              </div>
+            </RevealOnScroll>
+
+            <StaggerReveal>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {packageTiers.map((tier, index) => (
+                  <Card key={index} className={`p-8 relative transition-all duration-300 ${tier.popular ? 'border-accent bg-accent/5 scale-105 hover:scale-110' : 'bg-background/50 hover:scale-105'}`}>
+                    {tier.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <Badge className="bg-accent text-accent-foreground">Most Popular</Badge>
+                      </div>
+                    )}
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-heading font-bold mb-2">{tier.name}</h3>
+                      <p className="text-muted-foreground">{tier.description}</p>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button asChild className={`w-full ${tier.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}>
+                      <Link href={`/contact?service=seo&package=${tier.name.toLowerCase()}`}>
+                        Get Started
+                      </Link>
+                    </Button>
+                  </Card>
+                ))}
+              </div>
+            </StaggerReveal>
           </div>
         </section>
 

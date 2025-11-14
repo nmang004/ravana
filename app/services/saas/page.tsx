@@ -90,6 +90,46 @@ const process = [
   }
 ];
 
+const packageTiers = [
+  {
+    name: "MVP",
+    description: "Perfect for validating your SaaS concept",
+    features: [
+      "Core functionality development",
+      "User authentication system",
+      "Basic payment integration",
+      "Responsive web application",
+      "Database setup & hosting",
+      "3 months of support"
+    ]
+  },
+  {
+    name: "Growth",
+    description: "Scale your SaaS with advanced features",
+    features: [
+      "Everything in MVP",
+      "Advanced analytics dashboard",
+      "Multi-tenant architecture",
+      "API development",
+      "Third-party integrations",
+      "6 months of support"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    description: "Enterprise-grade solutions",
+    features: [
+      "Everything in Growth",
+      "Custom enterprise features",
+      "Advanced security & compliance",
+      "Dedicated infrastructure",
+      "Priority support & SLA",
+      "12 months of support"
+    ]
+  }
+];
+
 export const metadata: Metadata = {
   title: "SaaS Development Services | Ravana Solutions",
   description: "Build scalable SaaS web applications with full-stack development. Custom software solutions from MVP to enterprise scale using React, Next.js, and modern technologies.",
@@ -283,6 +323,53 @@ export default function SaaSPage() {
                 </RevealOnScroll>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Package Options Section */}
+        <section id="pricing" className="py-24 px-6">
+          <div className="container mx-auto">
+            <RevealOnScroll>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
+                  Choose Your <span className="text-accent">Package</span>
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Select the package that fits your needs and budget. All packages include ongoing support.
+                </p>
+              </div>
+            </RevealOnScroll>
+
+            <StaggerReveal>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {packageTiers.map((tier, index) => (
+                  <Card key={index} className={`p-8 relative ${tier.popular ? 'border-accent bg-accent/5' : 'bg-background/50'}`}>
+                    {tier.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <Badge className="bg-accent text-accent-foreground">Most Popular</Badge>
+                      </div>
+                    )}
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-heading font-bold mb-2">{tier.name}</h3>
+                      <p className="text-muted-foreground">{tier.description}</p>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button asChild className={`w-full ${tier.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}>
+                      <Link href={`/contact?service=saas&package=${tier.name.toLowerCase()}`}>
+                        Get Started
+                      </Link>
+                    </Button>
+                  </Card>
+                ))}
+              </div>
+            </StaggerReveal>
           </div>
         </section>
 
