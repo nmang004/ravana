@@ -277,10 +277,14 @@ export default function AboutPage() {
                 <RevealOnScroll key={index} delay={index * 0.2}>
                   <Card className="p-2 md:p-6 hover:shadow-lg transition-all duration-300 group">
                     <div className="flex items-start space-x-4">
-                      <div className="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/5 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:from-accent/30 group-hover:to-accent/10 transition-colors duration-300">
-                        <div className="text-2xl font-bold text-accent">
-                          {member.name.split(' ').map(n => n[0]).join('')}
-                        </div>
+                      <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 relative">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          width={80}
+                          height={80}
+                          className="object-cover w-full h-full"
+                        />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-heading font-bold mb-1">
