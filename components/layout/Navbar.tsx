@@ -36,9 +36,11 @@ export default function Navbar() {
 
   return (
     <motion.nav
+      role="navigation"
+      aria-label="Main navigation"
       className={cn(
         'fixed top-0 left-0 right-0 z-50',
-        isMenuOpen 
+        isMenuOpen
           ? 'bg-background'
           : 'transition-all duration-300',
         !isMenuOpen && isScrolled
@@ -69,7 +71,12 @@ export default function Navbar() {
 
           {isMobile ? (
             <div className="md:hidden">
-              <button onClick={toggleMenu} className="p-2 z-[100]">
+              <button
+                onClick={toggleMenu}
+                className="p-2 z-[100]"
+                aria-label="Toggle mobile menu"
+                aria-expanded={isMenuOpen}
+              >
                 <Menu size={24} />
               </button>
               <MobileNav isOpen={isMenuOpen} toggleMenu={toggleMenu} />
@@ -95,6 +102,9 @@ export default function Navbar() {
                     <>
                       <button
                         className="relative text-foreground hover:text-accent transition-colors duration-300 group flex items-center gap-1"
+                        aria-haspopup="true"
+                        aria-expanded={openDropdown === item.label}
+                        aria-label={`${item.label} menu`}
                       >
                         {item.label}
                         <ChevronDown
@@ -115,6 +125,8 @@ export default function Navbar() {
                       <AnimatePresence>
                         {openDropdown === item.label && (
                           <motion.div
+                            role="menu"
+                            aria-label={`${item.label} submenu`}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
@@ -125,6 +137,7 @@ export default function Navbar() {
                               <Link
                                 key={subLink.href}
                                 href={subLink.href}
+                                role="menuitem"
                                 className="block px-4 py-2 text-foreground hover:text-accent hover:bg-accent/5 transition-colors duration-200"
                               >
                                 {subLink.label}

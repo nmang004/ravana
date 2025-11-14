@@ -63,7 +63,7 @@ export const ProjectBriefConfirmation = ({
   return (
     <EmailLayout preview={`Thank you for your project brief, ${firstName}!`}>
       <EmailHeader
-        title={`Thank You for Your Project Brief, ${firstName}! 🚀`}
+        title={`Thank You for Your Project Brief, ${firstName}!`}
         variant="customer"
       />
 
@@ -82,7 +82,7 @@ export const ProjectBriefConfirmation = ({
 
         {/* Project Summary */}
         <Section style={summarySection}>
-          <Text style={summaryTitle}>📋 Your Project Summary</Text>
+          <Text style={summaryTitle}>Your Project Summary</Text>
         </Section>
 
         <EmailCard title="Contact Information" variant="default">
@@ -121,7 +121,7 @@ export const ProjectBriefConfirmation = ({
 
         {/* What's Next */}
         <Section style={nextStepsSection}>
-          <Text style={sectionTitle}>🎯 What Happens Next?</Text>
+          <Text style={sectionTitle}>What Happens Next?</Text>
 
           <Section style={timelineSection}>
             <Text style={timelineItem}>
@@ -156,7 +156,7 @@ export const ProjectBriefConfirmation = ({
 
         {/* CTA Section */}
         <Section style={ctaSection}>
-          <Text style={ctaTitle}>🗓️ Ready to Move Faster?</Text>
+          <Text style={ctaTitle}>Ready to Move Faster?</Text>
           <Text style={ctaText}>
             Don't wait for us to reach out - schedule your discovery call now and let's
             start transforming your ideas into reality.
@@ -170,31 +170,31 @@ export const ProjectBriefConfirmation = ({
 
         {/* Our Process */}
         <Section style={processSection}>
-          <Text style={processTitle}>💎 The Ravana Solutions Advantage</Text>
+          <Text style={processTitle}>The Ravana Solutions Advantage</Text>
 
           <Text style={processItem}>
-            <strong>🎨 Strategic Discovery</strong>
+            <strong>Strategic Discovery</strong>
             <br />
             We don't just build - we strategize. Our discovery process ensures every
             decision aligns with your business goals.
           </Text>
 
           <Text style={processItem}>
-            <strong>⚡ Agile Development</strong>
+            <strong>Agile Development</strong>
             <br />
             Stay involved throughout the process with regular updates, demos, and
             feedback sessions.
           </Text>
 
           <Text style={processItem}>
-            <strong>🚀 Launch & Beyond</strong>
+            <strong>Launch & Beyond</strong>
             <br />
             Our partnership doesn't end at launch. We provide ongoing support,
             optimization, and growth strategies.
           </Text>
 
           <Text style={processItem}>
-            <strong>📊 Measurable Results</strong>
+            <strong>Measurable Results</strong>
             <br />
             Every project is built with analytics and performance tracking from day one.
           </Text>
@@ -205,7 +205,7 @@ export const ProjectBriefConfirmation = ({
           <Text style={questionsTitle}>Have Questions?</Text>
           <Text style={questionsText}>
             We're here to help! Feel free to reply to this email or give us a call at
-            (757) 685-7209. Our team is ready to answer any questions you might have
+            +1-757-394-0583. Our team is ready to answer any questions you might have
             about your project.
           </Text>
         </Section>

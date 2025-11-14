@@ -15,10 +15,11 @@ export const EmailHeader = ({ title, variant = 'customer' }: EmailHeaderProps) =
         <Img
           src="https://ravanasolutions.com/images/ravana-logo.png"
           alt="Ravana Solutions"
-          width="120"
-          height="120"
+          width="80"
+          height="80"
           style={logoImage}
         />
+        <Text style={brandText}>RAVANA SOLUTIONS</Text>
       </Section>
       <Text style={isInternal ? titleInternal : titleCustomer}>{title}</Text>
     </Section>
@@ -38,7 +39,17 @@ const logoSection = {
 
 const logoImage = {
   display: 'block',
-  margin: '0 auto',
+  margin: '0 auto 10px auto',
+  maxWidth: '80px',
+};
+
+const brandText = {
+  color: '#FFD700',
+  fontSize: '16px',
+  fontWeight: '700',
+  margin: '0',
+  letterSpacing: '3px',
+  textAlign: 'center' as const,
 };
 
 const titleCustomer = {

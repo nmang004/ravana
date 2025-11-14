@@ -136,10 +136,10 @@ export default function ProjectBriefPage() {
                   </a>
                   <span className="hidden sm:inline text-muted-foreground">•</span>
                   <a
-                    href="tel:+17576857209"
+                    href="tel:+17573940583"
                     className="text-accent hover:underline font-medium"
                   >
-                    Call us: +1 (757) 685-7209
+                    Call us: (757) 394-0583
                   </a>
                   <span className="hidden sm:inline text-muted-foreground">•</span>
                   <a

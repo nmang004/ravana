@@ -60,13 +60,13 @@ export const ProjectBriefNotification = ({
 
   return (
     <EmailLayout preview={`New project brief from ${company}`}>
-      <EmailHeader title="🎯 New Project Brief Submission" variant="internal" />
+      <EmailHeader title="New Project Brief Submission" variant="internal" />
 
       <Section style={content}>
         {/* Timestamp Badge */}
         <Section style={timestampSection}>
           <Text style={timestampText}>
-            📅 Received: {receivedAt}
+            Received: {receivedAt}
           </Text>
         </Section>
 
@@ -79,13 +79,13 @@ export const ProjectBriefNotification = ({
                 variant="primary"
                 fullWidth
               >
-                ✉️ Reply
+                Reply
               </EmailButton>
             </Column>
             {phone && (
               <Column style={buttonColumn}>
                 <EmailButton href={`tel:${phone}`} variant="secondary" fullWidth>
-                  📞 Call
+                  Call
                 </EmailButton>
               </Column>
             )}
@@ -93,7 +93,7 @@ export const ProjectBriefNotification = ({
         </Section>
 
         {/* Client Info Card */}
-        <EmailCard title="👤 Client Information" variant="highlight">
+        <EmailCard title="Client Information" variant="highlight">
           <CardRow label="Name" value={name} />
           <CardRow
             label="Email"
@@ -117,7 +117,7 @@ export const ProjectBriefNotification = ({
         </EmailCard>
 
         {/* Project Details Card */}
-        <EmailCard title="🚀 Project Details">
+        <EmailCard title="Project Details">
           <CardRow
             label="Services Requested"
             value={
@@ -137,7 +137,7 @@ export const ProjectBriefNotification = ({
         </EmailCard>
 
         {/* Timeline & Budget Card */}
-        <EmailCard title="📊 Timeline & Budget">
+        <EmailCard title="Timeline & Budget">
           <CardRow label="Desired Launch Date" value={launchDate} />
           <CardRow
             label="Budget Range"
@@ -147,7 +147,7 @@ export const ProjectBriefNotification = ({
 
         {/* Technical Details Card (if provided) */}
         {(existingWebsite || hostingPreference || requiredIntegrations) && (
-          <EmailCard title="⚙️ Technical Details">
+          <EmailCard title="Technical Details">
             {existingWebsite && (
               <CardRow
                 label="Existing Website"
@@ -176,7 +176,7 @@ export const ProjectBriefNotification = ({
 
         {/* Next Steps */}
         <Section style={nextStepsSection}>
-          <Text style={nextStepsTitle}>📋 Recommended Next Steps</Text>
+          <Text style={nextStepsTitle}>Recommended Next Steps</Text>
           <Text style={nextStepsList}>
             1. Review project scope and budget alignment<br />
             2. Schedule discovery call within 24-48 hours<br />

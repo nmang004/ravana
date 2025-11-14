@@ -27,7 +27,7 @@ export const ContactConfirmation = ({
 
   return (
     <EmailLayout preview={`Thank you for contacting Ravana Solutions, ${firstName}!`}>
-      <EmailHeader title={`Thank You, ${firstName}! 🎉`} variant="customer" />
+      <EmailHeader title={`Thank You, ${firstName}!`} variant="customer" />
 
       <Section style={content}>
         {/* Welcome Message */}
@@ -42,7 +42,7 @@ export const ContactConfirmation = ({
         </Text>
 
         {/* Submission Summary */}
-        <EmailCard title="📝 Your Submission Summary" variant="highlight">
+        <EmailCard title="Your Submission Summary" variant="highlight">
           <CardRow label="Name" value={name} />
           <CardRow label="Email" value={email} />
           {company && <CardRow label="Company" value={company} />}
@@ -52,7 +52,7 @@ export const ContactConfirmation = ({
 
         {/* What's Next */}
         <Section style={nextStepsSection}>
-          <Text style={sectionTitle}>🚀 What Happens Next?</Text>
+          <Text style={sectionTitle}>What Happens Next?</Text>
           <Text style={stepsList}>
             <strong>1. Review</strong> - We'll carefully review your inquiry and assess
             how we can best help you achieve your goals.
@@ -76,7 +76,7 @@ export const ContactConfirmation = ({
           </Text>
           <Section style={buttonContainer}>
             <EmailButton href={calendlyUrl} variant="primary" fullWidth>
-              📅 Schedule Your Free Consultation
+              Schedule Your Free Consultation
             </EmailButton>
           </Section>
         </Section>
@@ -86,19 +86,19 @@ export const ContactConfirmation = ({
           <Text style={whyTitle}>Why Choose Ravana Solutions?</Text>
           <Section style={benefitsList}>
             <Text style={benefitItem}>
-              ✨ <strong>Premium Quality</strong> - We craft unforgettable digital
+              <strong>Premium Quality</strong> - We craft unforgettable digital
               experiences
             </Text>
             <Text style={benefitItem}>
-              🎯 <strong>Results-Driven</strong> - Every project is built to drive
+              <strong>Results-Driven</strong> - Every project is built to drive
               measurable results
             </Text>
             <Text style={benefitItem}>
-              🚀 <strong>Technical Excellence</strong> - Cutting-edge solutions powered
+              <strong>Technical Excellence</strong> - Cutting-edge solutions powered
               by expertise
             </Text>
             <Text style={benefitItem}>
-              💼 <strong>Client-Focused</strong> - Your success is our success
+              <strong>Client-Focused</strong> - Your success is our success
             </Text>
           </Section>
         </Section>

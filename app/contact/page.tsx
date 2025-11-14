@@ -19,9 +19,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (757) 685-7209",
+    content: "(757) 394-0583",
     description: "Mon-Fri from 9am to 6pm EST",
-    action: "tel:+17576857209"
+    action: "tel:+17573940583"
   },
   {
     icon: Calendar,

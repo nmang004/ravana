@@ -17,7 +17,7 @@ export const EmailFooter = ({ variant = 'customer' }: EmailFooterProps) => {
         </Link>
       </Text>
       <Text style={contactInfo}>
-        <strong>Phone:</strong> (757) 685-7209
+        <strong>Phone:</strong> (757) 394-0583
       </Text>
       <Text style={contactInfo}>
         <strong>Website:</strong>{' '}

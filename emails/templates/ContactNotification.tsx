@@ -31,7 +31,7 @@ export const ContactNotification = ({
         {/* Timestamp Badge */}
         <Section style={timestampSection}>
           <Text style={timestampText}>
-            📅 Received: {receivedAt}
+            Received: {receivedAt}
           </Text>
         </Section>
 
@@ -44,7 +44,7 @@ export const ContactNotification = ({
                 variant="primary"
                 fullWidth
               >
-                ✉️ Reply
+                Reply
               </EmailButton>
             </Column>
             <Column style={buttonColumn}>
@@ -53,14 +53,14 @@ export const ContactNotification = ({
                 variant="secondary"
                 fullWidth
               >
-                📊 View Dashboard
+                View Dashboard
               </EmailButton>
             </Column>
           </Row>
         </Section>
 
         {/* Customer Info Card */}
-        <EmailCard title="👤 Customer Information" variant="highlight">
+        <EmailCard title="Customer Information" variant="highlight">
           <CardRow label="Name" value={name} />
           <CardRow
             label="Email"
@@ -80,7 +80,7 @@ export const ContactNotification = ({
         </EmailCard>
 
         {/* Message Card */}
-        <EmailCard title="💬 Message">
+        <EmailCard title="Message">
           <Text style={messageText}>{message}</Text>
         </EmailCard>
 
