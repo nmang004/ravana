@@ -69,7 +69,7 @@ export default function ServicesSection() {
   });
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6">
       <div className="container mx-auto">
         <RevealOnScroll variants={fadeInUp} className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6">
@@ -81,7 +81,7 @@ export default function ServicesSection() {
         </RevealOnScroll>
 
         <StaggerReveal
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 lg:gap-8"
           staggerDelay={0.2}
         >
           {serviceCards}

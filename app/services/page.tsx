@@ -96,7 +96,7 @@ export default function ServicesPage() {
     <PageTransition>
       <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-12 md:py-16 lg:py-24 px-4 md:px-6 text-center">
+      <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6 text-center">
         <div className="container mx-auto">
           <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">
             Our <span className="text-accent">Services</span>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+      <section className="py-8 md:py-12 lg:py-16 px-3 md:px-6">
         <div className="container mx-auto">
           <div className="space-y-24">
             {services.map((service, index) => {
@@ -190,9 +190,9 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+      <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6">
         <div className="container mx-auto text-center">
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16">
+          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-4 sm:p-8 md:p-12 lg:p-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
               Not Sure Which Service You Need?
             </h2>

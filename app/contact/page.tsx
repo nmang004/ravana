@@ -81,7 +81,7 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
     <PageTransition>
       <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-12 md:py-16 lg:py-24 px-4 md:px-6 text-center">
+      <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6 text-center">
         <div className="container mx-auto">
           <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">
             Let's Build Something{" "}
@@ -95,7 +95,7 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+      <section className="py-8 md:py-12 lg:py-16 px-3 md:px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
@@ -130,7 +130,7 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
               {officeInfo.map((office, index) => {
                 const Icon = office.icon;
                 return (
-                  <Card key={index} className="p-4 md:p-6">
+                  <Card key={index} className="p-3 md:p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon className="w-5 h-5 text-accent" />
@@ -167,13 +167,13 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+      <section className="py-8 md:py-12 lg:py-16 px-3 md:px-6">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mb-16">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
-                <Card key={index} className="p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 border-border hover:border-accent/50">
+                <Card key={index} className="p-3 md:p-6 text-center hover:shadow-lg transition-all duration-300 border-border hover:border-accent/50">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>
@@ -204,9 +204,9 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
       </section>
 
       {/* Project Kickoff CTA */}
-      <section className="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+      <section className="py-12 md:py-16 lg:py-24 px-3 md:px-6">
         <div className="container mx-auto text-center">
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16">
+          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-4 sm:p-8 md:p-12 lg:p-16">
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
               Ready to Start Your Project?
             </h2>

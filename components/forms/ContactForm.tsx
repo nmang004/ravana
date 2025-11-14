@@ -92,7 +92,7 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
   ];
 
   return (
-    <Card className="p-4 sm:p-6 md:p-8">
+    <Card className="p-3 sm:p-6 md:p-8">
       <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
         {/* Success Message */}
         {submitStatus === "success" && (
