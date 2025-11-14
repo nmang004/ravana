@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Search, TrendingUp, Target, BarChart3, Globe, MapPin, ArrowRight, Check, Zap, Eye, Award, Crown } from "lucide-react";
+import { Search, TrendingUp, Target, BarChart3, Globe, MapPin, ArrowRight, Check, Zap, Eye, Award, Crown, Link2, Bug, LineChart, Tag, Settings } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -111,14 +111,14 @@ const seoProcess = [
 ];
 
 const tools = [
-  { name: "SEMrush", category: "Research", icon: "🔍" },
-  { name: "Ahrefs", category: "Backlinks", icon: "🔗" },
-  { name: "Google Search Console", category: "Analytics", icon: "📊" },
-  { name: "Screaming Frog", category: "Technical", icon: "🕷️" },
-  { name: "Google Analytics", category: "Traffic", icon: "📈" },
-  { name: "PageSpeed Insights", category: "Performance", icon: "⚡" },
-  { name: "Schema.org", category: "Markup", icon: "🏷️" },
-  { name: "Google My Business", category: "Local", icon: "📍" }
+  { name: "SEMrush", category: "Research", icon: Search },
+  { name: "Ahrefs", category: "Backlinks", icon: Link2 },
+  { name: "Google Search Console", category: "Analytics", icon: BarChart3 },
+  { name: "Screaming Frog", category: "Technical", icon: Bug },
+  { name: "Google Analytics", category: "Traffic", icon: LineChart },
+  { name: "PageSpeed Insights", category: "Performance", icon: Zap },
+  { name: "Schema.org", category: "Markup", icon: Tag },
+  { name: "Google My Business", category: "Local", icon: MapPin }
 ];
 
 const caseStudy = {
@@ -268,7 +268,9 @@ export default function SEOServicesPage() {
                 <div className="h-1 bg-accent/40 rounded w-14"></div>
               </div>
             </div>
-            <div className="absolute bottom-20 right-10 text-accent text-2xl animate-spin">🎯</div>
+            <div className="absolute bottom-20 right-10 text-accent animate-spin">
+              <Target className="w-6 h-6" />
+            </div>
           </div>
         </section>
 
@@ -434,19 +436,22 @@ export default function SEOServicesPage() {
 
             <StaggerReveal>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {tools.map((tool, index) => (
-                  <Card key={index} className="p-6 text-center bg-background/50 hover:bg-accent/5 transition-all duration-300 group">
-                    <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                      {tool.icon}
-                    </div>
-                    <h3 className="font-semibold mb-2 group-hover:text-accent transition-colors">
-                      {tool.name}
-                    </h3>
-                    <Badge variant="outline" className="text-xs">
-                      {tool.category}
-                    </Badge>
-                  </Card>
-                ))}
+                {tools.map((tool, index) => {
+                  const Icon = tool.icon;
+                  return (
+                    <Card key={index} className="p-6 text-center bg-background/50 hover:bg-accent/5 transition-all duration-300 group">
+                      <div className="flex justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8 text-accent" />
+                      </div>
+                      <h3 className="font-semibold mb-2 group-hover:text-accent transition-colors">
+                        {tool.name}
+                      </h3>
+                      <Badge variant="outline" className="text-xs">
+                        {tool.category}
+                      </Badge>
+                    </Card>
+                  );
+                })}
               </div>
             </StaggerReveal>
           </div>

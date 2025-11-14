@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Palette, Smartphone, Zap, Search, ShoppingCart, BarChart3, ArrowRight, Check, Layers, Figma, Chrome, MonitorSpeaker } from "lucide-react";
+import { Palette, Smartphone, Zap, Search, ShoppingCart, BarChart3, ArrowRight, Check, Layers, Figma, Chrome, MonitorSpeaker, Code2, Brush, Sparkles, FileText, Waves, Target } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -74,14 +74,14 @@ const designProcess = [
 ];
 
 const technologies = [
-  { name: "Next.js", category: "Framework", icon: "⚡" },
-  { name: "React", category: "Frontend", icon: "⚛️" },
-  { name: "Tailwind CSS", category: "Styling", icon: "🎨" },
-  { name: "Framer Motion", category: "Animation", icon: "🎭" },
-  { name: "WordPress", category: "CMS", icon: "📝" },
-  { name: "Shopify", category: "E-commerce", icon: "🛒" },
-  { name: "Webflow", category: "No-code", icon: "🌊" },
-  { name: "Figma", category: "Design", icon: "🎯" }
+  { name: "Next.js", category: "Framework", icon: Zap },
+  { name: "React", category: "Frontend", icon: Code2 },
+  { name: "Tailwind CSS", category: "Styling", icon: Brush },
+  { name: "Framer Motion", category: "Animation", icon: Sparkles },
+  { name: "WordPress", category: "CMS", icon: FileText },
+  { name: "Shopify", category: "E-commerce", icon: ShoppingCart },
+  { name: "Webflow", category: "No-code", icon: Waves },
+  { name: "Figma", category: "Design", icon: Target }
 ];
 
 const portfolioShowcase = [
@@ -341,17 +341,20 @@ export default function WebDevelopmentPage() {
 
             <StaggerReveal>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {technologies.map((tech, index) => (
-                  <Card key={index} className="p-6 text-center bg-background/50 hover:bg-accent/5 transition-all duration-300 group">
-                    <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                      {tech.icon}
-                    </div>
-                    <h3 className="font-semibold mb-1">{tech.name}</h3>
-                    <Badge variant="outline" className="text-xs">
-                      {tech.category}
-                    </Badge>
-                  </Card>
-                ))}
+                {technologies.map((tech, index) => {
+                  const Icon = tech.icon;
+                  return (
+                    <Card key={index} className="p-6 text-center bg-background/50 hover:bg-accent/5 transition-all duration-300 group">
+                      <div className="flex justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8 text-accent" />
+                      </div>
+                      <h3 className="font-semibold mb-1">{tech.name}</h3>
+                      <Badge variant="outline" className="text-xs">
+                        {tech.category}
+                      </Badge>
+                    </Card>
+                  );
+                })}
               </div>
             </StaggerReveal>
           </div>

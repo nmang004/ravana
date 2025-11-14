@@ -237,9 +237,15 @@ export default function DigitalMarketingPage() {
                 <div className="w-2 h-12 bg-accent rounded delay-300"></div>
               </div>
             </div>
-            <div className="absolute top-40 right-20 text-accent text-2xl animate-bounce delay-1000">📈</div>
-            <div className="absolute bottom-40 left-20 text-accent text-2xl animate-pulse delay-2000">💰</div>
-            <div className="absolute bottom-20 right-10 text-accent text-2xl animate-bounce delay-3000">🚀</div>
+            <div className="absolute top-40 right-20 text-accent animate-bounce delay-1000">
+              <TrendingUp className="w-6 h-6" />
+            </div>
+            <div className="absolute bottom-40 left-20 text-accent animate-pulse delay-2000">
+              <DollarSign className="w-6 h-6" />
+            </div>
+            <div className="absolute bottom-20 right-10 text-accent animate-bounce delay-3000">
+              <Rocket className="w-6 h-6" />
+            </div>
           </div>
         </section>
 

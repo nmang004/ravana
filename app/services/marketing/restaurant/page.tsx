@@ -215,12 +215,24 @@ export default function RestaurantMarketingPage() {
           
           {/* Animated Restaurant Elements */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-10 text-4xl animate-bounce">🍕</div>
-            <div className="absolute top-40 right-20 text-4xl animate-pulse delay-1000">🍔</div>
-            <div className="absolute bottom-40 left-20 text-4xl animate-bounce delay-2000">🍝</div>
-            <div className="absolute bottom-20 right-10 text-4xl animate-pulse delay-3000">🥘</div>
-            <div className="absolute top-1/2 left-1/4 text-3xl animate-spin-slow">⭐</div>
-            <div className="absolute top-1/3 right-1/3 text-3xl animate-pulse">❤️</div>
+            <div className="absolute top-20 left-10 text-accent animate-bounce">
+              <Utensils className="w-10 h-10" />
+            </div>
+            <div className="absolute top-40 right-20 text-accent animate-pulse delay-1000">
+              <ChefHat className="w-10 h-10" />
+            </div>
+            <div className="absolute bottom-40 left-20 text-accent animate-bounce delay-2000">
+              <Utensils className="w-10 h-10" />
+            </div>
+            <div className="absolute bottom-20 right-10 text-accent animate-pulse delay-3000">
+              <Utensils className="w-10 h-10" />
+            </div>
+            <div className="absolute top-1/2 left-1/4 text-accent animate-spin-slow">
+              <Star className="w-8 h-8" />
+            </div>
+            <div className="absolute top-1/3 right-1/3 text-accent animate-pulse">
+              <Heart className="w-8 h-8" />
+            </div>
           </div>
         </section>
 
