@@ -22,9 +22,7 @@ const services = [
       "Analytics & Tracking Setup",
       "Ongoing Maintenance & Support"
     ],
-    technologies: ["Next.js", "React", "WordPress", "Shopify", "Tailwind CSS", "Framer Motion"],
-    pricing: "Starting from $5,000",
-    timeline: "4-8 weeks"
+    technologies: ["Next.js", "React", "WordPress", "Shopify", "Tailwind CSS", "Framer Motion"]
   },
   {
     id: "seo",
@@ -42,9 +40,7 @@ const services = [
       "SEO Analytics & Reporting",
       "Competitor Analysis"
     ],
-    technologies: ["Google Search Console", "SEMrush", "Ahrefs", "Screaming Frog", "Google Analytics"],
-    pricing: "Starting from $1,500/month",
-    timeline: "3-6 months for results"
+    technologies: ["Google Search Console", "SEMrush", "Ahrefs", "Screaming Frog", "Google Analytics"]
   },
   {
     id: "saas",
@@ -62,9 +58,7 @@ const services = [
       "API Development & Integration",
       "Database Design & Optimization"
     ],
-    technologies: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "AWS", "Stripe"],
-    pricing: "Starting from $15,000",
-    timeline: "8-16 weeks"
+    technologies: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "AWS", "Stripe"]
   },
   {
     id: "marketing",
@@ -82,9 +76,7 @@ const services = [
       "Brand Strategy & Positioning",
       "Lead Generation Campaigns"
     ],
-    technologies: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Google Analytics", "HubSpot", "Mailchimp"],
-    pricing: "Starting from $2,500/month",
-    timeline: "Ongoing campaigns"
+    technologies: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Google Analytics", "HubSpot", "Mailchimp"]
   }
 ];
 
@@ -165,17 +157,6 @@ export default function ServicesPage() {
                               {tech}
                             </span>
                           ))}
-                        </div>
-                        
-                        <div className="mt-4 space-y-2">
-                          <div className="text-sm">
-                            <span className="text-muted-foreground">Starting from: </span>
-                            <span className="font-semibold text-accent">{service.pricing}</span>
-                          </div>
-                          <div className="text-sm">
-                            <span className="text-muted-foreground">Timeline: </span>
-                            <span className="font-semibold">{service.timeline}</span>
-                          </div>
                         </div>
                       </div>
                     </div>

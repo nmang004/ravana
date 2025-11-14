@@ -121,54 +121,6 @@ const features = [
   { name: "Loyalty Programs", status: "70% Valued", description: "By repeat customers" }
 ];
 
-const pricingTiers = [
-  {
-    name: "Foundation",
-    price: "$1,500",
-    period: "/month",
-    description: "Perfect for new restaurants",
-    features: [
-      "Google Business Profile setup & optimization",
-      "Basic website with online menu",
-      "Social media setup (2 platforms)",
-      "Monthly performance reports",
-      "Review monitoring & alerts",
-      "Basic local SEO"
-    ]
-  },
-  {
-    name: "Growth",
-    price: "$3,500",
-    period: "/month",
-    description: "Ideal for expanding restaurants",
-    features: [
-      "Everything in Foundation",
-      "Commission-free online ordering",
-      "Professional content creation",
-      "Email & SMS marketing",
-      "Digital loyalty program",
-      "Advanced local SEO",
-      "Bi-weekly strategy calls"
-    ],
-    popular: true
-  },
-  {
-    name: "Dominate",
-    price: "$5,500",
-    period: "/month",
-    description: "For market leaders",
-    features: [
-      "Everything in Growth",
-      "Multi-location management",
-      "Video content production",
-      "Influencer partnerships",
-      "Custom mobile app",
-      "Weekly performance optimization",
-      "Dedicated account manager"
-    ]
-  }
-];
-
 export const metadata: Metadata = {
   title: "Restaurant Marketing Services - Fill Tables & Grow Revenue",
   description: "Transform your restaurant with targeted marketing strategies. Local SEO, commission-free online ordering, social media management, and loyalty programs that drive results.",
@@ -458,55 +410,6 @@ export default function RestaurantMarketingPage() {
                 <p className="text-muted-foreground">— Restaurant Owner, Italian Bistro</p>
               </Card>
             </RevealOnScroll>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-24 px-6">
-          <div className="container mx-auto">
-            <RevealOnScroll>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                  Transparent, Flexible <span className="text-accent">Pricing</span>
-                </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Choose a package that matches your restaurant's growth goals. No hidden fees, no surprises.
-                </p>
-              </div>
-            </RevealOnScroll>
-
-            <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <Card key={index} className={`p-8 relative hover:scale-105 transition-transform duration-300 ${tier.popular ? 'border-accent bg-accent/5 scale-105' : 'bg-background/50'}`}>
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-accent text-accent-foreground">Most Popular</Badge>
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-heading font-bold mb-2">{tier.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold">{tier.price}</span>
-                      <span className="text-lg text-muted-foreground ml-1">{tier.period}</span>
-                    </div>
-                    <p className="text-muted-foreground">{tier.description}</p>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild className={`w-full ${tier.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}>
-                    <Link href={`/contact?service=restaurant-marketing&package=${tier.name.toLowerCase()}`}>
-                      Get Started
-                    </Link>
-                  </Button>
-                </Card>
-              ))}
-            </StaggerReveal>
           </div>
         </section>
 

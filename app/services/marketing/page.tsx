@@ -110,52 +110,6 @@ const platforms = [
   { name: "HubSpot", category: "CRM", growth: "Core Tool" }
 ];
 
-const pricingTiers = [
-  {
-    name: "Growth",
-    price: "$2,500",
-    period: "/month",
-    description: "Perfect for growing businesses",
-    features: [
-      "2 advertising platforms",
-      "Social media management",
-      "Monthly strategy calls",
-      "Performance reporting",
-      "Email marketing setup",
-      "Basic analytics tracking"
-    ]
-  },
-  {
-    name: "Scale",
-    price: "$5,000",
-    period: "/month",
-    description: "Ideal for scaling operations",
-    features: [
-      "4+ advertising platforms",
-      "Advanced social media strategy",
-      "Bi-weekly strategy calls",
-      "Custom analytics dashboard",
-      "Advanced email automation",
-      "Content creation support"
-    ],
-    popular: true
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "",
-    description: "Tailored for large organizations",
-    features: [
-      "Full-service marketing",
-      "Dedicated account manager",
-      "Weekly strategy sessions",
-      "Advanced attribution modeling",
-      "Custom integrations",
-      "Priority support & training"
-    ]
-  }
-];
-
 export const metadata: Metadata = {
   title: "Digital Marketing Services | Ravana Solutions",
   description: "Data-driven digital marketing services including PPC advertising, social media marketing, and analytics. Complement your web presence with strategic marketing.",
@@ -398,55 +352,6 @@ export default function DigitalMarketingPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-24 px-6 bg-muted/20">
-          <div className="container mx-auto">
-            <RevealOnScroll>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                  Flexible <span className="text-accent">Pricing</span>
-                </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Choose a marketing package that scales with your business growth and budget requirements.
-                </p>
-              </div>
-            </RevealOnScroll>
-
-            <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <Card key={index} className={`p-8 relative hover:scale-105 transition-transform duration-300 ${tier.popular ? 'border-accent bg-accent/5 scale-105' : 'bg-background/50'}`}>
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-accent text-accent-foreground">Most Popular</Badge>
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-heading font-bold mb-2">{tier.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold">{tier.price}</span>
-                      <span className="text-lg text-muted-foreground ml-1">{tier.period}</span>
-                    </div>
-                    <p className="text-muted-foreground">{tier.description}</p>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <Check className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild className={`w-full ${tier.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}>
-                    <Link href={`/contact?service=marketing&package=${tier.name.toLowerCase()}`}>
-                      Get Started
-                    </Link>
-                  </Button>
-                </Card>
-              ))}
-            </StaggerReveal>
           </div>
         </section>
 
