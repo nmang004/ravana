@@ -192,7 +192,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-12 md:py-16 lg:py-24 px-2 md:px-6">
         <div className="container mx-auto text-center">
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-3 sm:p-8 md:p-12 lg:p-16">
+          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
               Not Sure Which Service You Need?
             </h2>

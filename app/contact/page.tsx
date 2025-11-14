@@ -169,11 +169,11 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
       {/* Contact Methods */}
       <section className="py-8 md:py-12 lg:py-16 px-2 md:px-6">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-16">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
-                <Card key={index} className="p-2 md:p-6 text-center hover:shadow-lg transition-all duration-300 border-border hover:border-accent/50">
+                <Card key={index} className="p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 border-border hover:border-accent/50">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>
@@ -206,7 +206,7 @@ function ContactPageContent({ searchParams }: { searchParams: SearchParams }) {
       {/* Project Kickoff CTA */}
       <section className="py-12 md:py-16 lg:py-24 px-2 md:px-6">
         <div className="container mx-auto text-center">
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-3 sm:p-8 md:p-12 lg:p-16">
+          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16">
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
               Ready to Start Your Project?
             </h2>

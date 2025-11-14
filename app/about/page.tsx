@@ -201,12 +201,12 @@ export default function AboutPage() {
               </h2>
             </RevealOnScroll>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
                   <RevealOnScroll key={index} delay={index * 0.1}>
-                    <Card className="p-2 md:p-6 text-center bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
+                    <Card className="p-4 md:p-6 text-center bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
                       <Icon className="w-12 h-12 text-accent mx-auto mb-4" />
                       <div className="text-4xl font-bold text-accent mb-2">
                         {stat.value}
@@ -232,7 +232,7 @@ export default function AboutPage() {
               </h2>
             </RevealOnScroll>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
@@ -272,10 +272,10 @@ export default function AboutPage() {
               </p>
             </RevealOnScroll>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
               {team.map((member, index) => (
                 <RevealOnScroll key={index} delay={index * 0.2}>
-                  <Card className="p-2 md:p-6 hover:shadow-lg transition-all duration-300 group">
+                  <Card className="p-4 md:p-6 hover:shadow-lg transition-all duration-300 group">
                     <div className="flex items-start space-x-4">
                       <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 relative">
                         <Image
@@ -327,7 +327,7 @@ export default function AboutPage() {
               </div>
             </RevealOnScroll>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 lg:gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-12">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
@@ -365,7 +365,7 @@ export default function AboutPage() {
         <section className="py-12 md:py-16 lg:py-24 px-2 md:px-6">
           <div className="container mx-auto text-center">
             <RevealOnScroll>
-              <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-3 sm:p-8 md:p-12 lg:p-16">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
                   Ready to Work Together?
                 </h2>

@@ -81,10 +81,10 @@ export default function ProjectBriefPage() {
               </h2>
             </RevealOnScroll>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {whyProjectBrief.map((item, index) => (
                 <RevealOnScroll key={index} delay={index * 0.1}>
-                  <Card className="p-2 md:p-6 h-full hover:shadow-lg transition-shadow duration-300">
+                  <Card className="p-4 md:p-6 h-full hover:shadow-lg transition-shadow duration-300">
                     <h3 className="text-lg font-heading font-bold mb-3 text-accent">
                       {item.title}
                     </h3>

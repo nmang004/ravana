@@ -70,7 +70,7 @@ export default function PortfolioPage() {
               </h2>
             </RevealOnScroll>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-16">
               {featuredProjects.slice(0, 2).map((project, index) => (
                 <RevealOnScroll key={project.id} delay={index * 0.2}>
                   <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-border hover:border-accent/50">
@@ -152,7 +152,7 @@ export default function PortfolioPage() {
               </h2>
             </RevealOnScroll>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {portfolioProjects.map((project, index) => (
                 <RevealOnScroll key={project.id} delay={index * 0.1}>
                   <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover:border-accent/50">
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
                       />
                     </div>
 
-                    <div className="p-3 md:p-4">
+                    <div className="p-4 md:p-4">
                       <div className="flex items-center justify-between mb-2">
                         <Badge variant="secondary" className="bg-accent/10 text-accent text-xs">
                           {project.category}
@@ -228,7 +228,7 @@ export default function PortfolioPage() {
         <section className="py-12 md:py-16 lg:py-24 px-2 md:px-6">
           <div className="container mx-auto text-center">
             <RevealOnScroll>
-              <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-3 sm:p-8 md:p-12 lg:p-16">
+              <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16">
                 <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
                   Ready to Join Our Success Stories?
                 </h2>
